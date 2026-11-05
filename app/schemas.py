@@ -356,3 +356,4 @@ class MethodEvolutionResponse(BaseModel):
     query: str
     eras: List[EraResult]
     historical_benchmark_accuracies: Dict[str, float]
+

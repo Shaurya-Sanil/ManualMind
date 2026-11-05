@@ -65,3 +65,4 @@ def test_all_intent_classes_recognized():
     for expected_intent, query in sample_queries.items():
         pred_intent, _ = nb.predict(query)
         assert pred_intent in INTENT_CLASSES
+

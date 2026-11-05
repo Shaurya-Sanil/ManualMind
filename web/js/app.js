@@ -68,3 +68,4 @@ async function fetchHealthAndActiveManual() {
     console.warn("ManualMind backend health check waiting: ", err);
   }
 }
+

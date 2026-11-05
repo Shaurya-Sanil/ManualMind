@@ -162,3 +162,4 @@ def test_analyze_query_full_integration():
 
     assert len(analysis["tokens"]) > 0
     assert "<svg" in analysis["dependency_tree_svg"]
+

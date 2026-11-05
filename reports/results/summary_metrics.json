@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-05 21:01:51",
-  "total_evaluation_time_seconds": 591.36,
+  "timestamp": "2026-11-05 22:35:43",
+  "total_evaluation_time_seconds": 94.59,
   "random_seed": 42,
   "retrieval": {
     "retrieval_models": {
@@ -17,22 +17,22 @@
         "MRR": 0.8494
       },
       "w2v_cbow": {
-        "Recall@1": 67.31,
-        "Recall@3": 82.69,
-        "Recall@5": 92.31,
-        "MRR": 0.7699
+        "Recall@1": 55.77,
+        "Recall@3": 76.92,
+        "Recall@5": 88.46,
+        "MRR": 0.6776
       },
       "w2v_skipgram": {
-        "Recall@1": 71.15,
-        "Recall@3": 88.46,
-        "Recall@5": 92.31,
-        "MRR": 0.8035
+        "Recall@1": 63.46,
+        "Recall@3": 84.62,
+        "Recall@5": 88.46,
+        "MRR": 0.7372
       },
       "dense": {
-        "Recall@1": 80.77,
-        "Recall@3": 94.23,
+        "Recall@1": 75.0,
+        "Recall@3": 98.08,
         "Recall@5": 98.08,
-        "MRR": 0.875
+        "MRR": 0.8462
       },
       "hybrid": {
         "Recall@1": 88.46,
@@ -43,32 +43,32 @@
     },
     "preprocessing_ablation": {
       "raw": {
-        "Recall@1": 46.15,
-        "Recall@5": 75.0,
-        "MRR": 0.584
+        "Recall@1": 34.62,
+        "Recall@5": 71.15,
+        "MRR": 0.4917
       },
       "stopwords_removed": {
-        "Recall@1": 61.54,
-        "Recall@5": 75.0,
-        "MRR": 0.6763
+        "Recall@1": 48.08,
+        "Recall@5": 73.08,
+        "MRR": 0.5824
       },
       "stemming": {
-        "Recall@1": 46.15,
-        "Recall@5": 69.23,
-        "MRR": 0.5593
+        "Recall@1": 38.46,
+        "Recall@5": 65.38,
+        "MRR": 0.4936
       },
       "lemmatization": {
-        "Recall@1": 46.15,
-        "Recall@5": 73.08,
-        "MRR": 0.5769
+        "Recall@1": 38.46,
+        "Recall@5": 71.15,
+        "MRR": 0.5176
       }
     },
     "total_test_queries": 52
   },
   "answering": {
-    "token_f1": 14.33,
-    "exact_match_rate": 3.85,
-    "correct_section_rate": 69.23,
+    "token_f1": 22.83,
+    "exact_match_rate": 1.92,
+    "correct_section_rate": 50.0,
     "no_answer_out_of_scope_accuracy": 100.0,
     "in_scope_evaluated": 52,
     "out_of_scope_evaluated": 8,
@@ -77,8 +77,8 @@
         "id": "qa_01",
         "question": "What is the default IP address to access the router Web GUI?",
         "target_answer": "http://192.168.1.1 or http://router.aurora.local",
-        "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
-        "token_f1": 0.0958,
+        "predicted_answer": "The router features an intuitive web-based management graphical interface that works in all modern web browsers including Chrome, Firefox, Safari, and Edge.",
+        "token_f1": 0.0667,
         "exact_match": false,
         "correct_section": true
       },
@@ -86,8 +86,8 @@
         "id": "qa_02",
         "question": "What are the default login credentials for the admin account?",
         "target_answer": "Default username is admin and default password is admin",
-        "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
-        "token_f1": 0.0854,
+        "predicted_answer": "Step 3: On the login screen, enter the default credentials: - Default Username: admin - Default Password: admin Step 4: The system will automatically launch the",
+        "token_f1": 0.3429,
         "exact_match": false,
         "correct_section": true
       },
@@ -104,8 +104,8 @@
         "id": "qa_04",
         "question": "Where should I connect the Ethernet cable coming from my modem?",
         "target_answer": "Connect to the blue WAN port on the router",
-        "predicted_answer": "According to Section '2. Quick Start and Hardware Installation > 2.2 Establishing Connection', follow these steps:\n1. Power off your broadband modem by disconne",
-        "token_f1": 0.0845,
+        "predicted_answer": "Step 2: Connect one end of the provided RJ-45 Ethernet cable to the Ethernet port on your modem, and connect the other end to the blue WAN port on the Aurora AX",
+        "token_f1": 0.375,
         "exact_match": false,
         "correct_section": true
       },
@@ -113,17 +113,17 @@
         "id": "qa_05",
         "question": "How do I enable and isolate the guest network?",
         "target_answer": "Go to Settings > Wireless > Guest Network, toggle to ON, and check Isolate from Local Network (AP Isolation)",
-        "predicted_answer": "According to Section '4. Wireless Network Configuration > 4.3 Wi-Fi Security Protocols (WPA2 vs WPA3)', follow these steps:\n1. Go to Settings > Wireless > Guest",
-        "token_f1": 0.1697,
+        "predicted_answer": "Toggle Guest Network back ON and re-check 'Isolate from Local Network'.",
+        "token_f1": 0.7407,
         "exact_match": false,
-        "correct_section": true
+        "correct_section": false
       },
       {
         "id": "qa_06",
         "question": "How do I perform a factory reset using the physical button?",
         "target_answer": "Press and hold the recessed Reset button on the rear panel for 10 seconds with a paperclip until all LEDs flash amber",
-        "predicted_answer": "According to Section '6. System Maintenance and Recovery > 6.3 Factory Reset and Reboot Methods', follow these steps:\n1. Soft Reset via Web GUI: Navigate to Set",
-        "token_f1": 0.25,
+        "predicted_answer": "\u2022 Hard Reset via Physical Button: Locate the recessed Reset button on the rear panel.",
+        "token_f1": 0.3871,
         "exact_match": false,
         "correct_section": true
       },
@@ -140,8 +140,8 @@
         "id": "qa_08",
         "question": "What does a blinking red internet LED mean?",
         "target_answer": "WAN cable is disconnected or no carrier signal detected from modem (Error code E-101)",
-        "predicted_answer": "According to Section '5 GHz WI-FI', follow these steps:\n1. INTERNET (WAN) Off None WAN port is disconnected or Ethernet cable is damaged. Solid White\n2. 4 GHz w",
-        "token_f1": 0.0952,
+        "predicted_answer": "INTERNET (WAN) Blinking Red WAN cable disconnected or no carrier signal detected from modem.",
+        "token_f1": 0.7143,
         "exact_match": false,
         "correct_section": false
       },
@@ -804,15 +804,15 @@
     "understanding_layer_ablation": {
       "queries_evaluated": 14,
       "with_understanding_layer": {
-        "token_f1": 26.39,
-        "recall_at_1": 35.71
+        "token_f1": 28.49,
+        "recall_at_1": 21.43
       },
       "without_understanding_layer_ablated": {
         "token_f1": 21.54,
-        "recall_at_1": 42.86
+        "recall_at_1": 21.43
       },
-      "absolute_f1_improvement": 4.85,
-      "relative_f1_gain_percent": 22.52
+      "absolute_f1_improvement": 6.95,
+      "relative_f1_gain_percent": 32.27
     },
     "sample_ablations": [
       {
@@ -826,7 +826,7 @@
         "id": "qa_26_turn2",
         "raw_query": "How can I enable it?",
         "rewritten_query": "How can I enable the network?",
-        "f1_with_understanding": 0.0952,
+        "f1_with_understanding": 0.6,
         "f1_without_understanding": 0.2857
       },
       {
@@ -861,47 +861,47 @@
   },
   "ngram_latency": {
     "ngram_language_model": {
-      "unigram_perplexity": 819.71,
-      "bigram_perplexity": 600.88,
-      "trigram_perplexity": 744.73,
+      "unigram_perplexity": 816.85,
+      "bigram_perplexity": 594.22,
+      "trigram_perplexity": 734.45,
       "top3_next_word_accuracy": 35.0,
       "test_trials_count": 200
     },
     "pipeline_latency_benchmarks": {
       "preprocessing_spelling": {
-        "median_ms": 9.25,
-        "p95_ms": 23.81,
-        "mean_ms": 10.51
+        "median_ms": 7.22,
+        "p95_ms": 21.11,
+        "mean_ms": 9.27
       },
       "linguistic_analysis": {
-        "median_ms": 39.85,
-        "p95_ms": 53.87,
-        "mean_ms": 41.5
+        "median_ms": 38.68,
+        "p95_ms": 59.28,
+        "mean_ms": 40.42
       },
       "ambiguity_guard": {
-        "median_ms": 17.08,
-        "p95_ms": 23.09,
-        "mean_ms": 17.78
+        "median_ms": 16.58,
+        "p95_ms": 25.41,
+        "mean_ms": 17.32
       },
       "intent_classification": {
-        "median_ms": 0.1,
-        "p95_ms": 0.17,
-        "mean_ms": 0.11
+        "median_ms": 0.09,
+        "p95_ms": 0.13,
+        "mean_ms": 0.1
       },
       "hybrid_retrieval": {
-        "median_ms": 8.08,
-        "p95_ms": 10.79,
-        "mean_ms": 8.17
+        "median_ms": 8.9,
+        "p95_ms": 14.16,
+        "mean_ms": 9.41
       },
       "answer_composition": {
-        "median_ms": 452.79,
-        "p95_ms": 488.54,
-        "mean_ms": 456.24
+        "median_ms": 472.99,
+        "p95_ms": 704.76,
+        "mean_ms": 511.99
       },
       "end_to_end": {
-        "median_ms": 527.56,
-        "p95_ms": 569.5,
-        "mean_ms": 534.32
+        "median_ms": 547.84,
+        "p95_ms": 802.33,
+        "mean_ms": 588.51
       }
     },
     "target_met": true

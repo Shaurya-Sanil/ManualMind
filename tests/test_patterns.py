@@ -83,3 +83,4 @@ def test_contact_patterns():
 def test_find_error_codes_helper():
     assert find_error_codes("Error E-101 and E_204 detected") == ["E-101", "E-204"]
     assert find_error_codes("No error codes present") == []
+

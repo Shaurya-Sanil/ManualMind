@@ -132,3 +132,4 @@ All numbers measured on standard 2 vCPU / 16 GB RAM baseline:
   - Hybrid Retrieval (RRF MiniLM + BM25): **42.3 ms**
   - Extractive QA Reader (RoBERTa on CPU): **320.5 ms**
   - **Total Turnaround Time:** **~385 ms** (well below the 4.0-second interactive threshold).
+

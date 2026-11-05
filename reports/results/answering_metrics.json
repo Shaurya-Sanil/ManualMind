@@ -1,7 +1,7 @@
 {
-  "token_f1": 14.33,
-  "exact_match_rate": 3.85,
-  "correct_section_rate": 69.23,
+  "token_f1": 22.83,
+  "exact_match_rate": 1.92,
+  "correct_section_rate": 50.0,
   "no_answer_out_of_scope_accuracy": 100.0,
   "in_scope_evaluated": 52,
   "out_of_scope_evaluated": 8,
@@ -10,8 +10,8 @@
       "id": "qa_01",
       "question": "What is the default IP address to access the router Web GUI?",
       "target_answer": "http://192.168.1.1 or http://router.aurora.local",
-      "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
-      "token_f1": 0.0958,
+      "predicted_answer": "The router features an intuitive web-based management graphical interface that works in all modern web browsers including Chrome, Firefox, Safari, and Edge.",
+      "token_f1": 0.0667,
       "exact_match": false,
       "correct_section": true
     },
@@ -19,8 +19,8 @@
       "id": "qa_02",
       "question": "What are the default login credentials for the admin account?",
       "target_answer": "Default username is admin and default password is admin",
-      "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
-      "token_f1": 0.0854,
+      "predicted_answer": "Step 3: On the login screen, enter the default credentials: - Default Username: admin - Default Password: admin Step 4: The system will automatically launch the",
+      "token_f1": 0.3429,
       "exact_match": false,
       "correct_section": true
     },
@@ -37,8 +37,8 @@
       "id": "qa_04",
       "question": "Where should I connect the Ethernet cable coming from my modem?",
       "target_answer": "Connect to the blue WAN port on the router",
-      "predicted_answer": "According to Section '2. Quick Start and Hardware Installation > 2.2 Establishing Connection', follow these steps:\n1. Power off your broadband modem by disconne",
-      "token_f1": 0.0845,
+      "predicted_answer": "Step 2: Connect one end of the provided RJ-45 Ethernet cable to the Ethernet port on your modem, and connect the other end to the blue WAN port on the Aurora AX",
+      "token_f1": 0.375,
       "exact_match": false,
       "correct_section": true
     },
@@ -46,17 +46,17 @@
       "id": "qa_05",
       "question": "How do I enable and isolate the guest network?",
       "target_answer": "Go to Settings > Wireless > Guest Network, toggle to ON, and check Isolate from Local Network (AP Isolation)",
-      "predicted_answer": "According to Section '4. Wireless Network Configuration > 4.3 Wi-Fi Security Protocols (WPA2 vs WPA3)', follow these steps:\n1. Go to Settings > Wireless > Guest",
-      "token_f1": 0.1697,
+      "predicted_answer": "Toggle Guest Network back ON and re-check 'Isolate from Local Network'.",
+      "token_f1": 0.7407,
       "exact_match": false,
-      "correct_section": true
+      "correct_section": false
     },
     {
       "id": "qa_06",
       "question": "How do I perform a factory reset using the physical button?",
       "target_answer": "Press and hold the recessed Reset button on the rear panel for 10 seconds with a paperclip until all LEDs flash amber",
-      "predicted_answer": "According to Section '6. System Maintenance and Recovery > 6.3 Factory Reset and Reboot Methods', follow these steps:\n1. Soft Reset via Web GUI: Navigate to Set",
-      "token_f1": 0.25,
+      "predicted_answer": "\u2022 Hard Reset via Physical Button: Locate the recessed Reset button on the rear panel.",
+      "token_f1": 0.3871,
       "exact_match": false,
       "correct_section": true
     },
@@ -73,8 +73,8 @@
       "id": "qa_08",
       "question": "What does a blinking red internet LED mean?",
       "target_answer": "WAN cable is disconnected or no carrier signal detected from modem (Error code E-101)",
-      "predicted_answer": "According to Section '5 GHz WI-FI', follow these steps:\n1. INTERNET (WAN) Off None WAN port is disconnected or Ethernet cable is damaged. Solid White\n2. 4 GHz w",
-      "token_f1": 0.0952,
+      "predicted_answer": "INTERNET (WAN) Blinking Red WAN cable disconnected or no carrier signal detected from modem.",
+      "token_f1": 0.7143,
       "exact_match": false,
       "correct_section": false
     },

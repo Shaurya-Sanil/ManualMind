@@ -104,3 +104,4 @@ def extract_all_patterns(text: str) -> Dict[str, List[str]]:
 def find_error_codes(text: str) -> List[str]:
     """Convenience helper to extract error codes specifically."""
     return [c.upper().replace("_", "-") for c in PATTERNS["ERROR_CODE"].findall(text)]
+

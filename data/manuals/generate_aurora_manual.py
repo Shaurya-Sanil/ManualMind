@@ -750,3 +750,4 @@ if __name__ == "__main__":
     out_dir = Path(__file__).resolve().parent
     out_file = out_dir / "aurora_ax3000_manual.pdf"
     build_manual_pdf(str(out_file))
+

@@ -528,3 +528,4 @@ def expand_query_wordnet(query: str, max_synonyms: int = 2) -> str:
             if added >= max_synonyms:
                 break
     return " ".join(expanded)
+

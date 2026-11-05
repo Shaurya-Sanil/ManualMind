@@ -93,3 +93,4 @@ def test_ingest_aurora_manual_pdf():
     assert len(doc.sections) >= 5
     assert len(doc.chunks) >= 15
     assert doc.vocabulary_size > 100
+

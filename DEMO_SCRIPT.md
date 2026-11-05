@@ -133,3 +133,4 @@ This script provides an exact, step-by-step walkthrough for presenting **ManualM
 
 ## 5-Minute Wrap-Up Statement to the Examiner
 > *"ManualMind demonstrates that modern conversational AI does not need to be a black-box API wrapper. By systematically building each syllabus concept — from Levenshtein DP and HMM Viterbi to Clause Decomposition, Ambiguity Guards, and Hybrid RRF — we achieve an offline, production-grade customer support assistant that runs in 527 milliseconds on pure CPU and rigorously adheres to the theoretical principles of NLP."*
+

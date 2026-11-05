@@ -85,3 +85,4 @@ def download_all_assets():
 
 if __name__ == "__main__":
     download_all_assets()
+

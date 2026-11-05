@@ -285,3 +285,4 @@ def get_default_seed_intent_data() -> Tuple[List[str], List[str]]:
     texts = [d[0] for d in data]
     labels = [d[1] for d in data]
     return texts, labels
+

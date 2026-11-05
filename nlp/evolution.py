@@ -207,3 +207,4 @@ def run_all_eras_comparison(query: str, retriever: HybridRetriever) -> Dict[str,
         "eras": [e1, e2, e3, e4, e5],
         "historical_benchmark_accuracies": historical_accuracies
     }
+

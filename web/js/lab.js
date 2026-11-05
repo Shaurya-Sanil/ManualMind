@@ -349,3 +349,4 @@ async function runLabIntent() {
     container.innerHTML = `<span style="color:var(--danger)">Error: ${err.message}</span>`;
   }
 }
+

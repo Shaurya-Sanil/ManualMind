@@ -388,3 +388,4 @@ def highlight_entities_html(text: str, entities: List[Dict[str, Any]]) -> str:
         res = res[:start] + replacement + res[end:]
 
     return res
+

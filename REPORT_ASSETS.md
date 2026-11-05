@@ -249,3 +249,4 @@ The following publication-quality visual figures are generated directly by the b
 
 3. **Ambiguity Requires Interactive Disambiguation, Not Guessing:**
    When a user asks *"How do I reset the router?"*, the system faces true lexical ambiguity: soft reboot vs. factory hard reset. Instead of returning a random chunk, the Ambiguity Guard halts and surfaces clickable clarification chips, preventing catastrophic configuration errors for customer users.
+

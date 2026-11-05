@@ -227,3 +227,4 @@ def run_ngram_latency_evaluation():
 
 if __name__ == "__main__":
     run_ngram_latency_evaluation()
+

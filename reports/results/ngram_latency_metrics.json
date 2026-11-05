@@ -1,46 +1,46 @@
 {
   "ngram_language_model": {
-    "unigram_perplexity": 819.71,
-    "bigram_perplexity": 600.88,
-    "trigram_perplexity": 744.73,
+    "unigram_perplexity": 816.85,
+    "bigram_perplexity": 594.22,
+    "trigram_perplexity": 734.45,
     "top3_next_word_accuracy": 35.0,
     "test_trials_count": 200
   },
   "pipeline_latency_benchmarks": {
     "preprocessing_spelling": {
-      "median_ms": 9.25,
-      "p95_ms": 23.81,
-      "mean_ms": 10.51
+      "median_ms": 7.22,
+      "p95_ms": 21.11,
+      "mean_ms": 9.27
     },
     "linguistic_analysis": {
-      "median_ms": 39.85,
-      "p95_ms": 53.87,
-      "mean_ms": 41.5
+      "median_ms": 38.68,
+      "p95_ms": 59.28,
+      "mean_ms": 40.42
     },
     "ambiguity_guard": {
-      "median_ms": 17.08,
-      "p95_ms": 23.09,
-      "mean_ms": 17.78
+      "median_ms": 16.58,
+      "p95_ms": 25.41,
+      "mean_ms": 17.32
     },
     "intent_classification": {
-      "median_ms": 0.1,
-      "p95_ms": 0.17,
-      "mean_ms": 0.11
+      "median_ms": 0.09,
+      "p95_ms": 0.13,
+      "mean_ms": 0.1
     },
     "hybrid_retrieval": {
-      "median_ms": 8.08,
-      "p95_ms": 10.79,
-      "mean_ms": 8.17
+      "median_ms": 8.9,
+      "p95_ms": 14.16,
+      "mean_ms": 9.41
     },
     "answer_composition": {
-      "median_ms": 452.79,
-      "p95_ms": 488.54,
-      "mean_ms": 456.24
+      "median_ms": 472.99,
+      "p95_ms": 704.76,
+      "mean_ms": 511.99
     },
     "end_to_end": {
-      "median_ms": 527.56,
-      "p95_ms": 569.5,
-      "mean_ms": 534.32
+      "median_ms": 547.84,
+      "p95_ms": 802.33,
+      "mean_ms": 588.51
     }
   },
   "target_met": true

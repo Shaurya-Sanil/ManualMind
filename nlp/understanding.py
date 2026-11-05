@@ -621,3 +621,4 @@ def analyze_query_full(
         "decomposition": decomp,
         "ambiguity": ambiguity_report
     }
+

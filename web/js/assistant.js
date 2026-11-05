@@ -658,3 +658,4 @@ function speakResponse(answerPayload) {
 
   window.speechSynthesis.speak(utterance);
 }
+

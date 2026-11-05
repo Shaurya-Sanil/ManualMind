@@ -365,3 +365,4 @@ def compare_stemming_lemmatization(text: str) -> Dict[str, Any]:
         "vocab_reduction_lancaster": red_lancaster,
         "vocab_reduction_wordnet": red_wordnet
     }
+

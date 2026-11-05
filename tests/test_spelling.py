@@ -88,3 +88,4 @@ def test_spelling_corrector_preserves_error_codes():
     res = corrector.correct_query("Fix error E-101 at 192.168.1.1")
     assert "E-101" in res["corrected"]
     assert "192.168.1.1" in res["corrected"]
+

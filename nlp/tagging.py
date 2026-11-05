@@ -536,3 +536,4 @@ def render_dependency_tree_svg(sentence: str) -> str:
 
     svg_elements.append('</svg>')
     return "".join(svg_elements)
+

@@ -54,3 +54,4 @@ def test_highlight_entities_html():
     assert '<span class="entity-pill"' in html
     assert '[ERROR_CODE]' in html
     assert '[COMPONENT]' in html
+

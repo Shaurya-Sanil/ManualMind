@@ -100,3 +100,4 @@ async function activateManual(filename) {
 }
 
 window.loadManualsList = loadManualsList;
+

@@ -123,3 +123,4 @@ def test_expand_query_wordnet():
     expanded = expand_query_wordnet("start device", max_synonyms=1)
     assert "start" in expanded
     assert "device" in expanded
+

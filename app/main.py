@@ -12,9 +12,12 @@ Provides REST API endpoints for:
 """
 
 import sys
+import os
 import time
 import json
 import io
+
+os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
@@ -27,7 +30,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, Response
 
 from app.config import settings
 from app.schemas import (
@@ -540,9 +543,16 @@ app.mount("/vendor", StaticFiles(directory=settings.WEB_DIR / "vendor"), name="v
 app.mount("/reports/figures", StaticFiles(directory=settings.FIGURES_DIR), name="figures")
 
 
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    svg_icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🧠</text></svg>'
+    return Response(content=svg_icon, media_type="image/svg+xml")
+
+
 @app.get("/")
 async def serve_index():
     index_file = settings.WEB_DIR / "index.html"
     if index_file.exists():
         return FileResponse(index_file)
     return {"message": "ManualMind API is running. Place index.html in web/ directory."}
+

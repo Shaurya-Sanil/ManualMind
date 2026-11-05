@@ -99,3 +99,4 @@ def test_render_dependency_tree_svg():
     assert "</svg>" in svg
     assert "ROOT" in svg
     assert "firmware" in svg
+

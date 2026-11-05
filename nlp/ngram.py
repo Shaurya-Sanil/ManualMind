@@ -238,3 +238,4 @@ class ScratchNgramLM:
             "top_sklearn": sorted(cv_map.items(), key=lambda x: x[1], reverse=True)[:5],
             "top_scratch": sorted(scratch_map.items(), key=lambda x: x[1], reverse=True)[:5]
         }
+

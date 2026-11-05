@@ -89,3 +89,4 @@ function renderEvolutionChart(accuracies) {
   svg += `</svg>`;
   container.innerHTML = svg;
 }
+

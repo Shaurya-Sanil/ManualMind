@@ -285,3 +285,4 @@ function renderEvaluationDashboard(data) {
 
 // Expose globally
 window.loadEvaluationResults = loadEvaluationResults;
+

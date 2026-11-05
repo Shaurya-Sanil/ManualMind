@@ -298,3 +298,4 @@ NLP_mini_project/
 - **Zero Fabricated Results:** Every accuracy, perplexity, recall, F1, and latency score presented in this repository is directly output by deterministic Python code (`eval/run_all_evals.py`) on fixed random seeds (`SEED = 42`).
 - **Zero Remote Dependencies at Runtime:** No commercial API keys (OpenAI, Anthropic, Google, Cohere) are utilized. The system executes exclusively on open-source weights and locally implemented algorithms.
 - **Strictly English Only:** All NLP modules, tokenizers, models, and evaluators operate exclusively on the English language in compliance with project specifications.
+
