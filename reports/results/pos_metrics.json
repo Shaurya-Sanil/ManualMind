@@ -1,0 +1,274 @@
+{
+  "total_tokens_evaluated": 1266,
+  "oov_tokens_count": 503,
+  "taggers": {
+    "rule_based": {
+      "overall_accuracy": 52.21,
+      "oov_accuracy": 59.24,
+      "macro_f1": 42.79,
+      "per_tag": {
+        "NOUN": {
+          "precision": 52.95,
+          "recall": 93.49,
+          "f1": 67.61
+        },
+        "VERB": {
+          "precision": 50.0,
+          "recall": 36.17,
+          "f1": 41.98
+        },
+        "ADJ": {
+          "precision": 66.04,
+          "recall": 31.25,
+          "f1": 42.42
+        },
+        "ADV": {
+          "precision": 100.0,
+          "recall": 53.33,
+          "f1": 69.57
+        },
+        "PRON": {
+          "precision": 100.0,
+          "recall": 25.0,
+          "f1": 40.0
+        },
+        "DET": {
+          "precision": 96.43,
+          "recall": 98.78,
+          "f1": 97.59
+        },
+        "ADP": {
+          "precision": 79.44,
+          "recall": 85.86,
+          "f1": 82.52
+        },
+        "NUM": {
+          "precision": 75.51,
+          "recall": 68.52,
+          "f1": 71.84
+        },
+        "CONJ": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "PRT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        ".": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "X": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "hmm_viterbi_scratch": {
+      "overall_accuracy": 43.44,
+      "oov_accuracy": 22.66,
+      "macro_f1": 40.36,
+      "per_tag": {
+        "NOUN": {
+          "precision": 71.54,
+          "recall": 47.14,
+          "f1": 56.83
+        },
+        "VERB": {
+          "precision": 49.33,
+          "recall": 52.48,
+          "f1": 50.86
+        },
+        "ADJ": {
+          "precision": 57.28,
+          "recall": 52.68,
+          "f1": 54.88
+        },
+        "ADV": {
+          "precision": 30.56,
+          "recall": 73.33,
+          "f1": 43.14
+        },
+        "PRON": {
+          "precision": 51.43,
+          "recall": 90.0,
+          "f1": 65.45
+        },
+        "DET": {
+          "precision": 67.21,
+          "recall": 100.0,
+          "f1": 80.39
+        },
+        "ADP": {
+          "precision": 78.72,
+          "recall": 74.75,
+          "f1": 76.68
+        },
+        "NUM": {
+          "precision": 39.84,
+          "recall": 94.44,
+          "f1": 56.04
+        },
+        "CONJ": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "PRT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        ".": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "X": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "crf_suite": {
+      "overall_accuracy": 55.37,
+      "oov_accuracy": 54.67,
+      "macro_f1": 50.72,
+      "per_tag": {
+        "NOUN": {
+          "precision": 59.41,
+          "recall": 83.85,
+          "f1": 69.55
+        },
+        "VERB": {
+          "precision": 58.9,
+          "recall": 60.99,
+          "f1": 59.93
+        },
+        "ADJ": {
+          "precision": 55.26,
+          "recall": 56.25,
+          "f1": 55.75
+        },
+        "ADV": {
+          "precision": 57.89,
+          "recall": 73.33,
+          "f1": 64.71
+        },
+        "PRON": {
+          "precision": 100.0,
+          "recall": 85.0,
+          "f1": 91.89
+        },
+        "DET": {
+          "precision": 98.8,
+          "recall": 100.0,
+          "f1": 99.39
+        },
+        "ADP": {
+          "precision": 84.78,
+          "recall": 78.79,
+          "f1": 81.68
+        },
+        "NUM": {
+          "precision": 95.45,
+          "recall": 77.78,
+          "f1": 85.71
+        },
+        "CONJ": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "PRT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        ".": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "X": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      }
+    },
+    "spacy": {
+      "overall_accuracy": 98.5,
+      "oov_accuracy": 97.61,
+      "macro_f1": 74.16,
+      "per_tag": {
+        "NOUN": {
+          "precision": 97.69,
+          "recall": 98.96,
+          "f1": 98.32
+        },
+        "VERB": {
+          "precision": 99.28,
+          "recall": 97.87,
+          "f1": 98.57
+        },
+        "ADJ": {
+          "precision": 99.06,
+          "recall": 93.75,
+          "f1": 96.33
+        },
+        "ADV": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0
+        },
+        "PRON": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0
+        },
+        "DET": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0
+        },
+        "ADP": {
+          "precision": 99.0,
+          "recall": 100.0,
+          "f1": 99.5
+        },
+        "NUM": {
+          "precision": 98.11,
+          "recall": 96.3,
+          "f1": 97.2
+        },
+        "CONJ": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "PRT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        ".": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "X": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0
+        }
+      }
+    }
+  }
+}

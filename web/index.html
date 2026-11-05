@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ManualMind — Intelligent NLP Customer Support Assistant</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Top App Navigation Bar -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon">M</div>
+      <div class="brand-text">
+        <h1>ManualMind <span class="badge">NLP Lab Mini Project</span></h1>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <button class="nav-btn active" data-page="assistant-page">
+        <span>💬</span> Assistant
+      </button>
+      <button class="nav-btn" data-page="lab-page">
+        <span>🔬</span> NLP Lab
+      </button>
+      <button class="nav-btn" data-page="evolution-page">
+        <span>⏳</span> Method Evolution
+      </button>
+      <button class="nav-btn" data-page="evaluation-page">
+        <span>📊</span> Evaluation
+      </button>
+      <button class="nav-btn" data-page="manuals-page">
+        <span>📖</span> Manuals
+      </button>
+      <button class="nav-btn" data-page="about-page">
+        <span>ℹ️</span> About & COs
+      </button>
+    </nav>
+
+    <div class="header-actions">
+      <div class="active-manual-pill">
+        <span class="indicator-dot"></span>
+        <span id="active-manual-name">aurora_ax3000_manual.pdf</span>
+      </div>
+      <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark/Light Mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main Content Areas -->
+  <main class="app-main">
+
+    <!-- PAGE 1: ASSISTANT & NLP INSPECTOR -->
+    <section id="assistant-page" class="page-view active">
+      <div class="assistant-layout">
+        
+        <!-- Left Column: Customer Chat -->
+        <div class="chat-panel">
+          <div class="chat-history" id="chat-history">
+            <!-- Initial Assistant Greeting -->
+            <div class="message-bubble assistant">
+              <div class="content">
+                <strong>Hello! I am ManualMind</strong>, your local NLP customer support assistant for the <em>Aurora AX3000 Wi-Fi 6 Router</em>.
+                <br/><br/>
+                You can ask questions by typing or speaking (voice). Every answer provides numbered recovery steps, evidence citations, and a live inspection of linguistic processing across all course levels.
+              </div>
+              <div class="message-meta">
+                <span>System</span> • <span>Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Strip: Pipeline Stages -->
+          <div class="progress-strip" id="progress-strip">
+            <div class="stage-pill" id="stage-prep"><span>1. Normalization</span></div>
+            <div class="stage-pill" id="stage-understand"><span>2. Linguistic Parse</span></div>
+            <div class="stage-pill" id="stage-intent"><span>3. Intent</span></div>
+            <div class="stage-pill" id="stage-retrieve"><span>4. Hybrid Retrieval</span></div>
+            <div class="stage-pill" id="stage-answer"><span>5. QA Reader</span></div>
+          </div>
+
+          <!-- Input Area with Controls -->
+          <div class="chat-input-area">
+            <div class="autocomplete-dropdown" id="autocomplete-dropdown"></div>
+
+            <div class="input-controls-bar">
+              <div class="controls-group">
+                <label class="toggle-label">
+                  <input type="checkbox" id="auto-speak-toggle"> Auto-speak answers (TTS)
+                </label>
+                <label class="toggle-label">
+                  <input type="checkbox" id="generative-toggle"> Generative rewrite (FLAN-T5)
+                </label>
+              </div>
+              <div class="controls-group">
+                <span id="voice-status-text">Voice: Web Speech Ready</span>
+              </div>
+            </div>
+
+            <div class="input-box-wrapper">
+              <input type="text" id="query-input" class="query-input" placeholder="Ask a question (e.g. 'How do I fix error code E-101?' or 'How to reset it?')..." autocomplete="off">
+              <button id="mic-btn" class="action-btn mic" title="Push/Tap to Talk">🎙️</button>
+              <button id="send-btn" class="action-btn primary">Ask ➔</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: NLP Inspector -->
+        <div class="inspector-panel">
+          <div class="inspector-header">
+            <h2><span>🔍</span> Live NLP Inspector</h2>
+            <span id="timing-badge" class="badge">Latency: -- ms</span>
+          </div>
+
+          <div class="inspector-tabs">
+            <button class="inspector-tab-btn active" data-tab="tab-linguistic">Linguistic Levels</button>
+            <button class="inspector-tab-btn" data-tab="tab-rewrite">Rewrite & Decomp</button>
+            <button class="inspector-tab-btn" data-tab="tab-ambiguity">Ambiguity Guard</button>
+            <button class="inspector-tab-btn" data-tab="tab-intent">Intent Routing</button>
+            <button class="inspector-tab-btn" data-tab="tab-retrieval">Retrieval & Chunks</button>
+            <button class="inspector-tab-btn" data-tab="tab-timings">Stage Timings</button>
+          </div>
+
+          <div class="inspector-body">
+            
+            <!-- Tab 1: Linguistic Levels -->
+            <div id="tab-linguistic" class="tab-content active">
+              <div class="inspector-section">
+                <h3>Dependency Parse Tree</h3>
+                <div class="dep-tree-container" id="inspector-dep-tree">
+                  <p style="color: var(--text-muted); padding: 1rem; text-align: center;">Ask a question to view live dependency parse tree</p>
+                </div>
+              </div>
+
+              <div class="inspector-section">
+                <h3>Tokens, Morphology & POS Tags</h3>
+                <div class="token-grid" id="inspector-tokens"></div>
+              </div>
+
+              <div class="inspector-section">
+                <h3>Syntactic Chunks (NPs & VPs)</h3>
+                <div id="inspector-chunks" style="display: flex; flex-wrap: wrap; gap: 0.4rem;"></div>
+              </div>
+
+              <div class="inspector-section">
+                <h3>Detected Named Entities</h3>
+                <div id="inspector-entities" style="display: flex; flex-wrap: wrap; gap: 0.4rem;"></div>
+              </div>
+
+              <div class="inspector-section">
+                <h3>Extracted Semantic Frame</h3>
+                <table class="frame-table" id="inspector-frame-table">
+                  <tbody>
+                    <tr><th>Action</th><td id="frame-action">--</td></tr>
+                    <tr><th>Object</th><td id="frame-object">--</td></tr>
+                    <tr><th>Modifiers</th><td id="frame-modifiers">--</td></tr>
+                    <tr><th>Negation</th><td id="frame-negation">--</td></tr>
+                    <tr><th>Modality</th><td id="frame-modality">--</td></tr>
+                    <tr><th>Conditions</th><td id="frame-conditions">--</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Tab 2: Rewrite & Decomposition -->
+            <div id="tab-rewrite" class="tab-content" style="display: none;">
+              <div class="inspector-section">
+                <h3>Multi-Turn Pronoun Resolution</h3>
+                <p><strong>Resolved Entity:</strong> <span id="decomp-entity">None</span></p>
+                <p><strong>Rewritten Standalone Query:</strong> <span id="decomp-rewritten">--</span></p>
+              </div>
+
+              <div class="inspector-section">
+                <h3>Clause Decomposition</h3>
+                <p><strong>Is Compound Query:</strong> <span id="decomp-is-compound">No</span></p>
+                <div style="margin-top: 0.5rem;">
+                  <strong>Sub-Questions for Independent Retrieval:</strong>
+                  <ul id="decomp-subquestions" style="margin-left: 1.25rem; margin-top: 0.25rem;"></ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: Ambiguity Guard -->
+            <div id="tab-ambiguity" class="tab-content" style="display: none;">
+              <div class="inspector-section">
+                <h3>Ambiguity Analysis Report</h3>
+                <p><strong>Ambiguity Detected:</strong> <span id="amb-detected">None</span></p>
+                <p><strong>Type:</strong> <span id="amb-type">None</span></p>
+                <div id="amb-readings-list" style="margin-top: 0.75rem;"></div>
+              </div>
+            </div>
+
+            <!-- Tab 4: Intent -->
+            <div id="tab-intent" class="tab-content" style="display: none;">
+              <div class="inspector-section">
+                <h3>Classified Intent</h3>
+                <p><strong>Predicted Class:</strong> <span id="intent-name" style="font-weight: 700; color: var(--accent);">--</span></p>
+                <p><strong>Confidence:</strong> <span id="intent-conf">--</span></p>
+                <p><strong>Pipeline Routing:</strong> <span id="intent-route">--</span></p>
+                <div id="intent-prob-bars" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.4rem;"></div>
+              </div>
+            </div>
+
+            <!-- Tab 5: Retrieval -->
+            <div id="tab-retrieval" class="tab-content" style="display: none;">
+              <div class="inspector-section">
+                <h3>Ranked Evidence Chunks</h3>
+                <div id="inspector-retrieval-list" style="display: flex; flex-direction: column; gap: 0.75rem;"></div>
+              </div>
+            </div>
+
+            <!-- Tab 6: Timings -->
+            <div id="tab-timings" class="tab-content" style="display: none;">
+              <div class="inspector-section">
+                <h3>Latency Breakdown per Stage</h3>
+                <table class="frame-table" id="timings-table">
+                  <tbody>
+                    <tr><th>Total End-to-End</th><td id="t-total">--</td></tr>
+                    <tr><th>1. Preprocessing & Spelling</th><td id="t-prep">--</td></tr>
+                    <tr><th>2. Linguistic Analysis</th><td id="t-ling">--</td></tr>
+                    <tr><th>3. Pronoun Resolution</th><td id="t-pronoun">--</td></tr>
+                    <tr><th>4. Intent Classification</th><td id="t-intent">--</td></tr>
+                    <tr><th>5. Hybrid Retrieval</th><td id="t-ret">--</td></tr>
+                    <tr><th>6. QA Reader & Composition</th><td id="t-ans">--</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PAGE 2: NLP LAB (13 INTERACTIVE EXPERIMENT TOOLS) -->
+    <section id="lab-page" class="page-view">
+      <div class="lab-container">
+        <div class="lab-header">
+          <h2>Natural Language Processing Laboratory</h2>
+          <p>Interactive verification tools mirroring every syllabus concept, comparing from-scratch implementations with reference libraries.</p>
+        </div>
+
+        <!-- Tool 1: Tokenizers -->
+        <div class="lab-tool-card" id="tool-tokenizers">
+          <h3>1. Tokenization Comparison</h3>
+          <div class="concept-box">
+            Tokenization is the foundational process of segmenting text into discrete linguistic units (tokens). Different paradigms include character-level, whitespace/regex (NLTK), linguistic neural models (spaCy), subword WordPiece (BERT), and Byte Pair Encoding (BPE) learned iteratively from pair frequencies.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-tok-input" class="query-input" value="Resetting the router to factory default">
+            <button class="action-btn primary" onclick="runLabTokenization()">Compare Tokenizers</button>
+          </div>
+          <div id="lab-tok-results"></div>
+        </div>
+
+        <!-- Tool 2: Stopwords -->
+        <div class="lab-tool-card" id="tool-stopwords">
+          <h3>2. Stopword Removal & Text Statistics</h3>
+          <div class="concept-box">
+            Stopwords are high-frequency grammatical functional words (articles, prepositions) that carry low semantic discrimination in bag-of-words retrieval. Removing them alters vocabulary density, token counts, and retrieval precision.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-stop-input" class="query-input" value="How do I connect the blue WAN cable to my modem">
+            <button class="action-btn primary" onclick="runLabStopwords()">Filter Stopwords</button>
+          </div>
+          <div id="lab-stop-results"></div>
+        </div>
+
+        <!-- Tool 3: Stemming vs Lemmatization -->
+        <div class="lab-tool-card" id="tool-stem-lemmatize">
+          <h3>3. Stemming vs Lemmatization</h3>
+          <div class="concept-box">
+            Stemming strips inflectional affixes using heuristic rule cascades (Porter, Lancaster), often producing non-lexical stems. Lemmatization leverages morphological vocabularies and POS context (WordNet, spaCy) to reduce inflected forms to their canonical dictionary lemma.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-stem-input" class="query-input" value="resetting configured antennas switches connecting troubleshooting">
+            <button class="action-btn primary" onclick="runLabStemLemmatize()">Compare Reductions</button>
+          </div>
+          <div id="lab-stem-results"></div>
+        </div>
+
+        <!-- Tool 4: Regex Patterns -->
+        <div class="lab-tool-card" id="tool-regex">
+          <h3>4. Regular Expression Technical Pattern Extraction</h3>
+          <div class="concept-box">
+            Deterministic regular expressions extract formal technical tokens: error codes (E-101), MAC addresses, IP addresses, frequencies (5 GHz), voltages (12 V), and menu navigation breadcrumbs (Settings > Network > Wi-Fi).
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-regex-input" class="query-input" value="Fix error code E-101 on AX3000-PRO at Settings > Wireless > 5 GHz with 12 V power">
+            <button class="action-btn primary" onclick="runLabRegex()">Extract Patterns</button>
+          </div>
+          <div id="lab-regex-results"></div>
+        </div>
+
+        <!-- Tool 5: Levenshtein DP Matrix -->
+        <div class="lab-tool-card" id="tool-levenshtein">
+          <h3>5. Levenshtein Edit Distance & Dynamic Programming Matrix</h3>
+          <div class="concept-box">
+            Minimum edit distance finds the least number of insertions, deletions, and substitutions to transform source word S into target word T. The dynamic programming matrix tabulates subproblems D(i, j), and backtracing computes the optimal operation sequence.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-lev-w1" class="query-input" value="routter" style="max-width: 200px;">
+            <input type="text" id="lab-lev-w2" class="query-input" value="router" style="max-width: 200px;">
+            <button class="action-btn primary" onclick="runLabLevenshtein()">Compute DP Matrix</button>
+          </div>
+          <div id="lab-lev-results"></div>
+        </div>
+
+        <!-- Tool 6: N-Gram Generator -->
+        <div class="lab-tool-card" id="tool-ngram">
+          <h3>6. N-Gram Language Modeling & Perplexity</h3>
+          <div class="concept-box">
+            N-gram models predict the probability of word w_i conditioned on the preceding (n-1) words using maximum likelihood estimation. Laplace add-1 smoothing prevents zero probabilities, and perplexity measures the model's surprise on held-out text.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-ngram-input" class="query-input" value="how to reset">
+            <button class="action-btn primary" onclick="runLabNgram()">Predict Next Words</button>
+          </div>
+          <div id="lab-ngram-results"></div>
+        </div>
+
+        <!-- Tool 7: POS Taggers -->
+        <div class="lab-tool-card" id="tool-pos">
+          <h3>7. Part-of-Speech Tagging Side-by-Side</h3>
+          <div class="concept-box">
+            Compares 4 POS tagging paradigms: (a) Rule-based regex tagger, (b) Hidden Markov Model (HMM) with Viterbi decoding implemented from scratch, (c) Conditional Random Field (CRF) discriminative sequence model, (d) spaCy neural tagger.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-pos-input" class="query-input" value="Disconnect the power adapter and check the internet light">
+            <button class="action-btn primary" onclick="runLabPOS()">Tag Tokens</button>
+          </div>
+          <div id="lab-pos-results"></div>
+        </div>
+
+        <!-- Tool 8: Chunking -->
+        <div class="lab-tool-card" id="tool-chunking">
+          <h3>8. Syntactic Chunking (NP & VP)</h3>
+          <div class="concept-box">
+            Chunking segments sentences into non-overlapping syntactic phrases. NLTK RegexpParser applies regular expressions over POS tags to identify Noun Phrases (NP) and Verb Phrases (VP).
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-chunk-input" class="query-input" value="The blue WAN port connects the broadband modem quickly">
+            <button class="action-btn primary" onclick="runLabChunking()">Parse Chunks</button>
+          </div>
+          <div id="lab-chunk-results"></div>
+        </div>
+
+        <!-- Tool 9: NER -->
+        <div class="lab-tool-card" id="tool-ner">
+          <h3>9. Named Entity Recognition (NER)</h3>
+          <div class="concept-box">
+            Extracts domain-specific entities (COMPONENT, ERROR_CODE, SETTING, PRODUCT, MEASUREMENT, ACTION) comparing rule-based gazetteers, CRF sequence labeling, and general BERT transformer models.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-ner-input" class="query-input" value="Fix error code E-101 on the WAN port of Aurora AX3000 at 5 GHz">
+            <button class="action-btn primary" onclick="runLabNER()">Extract Entities</button>
+          </div>
+          <div id="lab-ner-results"></div>
+        </div>
+
+        <!-- Tool 10: TF-IDF -->
+        <div class="lab-tool-card" id="tool-tfidf">
+          <h3>10. TF-IDF Term-Document Matrix & Cosine Similarity</h3>
+          <div class="concept-box">
+            Constructs an explicit term-document matrix from scratch using tf(t, d) * idf(t) and ranks chunks with cosine similarity. Validated against scikit-learn TfidfVectorizer.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-tfidf-input" class="query-input" value="error code E-204 DNS failure">
+            <button class="action-btn primary" onclick="runLabTfidf()">Compute Matrix & Rank</button>
+          </div>
+          <div id="lab-tfidf-results"></div>
+        </div>
+
+        <!-- Tool 11: Word Vectors -->
+        <div class="lab-tool-card" id="tool-w2v">
+          <h3>11. Word2Vec Static Word Embeddings</h3>
+          <div class="concept-box">
+            Learns continuous distributed representations of words using Word2Vec Continuous Bag-of-Words (CBOW) and Skip-gram architectures trained directly on the manual text.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-w2v-input" class="query-input" value="router" style="max-width: 200px;">
+            <button class="action-btn primary" onclick="runLabVectors()">Find Nearest Neighbours</button>
+          </div>
+          <div id="lab-w2v-results"></div>
+        </div>
+
+        <!-- Tool 12: Sparse vs Dense -->
+        <div class="lab-tool-card" id="tool-sparse-dense">
+          <h3>12. Sparse vs Dense Feature Vector Representations</h3>
+          <div class="concept-box">
+            Contrasts high-dimensional sparse feature vectors (exact one-hot indicators for words, bigrams, and prefixes) against continuous 384-dimensional dense semantic embeddings.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-sd-input" class="query-input" value="Aurora AX3000 Wi-Fi 6 router delivers high speed">
+            <button class="action-btn primary" onclick="runLabSparseDense()">Inspect Representations</button>
+          </div>
+          <div id="lab-sd-results"></div>
+        </div>
+
+        <!-- Tool 13: Intent Classifier -->
+        <div class="lab-tool-card" id="tool-intent">
+          <h3>13. Intent Classification Comparison</h3>
+          <div class="concept-box">
+            Compares pure NumPy Multinomial Naive Bayes (log-priors + Laplace smoothed likelihoods) against Scikit-learn Logistic Regression across 7 customer support intent classes.
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="lab-intent-input" class="query-input" value="Why is the internet light flashing red?">
+            <button class="action-btn primary" onclick="runLabIntent()">Classify Intent</button>
+          </div>
+          <div id="lab-intent-results"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PAGE 3: METHOD EVOLUTION LAB (5 ERAS OF NLP) -->
+    <section id="evolution-page" class="page-view">
+      <div class="lab-container">
+        <div class="lab-header">
+          <h2>The Evolution of NLP Methods</h2>
+          <p>Run any question through 5 historical eras of Natural Language Processing to observe the leap from keyword matching to modern hybrid embeddings.</p>
+        </div>
+
+        <div class="lab-tool-card">
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="evolution-query-input" class="query-input" value="How do I resolve error code E-101 on the WAN port?">
+            <button class="action-btn primary" onclick="runMethodEvolution()">Run Across All 5 Eras ➔</button>
+          </div>
+        </div>
+
+        <!-- 5 Eras Cards Grid -->
+        <div class="era-cards-grid" id="evolution-cards-grid">
+          <!-- Filled by evolution.js -->
+        </div>
+
+        <!-- Historical Benchmark Accuracy Comparison Chart -->
+        <div class="lab-tool-card" style="margin-top: 1rem;">
+          <h3>Historical Paradigm Benchmark Accuracies (From Project Evaluation)</h3>
+          <div id="evolution-chart-container" style="padding: 1rem 0;">
+            <!-- SVG bar chart rendered by evolution.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: EVALUATION DASHBOARD -->
+    <section id="evaluation-page" class="page-view">
+      <div class="lab-container">
+        <div class="lab-header">
+          <h2>Experimental Evaluation & Benchmark Results</h2>
+          <p>Every number, table, and chart is computed directly by code in this repository with fixed random seeds (SEED=42). Zero invented results.</p>
+        </div>
+
+        <div id="eval-content-container">
+          <p style="color: var(--text-muted); text-align: center; padding: 2rem;">Loading verified evaluation results from /api/eval/results...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: MANUAL INGESTION & MANAGEMENT -->
+    <section id="manuals-page" class="page-view">
+      <div class="lab-container">
+        <div class="lab-header">
+          <h2>Manual Documents & Ingestion Engine</h2>
+          <p>Extracts text from PDF (PyMuPDF), Markdown, and TXT files. Automatically constructs section hierarchies, overlapping chunks, and tracks vocabulary.</p>
+        </div>
+
+        <!-- Upload Card -->
+        <div class="lab-tool-card">
+          <h3>Upload Product Manual (PDF, TXT, MD)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">
+            Note: Only text-based PDFs are supported. Scanned image-only PDFs without extractable text will be cleanly refused without OCR.
+          </p>
+          <div style="display: flex; gap: 0.75rem; align-items: center; margin-top: 0.5rem;">
+            <input type="file" id="manual-file-input" accept=".pdf,.txt,.md,.markdown" style="font-size: 0.9rem;">
+            <button class="action-btn primary" onclick="uploadManualFile()">Upload & Ingest</button>
+          </div>
+          <div id="upload-status" style="font-size: 0.88rem; font-weight: 600;"></div>
+        </div>
+
+        <!-- Available Manuals List -->
+        <div class="lab-tool-card">
+          <h3>Available Manuals in Library</h3>
+          <div id="manuals-list-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+            <!-- Rendered by manuals.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 6: ABOUT & COURSE OUTCOMES MAP -->
+    <section id="about-page" class="page-view">
+      <div class="lab-container">
+        <div class="lab-header">
+          <h2>About ManualMind & Syllabus Mapping</h2>
+          <p>Final Mini Project for the University Natural Language Processing Laboratory Course.</p>
+        </div>
+
+        <div class="lab-tool-card">
+          <h3>Course Outcome (CO) Alignment Map</h3>
+          <table class="frame-table">
+            <thead>
+              <tr>
+                <th style="width: 10%;">CO</th>
+                <th style="width: 30%;">Course Outcome Description</th>
+                <th style="width: 25%;">ManualMind Module Implementation</th>
+                <th style="width: 35%;">Examiner Verification Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>CO1</strong></td>
+                <td>Apply foundational NLP techniques: text cleaning, normalisation, tokenization, morphology, and edit distance.</td>
+                <td>Module M2 (Preprocessing Lab), Module M3 (Regex Patterns), Module M4 (Levenshtein from scratch).</td>
+                <td>BPE merge learning from scratch vs HuggingFace; Levenshtein DP matrix visualization with backtrace; regex tables.</td>
+              </tr>
+              <tr>
+                <td><strong>CO2</strong></td>
+                <td>Design and evaluate statistical Language Models using n-grams and smoothing methods.</td>
+                <td>Module M5 (N-gram Language Model: Unigram, Bigram, Trigram).</td>
+                <td>Laplace smoothing and Stupid Backoff from scratch; live query autocomplete; perplexity on held-out text.</td>
+              </tr>
+              <tr>
+                <td><strong>CO3</strong></td>
+                <td>Implement sequence labeling models for Part-of-Speech Tagging and Named Entity Recognition.</td>
+                <td>Module M6 (Rule-based, HMM Viterbi from scratch, CRF, spaCy POS taggers) & Module M7 (Domain NER).</td>
+                <td>Log-space Viterbi DP decoding; OOV accuracy comparison; 6-type domain entity extraction vs BERT baseline.</td>
+              </tr>
+              <tr>
+                <td><strong>CO4</strong></td>
+                <td>Analyze syntactic structure through chunking, dependency parsing, and semantic frame extraction.</td>
+                <td>Module M6 (Chunking & Dependency parsing) & Module M8 (Query Understanding Engine).</td>
+                <td>Standalone inline SVG dependency parse tree; semantic frame {action, object, modifiers, neg, modality, cond}; clause decomposition.</td>
+              </tr>
+              <tr>
+                <td><strong>CO5</strong></td>
+                <td>Implement vector representations, text classification, information retrieval, and question answering systems.</td>
+                <td>Module M9 (TF-IDF from scratch, BM25, Word2Vec, MiniLM, RRF), Module M10 (Naive Bayes), Module M11 (QA Reader).</td>
+                <td>Term-document matrix & cosine similarity vs scikit-learn; 7-intent classification; extractive reader with no-answer rejection.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="lab-tool-card">
+          <h3>Project Team Information</h3>
+          <table class="frame-table">
+            <thead>
+              <tr>
+                <th>Project Role</th>
+                <th>Responsibilities</th>
+                <th>Environment Specification</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>NLP Laboratory Team</strong></td>
+                <td>Full-Stack NLP Engineering, Algorithm Implementation, Model Evaluation</td>
+                <td>Python 3.11 / 3.13, CPU-only PyTorch, FastAPI, Vanilla JS, Zero external API dependencies</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Vendored Scripts & Modular Application JavaScript -->
+  <script src="/js/app.js"></script>
+  <script src="/js/assistant.js"></script>
+  <script src="/js/lab.js"></script>
+  <script src="/js/evolution.js"></script>
+  <script src="/js/evaluation.js"></script>
+  <script src="/js/manuals.js"></script>
+</body>
+</html>

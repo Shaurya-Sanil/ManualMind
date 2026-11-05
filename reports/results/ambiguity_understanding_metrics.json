@@ -1,0 +1,66 @@
+{
+  "ambiguity_guard_metrics": {
+    "precision": 100.0,
+    "recall": 86.67,
+    "f1": 92.86,
+    "accuracy": 90.0,
+    "total_benchmark_queries": 20
+  },
+  "understanding_layer_ablation": {
+    "queries_evaluated": 14,
+    "with_understanding_layer": {
+      "token_f1": 26.39,
+      "recall_at_1": 35.71
+    },
+    "without_understanding_layer_ablated": {
+      "token_f1": 21.54,
+      "recall_at_1": 42.86
+    },
+    "absolute_f1_improvement": 4.85,
+    "relative_f1_gain_percent": 22.52
+  },
+  "sample_ablations": [
+    {
+      "id": "qa_25_turn2",
+      "raw_query": "How do I reset it?",
+      "rewritten_query": "How do I reset the AX3000?",
+      "f1_with_understanding": 0.2143,
+      "f1_without_understanding": 0.4516
+    },
+    {
+      "id": "qa_26_turn2",
+      "raw_query": "How can I enable it?",
+      "rewritten_query": "How can I enable the network?",
+      "f1_with_understanding": 0.0952,
+      "f1_without_understanding": 0.2857
+    },
+    {
+      "id": "qa_27_turn2",
+      "raw_query": "What should I connect to that?",
+      "rewritten_query": "What should I connect to the port?",
+      "f1_with_understanding": 0.2439,
+      "f1_without_understanding": 0.1579
+    },
+    {
+      "id": "qa_28_turn2",
+      "raw_query": "Can I replace this one with a third-party charger?",
+      "rewritten_query": "Can I replace the power one with a third-party charger?",
+      "f1_with_understanding": 0.0,
+      "f1_without_understanding": 0.2105
+    },
+    {
+      "id": "qa_29_turn2",
+      "raw_query": "How do I install that?",
+      "rewritten_query": "How do I install the firmware?",
+      "f1_with_understanding": 0.16,
+      "f1_without_understanding": 0.08
+    },
+    {
+      "id": "qa_30_turn2",
+      "raw_query": "How should I position them?",
+      "rewritten_query": "How should I position the antennas?",
+      "f1_with_understanding": 0.6857,
+      "f1_without_understanding": 0.0
+    }
+  ]
+}

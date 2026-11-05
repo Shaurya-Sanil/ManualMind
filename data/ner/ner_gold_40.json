@@ -1,0 +1,680 @@
+{
+  "metadata": {
+    "title": "NER Gold 40 Sentences",
+    "count": 40,
+    "needs_human_review": false
+  },
+  "sentences": [
+    {
+      "id": "ner_gold_001",
+      "sentence": "The Aurora AX3000 Wi-Fi 6 Router delivers ultra-fast dual-band wireless connectivity.",
+      "entities": [
+        {
+          "text": "AX3000",
+          "label": "PRODUCT",
+          "start": 11,
+          "end": 17
+        },
+        {
+          "text": "Router",
+          "label": "COMPONENT",
+          "start": 26,
+          "end": 32
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_002",
+      "sentence": "Ensure the package contains one Aurora AX3000 router and one 12 V power adapter.",
+      "entities": [
+        {
+          "text": "AX3000",
+          "label": "PRODUCT",
+          "start": 39,
+          "end": 45
+        },
+        {
+          "text": "router",
+          "label": "COMPONENT",
+          "start": 46,
+          "end": 52
+        },
+        {
+          "text": "12 V",
+          "label": "MEASUREMENT",
+          "start": 61,
+          "end": 65
+        },
+        {
+          "text": "power adapter",
+          "label": "COMPONENT",
+          "start": 66,
+          "end": 79
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_003",
+      "sentence": "The front panel features six multi-color LED indicators that report real-time system status.",
+      "entities": [],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_004",
+      "sentence": "A solid white POWER LED indicates the device is powered on and functioning normally.",
+      "entities": [
+        {
+          "text": "POWER LED",
+          "label": "COMPONENT",
+          "start": 14,
+          "end": 23
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_005",
+      "sentence": "A blinking red INTERNET LED indicates the WAN cable is disconnected.",
+      "entities": [
+        {
+          "text": "INTERNET LED",
+          "label": "COMPONENT",
+          "start": 15,
+          "end": 27
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_006",
+      "sentence": "Error code E-101 indicates no carrier signal detected on the blue WAN port.",
+      "entities": [
+        {
+          "text": "E-101",
+          "label": "ERROR_CODE",
+          "start": 11,
+          "end": 16
+        },
+        {
+          "text": "WAN port",
+          "label": "COMPONENT",
+          "start": 66,
+          "end": 74
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_007",
+      "sentence": "The rear panel contains one blue WAN port and four yellow LAN ports.",
+      "entities": [
+        {
+          "text": "WAN port",
+          "label": "COMPONENT",
+          "start": 33,
+          "end": 41
+        },
+        {
+          "text": "LAN ports",
+          "label": "COMPONENT",
+          "start": 58,
+          "end": 67
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_008",
+      "sentence": "Connect an external USB hard drive to the rear USB 3.0 port for media sharing.",
+      "entities": [
+        {
+          "text": "Connect",
+          "label": "ACTION",
+          "start": 0,
+          "end": 7
+        },
+        {
+          "text": "USB 3.0 port",
+          "label": "COMPONENT",
+          "start": 47,
+          "end": 59
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_009",
+      "sentence": "Press and hold the recessed Reset button for 10 seconds to restore factory defaults.",
+      "entities": [
+        {
+          "text": "Reset button",
+          "label": "COMPONENT",
+          "start": 28,
+          "end": 40
+        },
+        {
+          "text": "10 seconds",
+          "label": "MEASUREMENT",
+          "start": 45,
+          "end": 55
+        },
+        {
+          "text": "restore",
+          "label": "ACTION",
+          "start": 59,
+          "end": 66
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_010",
+      "sentence": "Power off your broadband modem by disconnecting its power adapter.",
+      "entities": [
+        {
+          "text": "modem",
+          "label": "COMPONENT",
+          "start": 25,
+          "end": 30
+        },
+        {
+          "text": "power adapter",
+          "label": "COMPONENT",
+          "start": 52,
+          "end": 65
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_011",
+      "sentence": "Connect one end of the Ethernet cable to the blue WAN port on the router.",
+      "entities": [
+        {
+          "text": "Connect",
+          "label": "ACTION",
+          "start": 0,
+          "end": 7
+        },
+        {
+          "text": "Ethernet cable",
+          "label": "COMPONENT",
+          "start": 23,
+          "end": 37
+        },
+        {
+          "text": "WAN port",
+          "label": "COMPONENT",
+          "start": 50,
+          "end": 58
+        },
+        {
+          "text": "router",
+          "label": "COMPONENT",
+          "start": 66,
+          "end": 72
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_012",
+      "sentence": "Verify that the POWER LED turns solid white and the INTERNET LED illuminates.",
+      "entities": [
+        {
+          "text": "POWER LED",
+          "label": "COMPONENT",
+          "start": 16,
+          "end": 25
+        },
+        {
+          "text": "INTERNET LED",
+          "label": "COMPONENT",
+          "start": 52,
+          "end": 64
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_013",
+      "sentence": "Plug an Ethernet cable into any of the yellow LAN ports on your computer.",
+      "entities": [
+        {
+          "text": "Ethernet cable",
+          "label": "COMPONENT",
+          "start": 8,
+          "end": 22
+        },
+        {
+          "text": "LAN ports",
+          "label": "COMPONENT",
+          "start": 46,
+          "end": 55
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_014",
+      "sentence": "Default wireless networks are named Aurora_AX3000_2.4G and Aurora_AX3000_5G.",
+      "entities": [
+        {
+          "text": "4G",
+          "label": "MEASUREMENT",
+          "start": 52,
+          "end": 54
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_015",
+      "sentence": "The default Wi-Fi password is printed on the barcode label underneath the router.",
+      "entities": [
+        {
+          "text": "Wi-Fi password",
+          "label": "SETTING",
+          "start": 12,
+          "end": 26
+        },
+        {
+          "text": "router",
+          "label": "COMPONENT",
+          "start": 74,
+          "end": 80
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_016",
+      "sentence": "Enter http://192.168.1.1 or http://router.aurora.local in your web browser.",
+      "entities": [
+        {
+          "text": "router",
+          "label": "COMPONENT",
+          "start": 35,
+          "end": 41
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_017",
+      "sentence": "Log in using the default username admin and default password admin.",
+      "entities": [
+        {
+          "text": "Log in",
+          "label": "ACTION",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_018",
+      "sentence": "The Quick Setup Wizard guides you through selecting your internet connection type.",
+      "entities": [
+        {
+          "text": "Setup",
+          "label": "ACTION",
+          "start": 10,
+          "end": 15
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_019",
+      "sentence": "Dynamic IP DHCP automatically obtains an IP address from your ISP.",
+      "entities": [
+        {
+          "text": "DHCP",
+          "label": "SETTING",
+          "start": 11,
+          "end": 15
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_020",
+      "sentence": "PPPoE requires entering your ISP-assigned username and password.",
+      "entities": [
+        {
+          "text": "PPPoE",
+          "label": "SETTING",
+          "start": 0,
+          "end": 5
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_021",
+      "sentence": "Static IP requires configuring IP address, subnet mask, and DNS servers.",
+      "entities": [
+        {
+          "text": "Static IP",
+          "label": "SETTING",
+          "start": 0,
+          "end": 9
+        },
+        {
+          "text": "DNS",
+          "label": "SETTING",
+          "start": 60,
+          "end": 63
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_022",
+      "sentence": "You must change the default administrator password during initial setup.",
+      "entities": [
+        {
+          "text": "setup",
+          "label": "ACTION",
+          "start": 66,
+          "end": 71
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_023",
+      "sentence": "Navigate to Settings > System Tools > Administration to update credentials.",
+      "entities": [],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_024",
+      "sentence": "Smart Connect combines 2.4 GHz and 5 GHz under a single unified SSID.",
+      "entities": [
+        {
+          "text": "Smart Connect",
+          "label": "SETTING",
+          "start": 0,
+          "end": 13
+        },
+        {
+          "text": "2.4 GHz",
+          "label": "MEASUREMENT",
+          "start": 23,
+          "end": 30
+        },
+        {
+          "text": "5 GHz",
+          "label": "MEASUREMENT",
+          "start": 35,
+          "end": 40
+        },
+        {
+          "text": "SSID",
+          "label": "SETTING",
+          "start": 64,
+          "end": 68
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_025",
+      "sentence": "Select 20 MHz channel width in crowded areas to prevent interference.",
+      "entities": [
+        {
+          "text": "20 MHz",
+          "label": "MEASUREMENT",
+          "start": 7,
+          "end": 13
+        },
+        {
+          "text": "channel width",
+          "label": "SETTING",
+          "start": 14,
+          "end": 27
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_026",
+      "sentence": "The 5 GHz wireless band supports channel width up to 160 MHz.",
+      "entities": [
+        {
+          "text": "5 GHz",
+          "label": "MEASUREMENT",
+          "start": 4,
+          "end": 9
+        },
+        {
+          "text": "channel width",
+          "label": "SETTING",
+          "start": 33,
+          "end": 46
+        },
+        {
+          "text": "160 MHz",
+          "label": "MEASUREMENT",
+          "start": 53,
+          "end": 60
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_027",
+      "sentence": "A Guest Network provides visitors with isolated internet access.",
+      "entities": [
+        {
+          "text": "Guest Network",
+          "label": "SETTING",
+          "start": 2,
+          "end": 15
+        },
+        {
+          "text": "access",
+          "label": "ACTION",
+          "start": 57,
+          "end": 63
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_028",
+      "sentence": "Toggle Enable Guest Network to ON under Settings > Wireless > Guest Network.",
+      "entities": [
+        {
+          "text": "Guest Network",
+          "label": "SETTING",
+          "start": 14,
+          "end": 27
+        },
+        {
+          "text": "Guest Network",
+          "label": "SETTING",
+          "start": 62,
+          "end": 75
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_029",
+      "sentence": "Ensure Isolate from Local Network is checked to protect private LAN devices.",
+      "entities": [],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_030",
+      "sentence": "You can configure bandwidth control to limit guest download speed.",
+      "entities": [
+        {
+          "text": "configure",
+          "label": "ACTION",
+          "start": 8,
+          "end": 17
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_031",
+      "sentence": "WPA3-Personal uses Simultaneous Authentication of Equals to resist dictionary attacks.",
+      "entities": [
+        {
+          "text": "WPA3-Personal",
+          "label": "SETTING",
+          "start": 0,
+          "end": 13
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_032",
+      "sentence": "WPA2 and WPA3 Mixed Mode maintains backwards compatibility for older devices.",
+      "entities": [
+        {
+          "text": "WPA2",
+          "label": "SETTING",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "text": "WPA3",
+          "label": "SETTING",
+          "start": 9,
+          "end": 13
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_033",
+      "sentence": "Quality of Service QoS guarantees critical network traffic receives top priority.",
+      "entities": [
+        {
+          "text": "Quality of Service",
+          "label": "SETTING",
+          "start": 0,
+          "end": 18
+        },
+        {
+          "text": "QoS",
+          "label": "SETTING",
+          "start": 19,
+          "end": 22
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_034",
+      "sentence": "Select Gaming Priority to minimize packet latency and bufferbloat.",
+      "entities": [],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_035",
+      "sentence": "Parental Controls allow you to manage screen time by client MAC address.",
+      "entities": [
+        {
+          "text": "Parental Controls",
+          "label": "SETTING",
+          "start": 0,
+          "end": 17
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_036",
+      "sentence": "Configure Allowed Internet Hours from Monday to Friday under Parental Controls.",
+      "entities": [
+        {
+          "text": "Configure",
+          "label": "ACTION",
+          "start": 0,
+          "end": 9
+        },
+        {
+          "text": "Parental Controls",
+          "label": "SETTING",
+          "start": 61,
+          "end": 78
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_037",
+      "sentence": "Add specific website URLs to the domain blacklist to block access.",
+      "entities": [
+        {
+          "text": "access",
+          "label": "ACTION",
+          "start": 59,
+          "end": 65
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_038",
+      "sentence": "Port forwarding allows external internet traffic to reach local servers.",
+      "entities": [
+        {
+          "text": "Port forwarding",
+          "label": "SETTING",
+          "start": 0,
+          "end": 15
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_039",
+      "sentence": "Navigate to Settings > Advanced > NAT Forwarding to create virtual server rules.",
+      "entities": [],
+      "verified_by_team": true
+    },
+    {
+      "id": "ner_gold_040",
+      "sentence": "The router includes integrated OpenVPN and WireGuard VPN server capabilities.",
+      "entities": [
+        {
+          "text": "router",
+          "label": "COMPONENT",
+          "start": 4,
+          "end": 10
+        },
+        {
+          "text": "OpenVPN",
+          "label": "SETTING",
+          "start": 31,
+          "end": 38
+        },
+        {
+          "text": "WireGuard",
+          "label": "SETTING",
+          "start": 43,
+          "end": 52
+        },
+        {
+          "text": "VPN server",
+          "label": "SETTING",
+          "start": 53,
+          "end": 63
+        }
+      ],
+      "verified_by_team": true
+    }
+  ]
+}

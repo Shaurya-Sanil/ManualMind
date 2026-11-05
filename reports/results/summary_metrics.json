@@ -1,0 +1,909 @@
+{
+  "timestamp": "2026-11-05 21:01:51",
+  "total_evaluation_time_seconds": 591.36,
+  "random_seed": 42,
+  "retrieval": {
+    "retrieval_models": {
+      "tfidf": {
+        "Recall@1": 80.77,
+        "Recall@3": 92.31,
+        "Recall@5": 96.15,
+        "MRR": 0.8686
+      },
+      "bm25": {
+        "Recall@1": 76.92,
+        "Recall@3": 92.31,
+        "Recall@5": 96.15,
+        "MRR": 0.8494
+      },
+      "w2v_cbow": {
+        "Recall@1": 67.31,
+        "Recall@3": 82.69,
+        "Recall@5": 92.31,
+        "MRR": 0.7699
+      },
+      "w2v_skipgram": {
+        "Recall@1": 71.15,
+        "Recall@3": 88.46,
+        "Recall@5": 92.31,
+        "MRR": 0.8035
+      },
+      "dense": {
+        "Recall@1": 80.77,
+        "Recall@3": 94.23,
+        "Recall@5": 98.08,
+        "MRR": 0.875
+      },
+      "hybrid": {
+        "Recall@1": 88.46,
+        "Recall@3": 96.15,
+        "Recall@5": 100.0,
+        "MRR": 0.9295
+      }
+    },
+    "preprocessing_ablation": {
+      "raw": {
+        "Recall@1": 46.15,
+        "Recall@5": 75.0,
+        "MRR": 0.584
+      },
+      "stopwords_removed": {
+        "Recall@1": 61.54,
+        "Recall@5": 75.0,
+        "MRR": 0.6763
+      },
+      "stemming": {
+        "Recall@1": 46.15,
+        "Recall@5": 69.23,
+        "MRR": 0.5593
+      },
+      "lemmatization": {
+        "Recall@1": 46.15,
+        "Recall@5": 73.08,
+        "MRR": 0.5769
+      }
+    },
+    "total_test_queries": 52
+  },
+  "answering": {
+    "token_f1": 14.33,
+    "exact_match_rate": 3.85,
+    "correct_section_rate": 69.23,
+    "no_answer_out_of_scope_accuracy": 100.0,
+    "in_scope_evaluated": 52,
+    "out_of_scope_evaluated": 8,
+    "sample_evaluations": [
+      {
+        "id": "qa_01",
+        "question": "What is the default IP address to access the router Web GUI?",
+        "target_answer": "http://192.168.1.1 or http://router.aurora.local",
+        "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
+        "token_f1": 0.0958,
+        "exact_match": false,
+        "correct_section": true
+      },
+      {
+        "id": "qa_02",
+        "question": "What are the default login credentials for the admin account?",
+        "target_answer": "Default username is admin and default password is admin",
+        "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
+        "token_f1": 0.0854,
+        "exact_match": false,
+        "correct_section": true
+      },
+      {
+        "id": "qa_03",
+        "question": "What is the default 5 GHz Wi-Fi SSID and password?",
+        "target_answer": "Aurora_AX3000_5G with default password aurora99pass",
+        "predicted_answer": "4 GHz and 5 GHz under a single unified SSID.",
+        "token_f1": 0.0,
+        "exact_match": false,
+        "correct_section": false
+      },
+      {
+        "id": "qa_04",
+        "question": "Where should I connect the Ethernet cable coming from my modem?",
+        "target_answer": "Connect to the blue WAN port on the router",
+        "predicted_answer": "According to Section '2. Quick Start and Hardware Installation > 2.2 Establishing Connection', follow these steps:\n1. Power off your broadband modem by disconne",
+        "token_f1": 0.0845,
+        "exact_match": false,
+        "correct_section": true
+      },
+      {
+        "id": "qa_05",
+        "question": "How do I enable and isolate the guest network?",
+        "target_answer": "Go to Settings > Wireless > Guest Network, toggle to ON, and check Isolate from Local Network (AP Isolation)",
+        "predicted_answer": "According to Section '4. Wireless Network Configuration > 4.3 Wi-Fi Security Protocols (WPA2 vs WPA3)', follow these steps:\n1. Go to Settings > Wireless > Guest",
+        "token_f1": 0.1697,
+        "exact_match": false,
+        "correct_section": true
+      },
+      {
+        "id": "qa_06",
+        "question": "How do I perform a factory reset using the physical button?",
+        "target_answer": "Press and hold the recessed Reset button on the rear panel for 10 seconds with a paperclip until all LEDs flash amber",
+        "predicted_answer": "According to Section '6. System Maintenance and Recovery > 6.3 Factory Reset and Reboot Methods', follow these steps:\n1. Soft Reset via Web GUI: Navigate to Set",
+        "token_f1": 0.25,
+        "exact_match": false,
+        "correct_section": true
+      },
+      {
+        "id": "qa_07",
+        "question": "What is the maximum Wi-Fi 6 speed on the 5 GHz band?",
+        "target_answer": "Up to 2402 Mbps using 160 MHz channel width",
+        "predicted_answer": "\u2022 5 GHz Band Configuration: - Channel Width: Up to 160 MHz for maximum Wi-Fi 6 theoretical throughput (2402 Mbps).",
+        "token_f1": 0.5385,
+        "exact_match": false,
+        "correct_section": false
+      },
+      {
+        "id": "qa_08",
+        "question": "What does a blinking red internet LED mean?",
+        "target_answer": "WAN cable is disconnected or no carrier signal detected from modem (Error code E-101)",
+        "predicted_answer": "According to Section '5 GHz WI-FI', follow these steps:\n1. INTERNET (WAN) Off None WAN port is disconnected or Ethernet cable is damaged. Solid White\n2. 4 GHz w",
+        "token_f1": 0.0952,
+        "exact_match": false,
+        "correct_section": false
+      },
+      {
+        "id": "qa_09",
+        "question": "What power adapter specifications are required for the router?",
+        "target_answer": "Input: 100-240V AC 50/60Hz, Output: 12 V DC, 2.0 A",
+        "predicted_answer": "5A maximum output) Buttons Hardware Controls Power On/Off, Reset (recessed pin-hole), WPS button Power Power Supply External AC/DC Adapter; Input: 100-240V 50/6",
+        "token_f1": 0.5,
+        "exact_match": false,
+        "correct_section": false
+      },
+      {
+        "id": "qa_10",
+        "question": "What is the toll-free customer support phone number?",
+        "target_answer": "+1-800-555-0199",
+        "predicted_answer": "For technical assistance, driver downloads, warranty claims, and knowledgebase articles: \u2022 Technical Support Phone: +1-800-555-0199 (Toll-Free USA & Canada) \u2022 I",
+        "token_f1": 0.2222,
+        "exact_match": true,
+        "correct_section": true
+      }
+    ]
+  },
+  "intent": {
+    "classes": [
+      "troubleshooting",
+      "setup_install",
+      "how_to_usage",
+      "specifications",
+      "warranty_support",
+      "safety",
+      "out_of_scope"
+    ],
+    "total_test_samples": 164,
+    "naive_bayes_scratch": {
+      "accuracy": 82.93,
+      "macro_precision": 84.54,
+      "macro_recall": 83.82,
+      "macro_f1": 82.93,
+      "per_class": {
+        "troubleshooting": {
+          "precision": 96.0,
+          "recall": 96.0,
+          "f1": 96.0
+        },
+        "setup_install": {
+          "precision": 79.17,
+          "recall": 76.0,
+          "f1": 77.55
+        },
+        "how_to_usage": {
+          "precision": 73.68,
+          "recall": 56.0,
+          "f1": 63.64
+        },
+        "specifications": {
+          "precision": 69.44,
+          "recall": 100.0,
+          "f1": 81.97
+        },
+        "warranty_support": {
+          "precision": 95.24,
+          "recall": 100.0,
+          "f1": 97.56
+        },
+        "safety": {
+          "precision": 78.26,
+          "recall": 94.74,
+          "f1": 85.71
+        },
+        "out_of_scope": {
+          "precision": 100.0,
+          "recall": 64.0,
+          "f1": 78.05
+        }
+      },
+      "confusion_matrix": [
+        [
+          24,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          19,
+          1,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          5,
+          14,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          25,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          20,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          18,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          5,
+          16
+        ]
+      ]
+    },
+    "logistic_regression_sklearn": {
+      "accuracy": 73.78,
+      "macro_precision": 82.96,
+      "macro_recall": 71.62,
+      "macro_f1": 71.71,
+      "per_class": {
+        "troubleshooting": {
+          "precision": 89.29,
+          "recall": 100.0,
+          "f1": 94.34
+        },
+        "setup_install": {
+          "precision": 70.37,
+          "recall": 76.0,
+          "f1": 73.08
+        },
+        "how_to_usage": {
+          "precision": 92.31,
+          "recall": 48.0,
+          "f1": 63.16
+        },
+        "specifications": {
+          "precision": 45.45,
+          "recall": 100.0,
+          "f1": 62.5
+        },
+        "warranty_support": {
+          "precision": 100.0,
+          "recall": 55.0,
+          "f1": 70.97
+        },
+        "safety": {
+          "precision": 83.33,
+          "recall": 26.32,
+          "f1": 40.0
+        },
+        "out_of_scope": {
+          "precision": 100.0,
+          "recall": 96.0,
+          "f1": 97.96
+        }
+      },
+      "confusion_matrix": [
+        [
+          25,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          19,
+          1,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          12,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          25,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          9,
+          11,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          11,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          24
+        ]
+      ]
+    }
+  },
+  "pos": {
+    "total_tokens_evaluated": 1266,
+    "oov_tokens_count": 503,
+    "taggers": {
+      "rule_based": {
+        "overall_accuracy": 52.21,
+        "oov_accuracy": 59.24,
+        "macro_f1": 42.79,
+        "per_tag": {
+          "NOUN": {
+            "precision": 52.95,
+            "recall": 93.49,
+            "f1": 67.61
+          },
+          "VERB": {
+            "precision": 50.0,
+            "recall": 36.17,
+            "f1": 41.98
+          },
+          "ADJ": {
+            "precision": 66.04,
+            "recall": 31.25,
+            "f1": 42.42
+          },
+          "ADV": {
+            "precision": 100.0,
+            "recall": 53.33,
+            "f1": 69.57
+          },
+          "PRON": {
+            "precision": 100.0,
+            "recall": 25.0,
+            "f1": 40.0
+          },
+          "DET": {
+            "precision": 96.43,
+            "recall": 98.78,
+            "f1": 97.59
+          },
+          "ADP": {
+            "precision": 79.44,
+            "recall": 85.86,
+            "f1": 82.52
+          },
+          "NUM": {
+            "precision": 75.51,
+            "recall": 68.52,
+            "f1": 71.84
+          },
+          "CONJ": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PRT": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          ".": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "X": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "hmm_viterbi_scratch": {
+        "overall_accuracy": 43.44,
+        "oov_accuracy": 22.66,
+        "macro_f1": 40.36,
+        "per_tag": {
+          "NOUN": {
+            "precision": 71.54,
+            "recall": 47.14,
+            "f1": 56.83
+          },
+          "VERB": {
+            "precision": 49.33,
+            "recall": 52.48,
+            "f1": 50.86
+          },
+          "ADJ": {
+            "precision": 57.28,
+            "recall": 52.68,
+            "f1": 54.88
+          },
+          "ADV": {
+            "precision": 30.56,
+            "recall": 73.33,
+            "f1": 43.14
+          },
+          "PRON": {
+            "precision": 51.43,
+            "recall": 90.0,
+            "f1": 65.45
+          },
+          "DET": {
+            "precision": 67.21,
+            "recall": 100.0,
+            "f1": 80.39
+          },
+          "ADP": {
+            "precision": 78.72,
+            "recall": 74.75,
+            "f1": 76.68
+          },
+          "NUM": {
+            "precision": 39.84,
+            "recall": 94.44,
+            "f1": 56.04
+          },
+          "CONJ": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PRT": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          ".": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "X": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "crf_suite": {
+        "overall_accuracy": 55.37,
+        "oov_accuracy": 54.67,
+        "macro_f1": 50.72,
+        "per_tag": {
+          "NOUN": {
+            "precision": 59.41,
+            "recall": 83.85,
+            "f1": 69.55
+          },
+          "VERB": {
+            "precision": 58.9,
+            "recall": 60.99,
+            "f1": 59.93
+          },
+          "ADJ": {
+            "precision": 55.26,
+            "recall": 56.25,
+            "f1": 55.75
+          },
+          "ADV": {
+            "precision": 57.89,
+            "recall": 73.33,
+            "f1": 64.71
+          },
+          "PRON": {
+            "precision": 100.0,
+            "recall": 85.0,
+            "f1": 91.89
+          },
+          "DET": {
+            "precision": 98.8,
+            "recall": 100.0,
+            "f1": 99.39
+          },
+          "ADP": {
+            "precision": 84.78,
+            "recall": 78.79,
+            "f1": 81.68
+          },
+          "NUM": {
+            "precision": 95.45,
+            "recall": 77.78,
+            "f1": 85.71
+          },
+          "CONJ": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PRT": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          ".": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "X": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "spacy": {
+        "overall_accuracy": 98.5,
+        "oov_accuracy": 97.61,
+        "macro_f1": 74.16,
+        "per_tag": {
+          "NOUN": {
+            "precision": 97.69,
+            "recall": 98.96,
+            "f1": 98.32
+          },
+          "VERB": {
+            "precision": 99.28,
+            "recall": 97.87,
+            "f1": 98.57
+          },
+          "ADJ": {
+            "precision": 99.06,
+            "recall": 93.75,
+            "f1": 96.33
+          },
+          "ADV": {
+            "precision": 100.0,
+            "recall": 100.0,
+            "f1": 100.0
+          },
+          "PRON": {
+            "precision": 100.0,
+            "recall": 100.0,
+            "f1": 100.0
+          },
+          "DET": {
+            "precision": 100.0,
+            "recall": 100.0,
+            "f1": 100.0
+          },
+          "ADP": {
+            "precision": 99.0,
+            "recall": 100.0,
+            "f1": 99.5
+          },
+          "NUM": {
+            "precision": 98.11,
+            "recall": 96.3,
+            "f1": 97.2
+          },
+          "CONJ": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "PRT": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          ".": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "X": {
+            "precision": 100.0,
+            "recall": 100.0,
+            "f1": 100.0
+          }
+        }
+      }
+    }
+  },
+  "ner": {
+    "rule_based_ner": {
+      "macro_f1": 100.0,
+      "per_entity_type": {
+        "COMPONENT": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 22
+        },
+        "ERROR_CODE": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 1
+        },
+        "SETTING": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 23
+        },
+        "PRODUCT": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 2
+        },
+        "MEASUREMENT": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 8
+        },
+        "ACTION": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 10
+        }
+      }
+    },
+    "statistical_crf_ner": {
+      "macro_f1": 67.72,
+      "per_entity_type": {
+        "COMPONENT": {
+          "precision": 80.0,
+          "recall": 54.55,
+          "f1": 64.86,
+          "support": 22
+        },
+        "ERROR_CODE": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 1
+        },
+        "SETTING": {
+          "precision": 64.29,
+          "recall": 39.13,
+          "f1": 48.65,
+          "support": 23
+        },
+        "PRODUCT": {
+          "precision": 100.0,
+          "recall": 50.0,
+          "f1": 66.67,
+          "support": 2
+        },
+        "MEASUREMENT": {
+          "precision": 85.71,
+          "recall": 75.0,
+          "f1": 80.0,
+          "support": 8
+        },
+        "ACTION": {
+          "precision": 100.0,
+          "recall": 30.0,
+          "f1": 46.15,
+          "support": 10
+        }
+      }
+    },
+    "transformer_baseline_bert": {
+      "macro_f1": 0.0,
+      "per_entity_type": {
+        "COMPONENT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 22
+        },
+        "ERROR_CODE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "SETTING": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 23
+        },
+        "PRODUCT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "MEASUREMENT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        "ACTION": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        }
+      },
+      "explanation": "General BERT-base-NER trained on CoNLL (PER/ORG/LOC) misses specialized router domain entities."
+    }
+  },
+  "ambiguity_understanding": {
+    "ambiguity_guard_metrics": {
+      "precision": 100.0,
+      "recall": 86.67,
+      "f1": 92.86,
+      "accuracy": 90.0,
+      "total_benchmark_queries": 20
+    },
+    "understanding_layer_ablation": {
+      "queries_evaluated": 14,
+      "with_understanding_layer": {
+        "token_f1": 26.39,
+        "recall_at_1": 35.71
+      },
+      "without_understanding_layer_ablated": {
+        "token_f1": 21.54,
+        "recall_at_1": 42.86
+      },
+      "absolute_f1_improvement": 4.85,
+      "relative_f1_gain_percent": 22.52
+    },
+    "sample_ablations": [
+      {
+        "id": "qa_25_turn2",
+        "raw_query": "How do I reset it?",
+        "rewritten_query": "How do I reset the AX3000?",
+        "f1_with_understanding": 0.2143,
+        "f1_without_understanding": 0.4516
+      },
+      {
+        "id": "qa_26_turn2",
+        "raw_query": "How can I enable it?",
+        "rewritten_query": "How can I enable the network?",
+        "f1_with_understanding": 0.0952,
+        "f1_without_understanding": 0.2857
+      },
+      {
+        "id": "qa_27_turn2",
+        "raw_query": "What should I connect to that?",
+        "rewritten_query": "What should I connect to the port?",
+        "f1_with_understanding": 0.2439,
+        "f1_without_understanding": 0.1579
+      },
+      {
+        "id": "qa_28_turn2",
+        "raw_query": "Can I replace this one with a third-party charger?",
+        "rewritten_query": "Can I replace the power one with a third-party charger?",
+        "f1_with_understanding": 0.0,
+        "f1_without_understanding": 0.2105
+      },
+      {
+        "id": "qa_29_turn2",
+        "raw_query": "How do I install that?",
+        "rewritten_query": "How do I install the firmware?",
+        "f1_with_understanding": 0.16,
+        "f1_without_understanding": 0.08
+      },
+      {
+        "id": "qa_30_turn2",
+        "raw_query": "How should I position them?",
+        "rewritten_query": "How should I position the antennas?",
+        "f1_with_understanding": 0.6857,
+        "f1_without_understanding": 0.0
+      }
+    ]
+  },
+  "ngram_latency": {
+    "ngram_language_model": {
+      "unigram_perplexity": 819.71,
+      "bigram_perplexity": 600.88,
+      "trigram_perplexity": 744.73,
+      "top3_next_word_accuracy": 35.0,
+      "test_trials_count": 200
+    },
+    "pipeline_latency_benchmarks": {
+      "preprocessing_spelling": {
+        "median_ms": 9.25,
+        "p95_ms": 23.81,
+        "mean_ms": 10.51
+      },
+      "linguistic_analysis": {
+        "median_ms": 39.85,
+        "p95_ms": 53.87,
+        "mean_ms": 41.5
+      },
+      "ambiguity_guard": {
+        "median_ms": 17.08,
+        "p95_ms": 23.09,
+        "mean_ms": 17.78
+      },
+      "intent_classification": {
+        "median_ms": 0.1,
+        "p95_ms": 0.17,
+        "mean_ms": 0.11
+      },
+      "hybrid_retrieval": {
+        "median_ms": 8.08,
+        "p95_ms": 10.79,
+        "mean_ms": 8.17
+      },
+      "answer_composition": {
+        "median_ms": 452.79,
+        "p95_ms": 488.54,
+        "mean_ms": 456.24
+      },
+      "end_to_end": {
+        "median_ms": 527.56,
+        "p95_ms": 569.5,
+        "mean_ms": 534.32
+      }
+    },
+    "target_met": true
+  }
+}

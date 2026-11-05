@@ -1,0 +1,100 @@
+{
+  "token_f1": 14.33,
+  "exact_match_rate": 3.85,
+  "correct_section_rate": 69.23,
+  "no_answer_out_of_scope_accuracy": 100.0,
+  "in_scope_evaluated": 52,
+  "out_of_scope_evaluated": 8,
+  "sample_evaluations": [
+    {
+      "id": "qa_01",
+      "question": "What is the default IP address to access the router Web GUI?",
+      "target_answer": "http://192.168.1.1 or http://router.aurora.local",
+      "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
+      "token_f1": 0.0958,
+      "exact_match": false,
+      "correct_section": true
+    },
+    {
+      "id": "qa_02",
+      "question": "What are the default login credentials for the admin account?",
+      "target_answer": "Default username is admin and default password is admin",
+      "predicted_answer": "According to Section '3. Web GUI and Initial Setup Wizard > 3.3 Administrator Account Protection', follow these steps:\n1. Open a web browser on a device connect",
+      "token_f1": 0.0854,
+      "exact_match": false,
+      "correct_section": true
+    },
+    {
+      "id": "qa_03",
+      "question": "What is the default 5 GHz Wi-Fi SSID and password?",
+      "target_answer": "Aurora_AX3000_5G with default password aurora99pass",
+      "predicted_answer": "4 GHz and 5 GHz under a single unified SSID.",
+      "token_f1": 0.0,
+      "exact_match": false,
+      "correct_section": false
+    },
+    {
+      "id": "qa_04",
+      "question": "Where should I connect the Ethernet cable coming from my modem?",
+      "target_answer": "Connect to the blue WAN port on the router",
+      "predicted_answer": "According to Section '2. Quick Start and Hardware Installation > 2.2 Establishing Connection', follow these steps:\n1. Power off your broadband modem by disconne",
+      "token_f1": 0.0845,
+      "exact_match": false,
+      "correct_section": true
+    },
+    {
+      "id": "qa_05",
+      "question": "How do I enable and isolate the guest network?",
+      "target_answer": "Go to Settings > Wireless > Guest Network, toggle to ON, and check Isolate from Local Network (AP Isolation)",
+      "predicted_answer": "According to Section '4. Wireless Network Configuration > 4.3 Wi-Fi Security Protocols (WPA2 vs WPA3)', follow these steps:\n1. Go to Settings > Wireless > Guest",
+      "token_f1": 0.1697,
+      "exact_match": false,
+      "correct_section": true
+    },
+    {
+      "id": "qa_06",
+      "question": "How do I perform a factory reset using the physical button?",
+      "target_answer": "Press and hold the recessed Reset button on the rear panel for 10 seconds with a paperclip until all LEDs flash amber",
+      "predicted_answer": "According to Section '6. System Maintenance and Recovery > 6.3 Factory Reset and Reboot Methods', follow these steps:\n1. Soft Reset via Web GUI: Navigate to Set",
+      "token_f1": 0.25,
+      "exact_match": false,
+      "correct_section": true
+    },
+    {
+      "id": "qa_07",
+      "question": "What is the maximum Wi-Fi 6 speed on the 5 GHz band?",
+      "target_answer": "Up to 2402 Mbps using 160 MHz channel width",
+      "predicted_answer": "\u2022 5 GHz Band Configuration: - Channel Width: Up to 160 MHz for maximum Wi-Fi 6 theoretical throughput (2402 Mbps).",
+      "token_f1": 0.5385,
+      "exact_match": false,
+      "correct_section": false
+    },
+    {
+      "id": "qa_08",
+      "question": "What does a blinking red internet LED mean?",
+      "target_answer": "WAN cable is disconnected or no carrier signal detected from modem (Error code E-101)",
+      "predicted_answer": "According to Section '5 GHz WI-FI', follow these steps:\n1. INTERNET (WAN) Off None WAN port is disconnected or Ethernet cable is damaged. Solid White\n2. 4 GHz w",
+      "token_f1": 0.0952,
+      "exact_match": false,
+      "correct_section": false
+    },
+    {
+      "id": "qa_09",
+      "question": "What power adapter specifications are required for the router?",
+      "target_answer": "Input: 100-240V AC 50/60Hz, Output: 12 V DC, 2.0 A",
+      "predicted_answer": "5A maximum output) Buttons Hardware Controls Power On/Off, Reset (recessed pin-hole), WPS button Power Power Supply External AC/DC Adapter; Input: 100-240V 50/6",
+      "token_f1": 0.5,
+      "exact_match": false,
+      "correct_section": false
+    },
+    {
+      "id": "qa_10",
+      "question": "What is the toll-free customer support phone number?",
+      "target_answer": "+1-800-555-0199",
+      "predicted_answer": "For technical assistance, driver downloads, warranty claims, and knowledgebase articles: \u2022 Technical Support Phone: +1-800-555-0199 (Toll-Free USA & Canada) \u2022 I",
+      "token_f1": 0.2222,
+      "exact_match": true,
+      "correct_section": true
+    }
+  ]
+}

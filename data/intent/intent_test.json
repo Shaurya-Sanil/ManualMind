@@ -1,0 +1,674 @@
+{
+  "metadata": {
+    "split": "test",
+    "total": 164,
+    "intents": [
+      "troubleshooting",
+      "setup_install",
+      "how_to_usage",
+      "specifications",
+      "warranty_support",
+      "safety",
+      "out_of_scope"
+    ],
+    "leakage_free": true
+  },
+  "data": [
+    {
+      "query": "Setting up AX3000-PRO router out of the box",
+      "intent": "setup_install"
+    },
+    {
+      "query": "What should I do when LED status is blinking red",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Flash memory capacity and size of AX3000 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Unboxing and installing Aurora Wi-Fi 6 router",
+      "intent": "setup_install"
+    },
+    {
+      "query": "How to bake a fresh chocolate cake",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Antenna gain and Wi-Fi 6 modulation specs of AX3000-PRO",
+      "intent": "specifications"
+    },
+    {
+      "query": "Stock market trends for Tesla",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "How to set up custom DNS servers in Guest Network",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Detailed processor and memory specs for Aurora AX3000",
+      "intent": "specifications"
+    },
+    {
+      "query": "What should I do when LED status is solid white",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Warranty claims procedure for AX3000-PRO router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Backing up configuration file before factory reset",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "History of ancient monuments in Japan",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Where to insert power plug on AX3000-PRO",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Operating frequency and hardware architecture of Aurora AX3000",
+      "intent": "specifications"
+    },
+    {
+      "query": "Configuring WireGuard on AX3000-PRO router",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Plugging Ethernet cable from modem into blue WAN port",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Warranty claims procedure for Aurora Wi-Fi 6 router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Recipe instructions for making chocolate cake",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "What should I do when LED status is solid amber",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Configuring Guest Network on Aurora AX3000",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Where to insert power plug on Aurora router",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Resolving error E-204 diagnostic failure",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Unboxing and installing AX3000-PRO",
+      "intent": "setup_install"
+    },
+    {
+      "query": "How to bake a fresh apple pie",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Warranty claims procedure for AX3000 router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Internet status LED turned blinking red suddenly",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Connecting router to smart TV via power adapter",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Configuring Parental Controls on AX3000-PRO",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Recipe instructions for making chicken curry",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Activating WPA3 security on local network",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Experiencing packet loss on dual-band wireless",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Where to send email for replacement of Aurora Wi-Fi 6 router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Stock market trends for Microsoft",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Flash memory capacity and size of AX3000-PRO",
+      "intent": "specifications"
+    },
+    {
+      "query": "Internet status LED turned blinking white suddenly",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Configuring Smart Connect on Aurora router",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Recipe instructions for making french toast",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Where to insert power plug on AX3000-PRO router",
+      "intent": "setup_install"
+    },
+    {
+      "query": "History of ancient monuments in Canada",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Configuring VPN Server on Aurora Wi-Fi 6 router",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Fire safety and ventilation warnings for Aurora AX3000",
+      "intent": "safety"
+    },
+    {
+      "query": "Electrical precautions when plugging Aurora Wi-Fi 6 router",
+      "intent": "safety"
+    },
+    {
+      "query": "Connecting router to broadband modem via WAN port",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Where to insert power plug on Aurora Wi-Fi 6 router",
+      "intent": "setup_install"
+    },
+    {
+      "query": "How to set up custom DNS servers in DMZ",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Facing network disconnects with error code E-501",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Clearance requirements to avoid thermal problems on AX3000-PRO router",
+      "intent": "safety"
+    },
+    {
+      "query": "Connecting router to fiber ONT terminal via Ethernet port",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Experiencing DNS resolution failure on dual-band wireless",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "What should I do when LED status is blinking amber",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "What should I do when LED status is off",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "How to play the flute for beginners",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "First time connection using Samba credentials",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Experiencing overheating on wireless radio wireless",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Resolving error E-305 diagnostic failure",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Electrical precautions when plugging AX3000-PRO router",
+      "intent": "safety"
+    },
+    {
+      "query": "Input voltage and amperage for Aurora router",
+      "intent": "specifications"
+    },
+    {
+      "query": "How to play the piano for beginners",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "What should I do when LED status is blinking white",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Activating Dynamic IP on local network",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "How to set up custom DNS servers in Smart Connect",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Where to send email for replacement of Aurora AX3000",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Fixing slow throughput on 2.4 GHz radio",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "How do I recover from error E-401 on my router",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Resolving error E-402 diagnostic failure",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Where to send email for replacement of AX3000-PRO",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Clearance requirements to avoid thermal problems on Aurora router",
+      "intent": "safety"
+    },
+    {
+      "query": "Detailed processor and memory specs for AX3000-PRO router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Connecting router to laptop via power supply",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Antenna gain and Wi-Fi 6 modulation specs of AX3000-PRO router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Flash memory capacity and size of Aurora Wi-Fi 6 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "How to play the guitar for beginners",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Fire safety and ventilation warnings for AX3000-PRO",
+      "intent": "safety"
+    },
+    {
+      "query": "Input voltage and amperage for AX3000 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Activating Static IP on local network",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Electrical precautions when plugging AX3000 router",
+      "intent": "safety"
+    },
+    {
+      "query": "Detailed processor and memory specs for AX3000 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Detailed processor and memory specs for AX3000-PRO",
+      "intent": "specifications"
+    },
+    {
+      "query": "Clearance requirements to avoid thermal problems on Aurora Wi-Fi 6 router",
+      "intent": "safety"
+    },
+    {
+      "query": "Where to insert power plug on Aurora AX3000",
+      "intent": "setup_install"
+    },
+    {
+      "query": "History of ancient monuments in Brazil",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Rules of FIFA World Cup game",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "How many years is AX3000-PRO covered under warranty",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Fire safety and ventilation warnings for Aurora router",
+      "intent": "safety"
+    },
+    {
+      "query": "First time connection using WireGuard credentials",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Changing Port Forwarding passphrase",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "How to bake a fresh pancakes",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Clearance requirements to avoid thermal problems on AX3000 router",
+      "intent": "safety"
+    },
+    {
+      "query": "Toll free phone contact for Aurora support",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Electrical precautions when plugging AX3000-PRO",
+      "intent": "safety"
+    },
+    {
+      "query": "Input voltage and amperage for Aurora AX3000",
+      "intent": "specifications"
+    },
+    {
+      "query": "Moisture prevention and power safety recommendations",
+      "intent": "safety"
+    },
+    {
+      "query": "Plugging Ethernet cable from modem into WAN port",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Plugging Ethernet cable from modem into yellow LAN port",
+      "intent": "setup_install"
+    },
+    {
+      "query": "How to bake a fresh sourdough bread",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Fire safety and ventilation warnings for Aurora Wi-Fi 6 router",
+      "intent": "safety"
+    },
+    {
+      "query": "Stock market trends for Apple",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Input voltage and amperage for AX3000-PRO",
+      "intent": "specifications"
+    },
+    {
+      "query": "Stock market trends for Google",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Antenna gain and Wi-Fi 6 modulation specs of Aurora router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Operating frequency and hardware architecture of Aurora Wi-Fi 6 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "How to set up custom DNS servers in VPN Server",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Where to send email for replacement of AX3000 router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Internet status LED turned blinking amber suddenly",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "How do I recover from error E-102 on my router",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Recipe instructions for making sourdough bread",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Fire safety and ventilation warnings for AX3000 router",
+      "intent": "safety"
+    },
+    {
+      "query": "Operating frequency and hardware architecture of AX3000-PRO",
+      "intent": "specifications"
+    },
+    {
+      "query": "Configuring DMZ on AX3000-PRO router",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "How to set up custom DNS servers in OpenVPN",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Activating PPPoE on local network",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Facing network disconnects with error code E-103",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "How many years is AX3000-PRO router covered under warranty",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "How to set up custom DNS servers in Port Forwarding",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "History of ancient monuments in Germany",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "How do I recover from error E-201 on my router",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Fixing slow throughput on wireless radio radio",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Recipe instructions for making chocolate cookies",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Antenna gain and Wi-Fi 6 modulation specs of Aurora Wi-Fi 6 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Electrical precautions when plugging Aurora AX3000",
+      "intent": "safety"
+    },
+    {
+      "query": "How to set up custom DNS servers in WireGuard",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "How many years is AX3000 router covered under warranty",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "How many years is Aurora router covered under warranty",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Warranty claims procedure for AX3000-PRO",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Resolving error E-401 diagnostic failure",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Clearance requirements to avoid thermal problems on Aurora AX3000",
+      "intent": "safety"
+    },
+    {
+      "query": "Connecting router to gaming console via Ethernet port",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Where to send email for replacement of Aurora router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "How to set up custom DNS servers in channel width",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "History of ancient monuments in Italy",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Configuring Dynamic IP on AX3000-PRO router",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "How many years is Aurora AX3000 covered under warranty",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Flash memory capacity and size of Aurora AX3000",
+      "intent": "specifications"
+    },
+    {
+      "query": "Warranty claims procedure for Aurora router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Backing up configuration file before firmware update",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Operating frequency and hardware architecture of AX3000 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "First time connection using DHCP credentials",
+      "intent": "setup_install"
+    },
+    {
+      "query": "History of ancient monuments in India",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Operating frequency and hardware architecture of AX3000-PRO router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Fixing slow throughput on 5 GHz radio",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Experiencing high latency on dual-band wireless",
+      "intent": "troubleshooting"
+    },
+    {
+      "query": "Backing up configuration file before reboot",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Input voltage and amperage for AX3000-PRO router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Fire safety and ventilation warnings for AX3000-PRO router",
+      "intent": "safety"
+    },
+    {
+      "query": "Connecting router to broadband modem via Ethernet port",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Clearance requirements to avoid thermal problems on AX3000-PRO",
+      "intent": "safety"
+    },
+    {
+      "query": "Stock market trends for NVIDIA",
+      "intent": "out_of_scope"
+    },
+    {
+      "query": "Warranty claims procedure for Aurora AX3000",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "First time connection using PPPoE credentials",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Detailed processor and memory specs for Aurora router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Plugging Ethernet cable from modem into power adapter",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Warranty coverage terms for hardware defects",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Activating MAC Clone on local network",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "Electrical precautions when plugging Aurora router",
+      "intent": "safety"
+    },
+    {
+      "query": "Backing up configuration file before power cycle",
+      "intent": "how_to_usage"
+    },
+    {
+      "query": "How many years is Aurora Wi-Fi 6 router covered under warranty",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Detailed processor and memory specs for Aurora Wi-Fi 6 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Antenna gain and Wi-Fi 6 modulation specs of AX3000 router",
+      "intent": "specifications"
+    },
+    {
+      "query": "Setting up Aurora Wi-Fi 6 router out of the box",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Plugging Ethernet cable from modem into antenna",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Where to send email for replacement of AX3000-PRO router",
+      "intent": "warranty_support"
+    },
+    {
+      "query": "Unboxing and installing Aurora router",
+      "intent": "setup_install"
+    },
+    {
+      "query": "Rules of Tour de France game",
+      "intent": "out_of_scope"
+    }
+  ]
+}

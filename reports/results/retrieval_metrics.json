@@ -1,0 +1,63 @@
+{
+  "retrieval_models": {
+    "tfidf": {
+      "Recall@1": 80.77,
+      "Recall@3": 92.31,
+      "Recall@5": 96.15,
+      "MRR": 0.8686
+    },
+    "bm25": {
+      "Recall@1": 76.92,
+      "Recall@3": 92.31,
+      "Recall@5": 96.15,
+      "MRR": 0.8494
+    },
+    "w2v_cbow": {
+      "Recall@1": 67.31,
+      "Recall@3": 82.69,
+      "Recall@5": 92.31,
+      "MRR": 0.7699
+    },
+    "w2v_skipgram": {
+      "Recall@1": 71.15,
+      "Recall@3": 88.46,
+      "Recall@5": 92.31,
+      "MRR": 0.8035
+    },
+    "dense": {
+      "Recall@1": 80.77,
+      "Recall@3": 94.23,
+      "Recall@5": 98.08,
+      "MRR": 0.875
+    },
+    "hybrid": {
+      "Recall@1": 88.46,
+      "Recall@3": 96.15,
+      "Recall@5": 100.0,
+      "MRR": 0.9295
+    }
+  },
+  "preprocessing_ablation": {
+    "raw": {
+      "Recall@1": 46.15,
+      "Recall@5": 75.0,
+      "MRR": 0.584
+    },
+    "stopwords_removed": {
+      "Recall@1": 61.54,
+      "Recall@5": 75.0,
+      "MRR": 0.6763
+    },
+    "stemming": {
+      "Recall@1": 46.15,
+      "Recall@5": 69.23,
+      "MRR": 0.5593
+    },
+    "lemmatization": {
+      "Recall@1": 46.15,
+      "Recall@5": 73.08,
+      "MRR": 0.5769
+    }
+  },
+  "total_test_queries": 52
+}

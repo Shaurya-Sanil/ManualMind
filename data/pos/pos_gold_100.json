@@ -1,0 +1,5774 @@
+{
+  "metadata": {
+    "title": "POS Gold 100 Sentences",
+    "tagset": "universal",
+    "count": 100,
+    "needs_human_review": false
+  },
+  "sentences": [
+    {
+      "id": "pos_gold_001",
+      "sentence": "The Aurora AX3000 Wi-Fi 6 Router delivers ultra-fast dual-band wireless connectivity.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "Aurora",
+          "tag": "PROPN"
+        },
+        {
+          "token": "AX3000",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Wi",
+          "tag": "PROPN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "Fi",
+          "tag": "PROPN"
+        },
+        {
+          "token": "6",
+          "tag": "NUM"
+        },
+        {
+          "token": "Router",
+          "tag": "PROPN"
+        },
+        {
+          "token": "delivers",
+          "tag": "VERB"
+        },
+        {
+          "token": "ultra",
+          "tag": "ADJ"
+        },
+        {
+          "token": "-",
+          "tag": "ADJ"
+        },
+        {
+          "token": "fast",
+          "tag": "ADJ"
+        },
+        {
+          "token": "dual",
+          "tag": "ADJ"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "band",
+          "tag": "NOUN"
+        },
+        {
+          "token": "wireless",
+          "tag": "ADJ"
+        },
+        {
+          "token": "connectivity",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_002",
+      "sentence": "Ensure the package contains one Aurora AX3000 router and one 12 V power adapter.",
+      "tokens": [
+        {
+          "token": "Ensure",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "package",
+          "tag": "NOUN"
+        },
+        {
+          "token": "contains",
+          "tag": "VERB"
+        },
+        {
+          "token": "one",
+          "tag": "NUM"
+        },
+        {
+          "token": "Aurora",
+          "tag": "PROPN"
+        },
+        {
+          "token": "AX3000",
+          "tag": "NOUN"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "one",
+          "tag": "NUM"
+        },
+        {
+          "token": "12",
+          "tag": "NUM"
+        },
+        {
+          "token": "V",
+          "tag": "PROPN"
+        },
+        {
+          "token": "power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "adapter",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_003",
+      "sentence": "The front panel features six multi-color LED indicators that report real-time system status.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "front",
+          "tag": "ADJ"
+        },
+        {
+          "token": "panel",
+          "tag": "NOUN"
+        },
+        {
+          "token": "features",
+          "tag": "VERB"
+        },
+        {
+          "token": "six",
+          "tag": "NUM"
+        },
+        {
+          "token": "multi",
+          "tag": "NOUN"
+        },
+        {
+          "token": "-",
+          "tag": "ADJ"
+        },
+        {
+          "token": "color",
+          "tag": "ADJ"
+        },
+        {
+          "token": "LED",
+          "tag": "NOUN"
+        },
+        {
+          "token": "indicators",
+          "tag": "NOUN"
+        },
+        {
+          "token": "that",
+          "tag": "PRON"
+        },
+        {
+          "token": "report",
+          "tag": "VERB"
+        },
+        {
+          "token": "real",
+          "tag": "ADJ"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "time",
+          "tag": "NOUN"
+        },
+        {
+          "token": "system",
+          "tag": "NOUN"
+        },
+        {
+          "token": "status",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_004",
+      "sentence": "A solid white POWER LED indicates the device is powered on and functioning normally.",
+      "tokens": [
+        {
+          "token": "A",
+          "tag": "DET"
+        },
+        {
+          "token": "solid",
+          "tag": "ADJ"
+        },
+        {
+          "token": "white",
+          "tag": "ADJ"
+        },
+        {
+          "token": "POWER",
+          "tag": "NOUN"
+        },
+        {
+          "token": "LED",
+          "tag": "NOUN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "device",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "powered",
+          "tag": "VERB"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "functioning",
+          "tag": "VERB"
+        },
+        {
+          "token": "normally",
+          "tag": "ADV"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_005",
+      "sentence": "A blinking red INTERNET LED indicates the WAN cable is disconnected.",
+      "tokens": [
+        {
+          "token": "A",
+          "tag": "DET"
+        },
+        {
+          "token": "blinking",
+          "tag": "VERB"
+        },
+        {
+          "token": "red",
+          "tag": "ADJ"
+        },
+        {
+          "token": "INTERNET",
+          "tag": "NOUN"
+        },
+        {
+          "token": "LED",
+          "tag": "NOUN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "WAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "cable",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "disconnected",
+          "tag": "VERB"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_006",
+      "sentence": "Error code E-101 indicates no carrier signal detected on the blue WAN port.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-101",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "no",
+          "tag": "DET"
+        },
+        {
+          "token": "carrier",
+          "tag": "NOUN"
+        },
+        {
+          "token": "signal",
+          "tag": "NOUN"
+        },
+        {
+          "token": "detected",
+          "tag": "VERB"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "blue",
+          "tag": "ADJ"
+        },
+        {
+          "token": "WAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "port",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_007",
+      "sentence": "The rear panel contains one blue WAN port and four yellow LAN ports.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "rear",
+          "tag": "ADJ"
+        },
+        {
+          "token": "panel",
+          "tag": "NOUN"
+        },
+        {
+          "token": "contains",
+          "tag": "VERB"
+        },
+        {
+          "token": "one",
+          "tag": "NUM"
+        },
+        {
+          "token": "blue",
+          "tag": "ADJ"
+        },
+        {
+          "token": "WAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "port",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "four",
+          "tag": "NUM"
+        },
+        {
+          "token": "yellow",
+          "tag": "ADJ"
+        },
+        {
+          "token": "LAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "ports",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_008",
+      "sentence": "Connect an external USB hard drive to the rear USB 3.0 port for media sharing.",
+      "tokens": [
+        {
+          "token": "Connect",
+          "tag": "VERB"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "external",
+          "tag": "ADJ"
+        },
+        {
+          "token": "USB",
+          "tag": "NOUN"
+        },
+        {
+          "token": "hard",
+          "tag": "ADJ"
+        },
+        {
+          "token": "drive",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "rear",
+          "tag": "ADJ"
+        },
+        {
+          "token": "USB",
+          "tag": "PROPN"
+        },
+        {
+          "token": "3.0",
+          "tag": "NUM"
+        },
+        {
+          "token": "port",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "media",
+          "tag": "NOUN"
+        },
+        {
+          "token": "sharing",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_009",
+      "sentence": "Press and hold the recessed Reset button for 10 seconds to restore factory defaults.",
+      "tokens": [
+        {
+          "token": "Press",
+          "tag": "VERB"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "hold",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "recessed",
+          "tag": "VERB"
+        },
+        {
+          "token": "Reset",
+          "tag": "PROPN"
+        },
+        {
+          "token": "button",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "10",
+          "tag": "NUM"
+        },
+        {
+          "token": "seconds",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "restore",
+          "tag": "VERB"
+        },
+        {
+          "token": "factory",
+          "tag": "NOUN"
+        },
+        {
+          "token": "defaults",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_010",
+      "sentence": "Power off your broadband modem by disconnecting its power adapter.",
+      "tokens": [
+        {
+          "token": "Power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "off",
+          "tag": "ADP"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "broadband",
+          "tag": "NOUN"
+        },
+        {
+          "token": "modem",
+          "tag": "NOUN"
+        },
+        {
+          "token": "by",
+          "tag": "ADP"
+        },
+        {
+          "token": "disconnecting",
+          "tag": "VERB"
+        },
+        {
+          "token": "its",
+          "tag": "PRON"
+        },
+        {
+          "token": "power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "adapter",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_011",
+      "sentence": "Connect one end of the Ethernet cable to the blue WAN port on the router.",
+      "tokens": [
+        {
+          "token": "Connect",
+          "tag": "VERB"
+        },
+        {
+          "token": "one",
+          "tag": "NUM"
+        },
+        {
+          "token": "end",
+          "tag": "NOUN"
+        },
+        {
+          "token": "of",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "Ethernet",
+          "tag": "PROPN"
+        },
+        {
+          "token": "cable",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "blue",
+          "tag": "ADJ"
+        },
+        {
+          "token": "WAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "port",
+          "tag": "NOUN"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_012",
+      "sentence": "Verify that the POWER LED turns solid white and the INTERNET LED illuminates.",
+      "tokens": [
+        {
+          "token": "Verify",
+          "tag": "VERB"
+        },
+        {
+          "token": "that",
+          "tag": "SCONJ"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "POWER",
+          "tag": "NOUN"
+        },
+        {
+          "token": "LED",
+          "tag": "VERB"
+        },
+        {
+          "token": "turns",
+          "tag": "VERB"
+        },
+        {
+          "token": "solid",
+          "tag": "ADJ"
+        },
+        {
+          "token": "white",
+          "tag": "ADJ"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "INTERNET",
+          "tag": "NOUN"
+        },
+        {
+          "token": "LED",
+          "tag": "VERB"
+        },
+        {
+          "token": "illuminates",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_013",
+      "sentence": "Plug an Ethernet cable into any of the yellow LAN ports on your computer.",
+      "tokens": [
+        {
+          "token": "Plug",
+          "tag": "VERB"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "Ethernet",
+          "tag": "PROPN"
+        },
+        {
+          "token": "cable",
+          "tag": "NOUN"
+        },
+        {
+          "token": "into",
+          "tag": "ADP"
+        },
+        {
+          "token": "any",
+          "tag": "PRON"
+        },
+        {
+          "token": "of",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "yellow",
+          "tag": "ADJ"
+        },
+        {
+          "token": "LAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "ports",
+          "tag": "NOUN"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "computer",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_014",
+      "sentence": "Default wireless networks are named Aurora_AX3000_2.4G and Aurora_AX3000_5G.",
+      "tokens": [
+        {
+          "token": "Default",
+          "tag": "ADJ"
+        },
+        {
+          "token": "wireless",
+          "tag": "ADJ"
+        },
+        {
+          "token": "networks",
+          "tag": "NOUN"
+        },
+        {
+          "token": "are",
+          "tag": "AUX"
+        },
+        {
+          "token": "named",
+          "tag": "VERB"
+        },
+        {
+          "token": "Aurora_AX3000_2.4",
+          "tag": "NOUN"
+        },
+        {
+          "token": "G",
+          "tag": "PROPN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "Aurora_AX3000_5G.",
+          "tag": "NOUN"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_015",
+      "sentence": "The default Wi-Fi password is printed on the barcode label underneath the router.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "default",
+          "tag": "NOUN"
+        },
+        {
+          "token": "Wi",
+          "tag": "PROPN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "Fi",
+          "tag": "PROPN"
+        },
+        {
+          "token": "password",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "printed",
+          "tag": "VERB"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "barcode",
+          "tag": "PROPN"
+        },
+        {
+          "token": "label",
+          "tag": "NOUN"
+        },
+        {
+          "token": "underneath",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_016",
+      "sentence": "Enter http://192.168.1.1 or http://router.aurora.local in your web browser.",
+      "tokens": [
+        {
+          "token": "Enter",
+          "tag": "VERB"
+        },
+        {
+          "token": "http://192.168.1.1",
+          "tag": "PROPN"
+        },
+        {
+          "token": "or",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "http://router.aurora.local",
+          "tag": "PROPN"
+        },
+        {
+          "token": "in",
+          "tag": "ADP"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "web",
+          "tag": "NOUN"
+        },
+        {
+          "token": "browser",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_017",
+      "sentence": "Log in using the default username admin and default password admin.",
+      "tokens": [
+        {
+          "token": "Log",
+          "tag": "VERB"
+        },
+        {
+          "token": "in",
+          "tag": "ADP"
+        },
+        {
+          "token": "using",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "default",
+          "tag": "NOUN"
+        },
+        {
+          "token": "username",
+          "tag": "NOUN"
+        },
+        {
+          "token": "admin",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "default",
+          "tag": "NOUN"
+        },
+        {
+          "token": "password",
+          "tag": "NOUN"
+        },
+        {
+          "token": "admin",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_018",
+      "sentence": "The Quick Setup Wizard guides you through selecting your internet connection type.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "Quick",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Setup",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Wizard",
+          "tag": "PROPN"
+        },
+        {
+          "token": "guides",
+          "tag": "VERB"
+        },
+        {
+          "token": "you",
+          "tag": "PRON"
+        },
+        {
+          "token": "through",
+          "tag": "ADP"
+        },
+        {
+          "token": "selecting",
+          "tag": "VERB"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "internet",
+          "tag": "NOUN"
+        },
+        {
+          "token": "connection",
+          "tag": "NOUN"
+        },
+        {
+          "token": "type",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_019",
+      "sentence": "Dynamic IP DHCP automatically obtains an IP address from your ISP.",
+      "tokens": [
+        {
+          "token": "Dynamic",
+          "tag": "ADJ"
+        },
+        {
+          "token": "IP",
+          "tag": "NOUN"
+        },
+        {
+          "token": "DHCP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "automatically",
+          "tag": "ADV"
+        },
+        {
+          "token": "obtains",
+          "tag": "VERB"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "IP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "address",
+          "tag": "NOUN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "ISP",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_020",
+      "sentence": "PPPoE requires entering your ISP-assigned username and password.",
+      "tokens": [
+        {
+          "token": "PPPoE",
+          "tag": "ADV"
+        },
+        {
+          "token": "requires",
+          "tag": "VERB"
+        },
+        {
+          "token": "entering",
+          "tag": "VERB"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "ISP",
+          "tag": "NOUN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "assigned",
+          "tag": "VERB"
+        },
+        {
+          "token": "username",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "password",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_021",
+      "sentence": "Static IP requires configuring IP address, subnet mask, and DNS servers.",
+      "tokens": [
+        {
+          "token": "Static",
+          "tag": "PROPN"
+        },
+        {
+          "token": "IP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "requires",
+          "tag": "VERB"
+        },
+        {
+          "token": "configuring",
+          "tag": "VERB"
+        },
+        {
+          "token": "IP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "address",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "subnet",
+          "tag": "NOUN"
+        },
+        {
+          "token": "mask",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "DNS",
+          "tag": "PROPN"
+        },
+        {
+          "token": "servers",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_022",
+      "sentence": "You must change the default administrator password during initial setup.",
+      "tokens": [
+        {
+          "token": "You",
+          "tag": "PRON"
+        },
+        {
+          "token": "must",
+          "tag": "AUX"
+        },
+        {
+          "token": "change",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "default",
+          "tag": "NOUN"
+        },
+        {
+          "token": "administrator",
+          "tag": "NOUN"
+        },
+        {
+          "token": "password",
+          "tag": "NOUN"
+        },
+        {
+          "token": "during",
+          "tag": "ADP"
+        },
+        {
+          "token": "initial",
+          "tag": "ADJ"
+        },
+        {
+          "token": "setup",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_023",
+      "sentence": "Navigate to Settings > System Tools > Administration to update credentials.",
+      "tokens": [
+        {
+          "token": "Navigate",
+          "tag": "VERB"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "Settings",
+          "tag": "PROPN"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "System",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Tools",
+          "tag": "PROPN"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "Administration",
+          "tag": "PROPN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "update",
+          "tag": "VERB"
+        },
+        {
+          "token": "credentials",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_024",
+      "sentence": "Smart Connect combines 2.4 GHz and 5 GHz under a single unified SSID.",
+      "tokens": [
+        {
+          "token": "Smart",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Connect",
+          "tag": "PROPN"
+        },
+        {
+          "token": "combines",
+          "tag": "VERB"
+        },
+        {
+          "token": "2.4",
+          "tag": "NUM"
+        },
+        {
+          "token": "GHz",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "5",
+          "tag": "NUM"
+        },
+        {
+          "token": "GHz",
+          "tag": "NOUN"
+        },
+        {
+          "token": "under",
+          "tag": "ADP"
+        },
+        {
+          "token": "a",
+          "tag": "DET"
+        },
+        {
+          "token": "single",
+          "tag": "ADJ"
+        },
+        {
+          "token": "unified",
+          "tag": "ADJ"
+        },
+        {
+          "token": "SSID",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_025",
+      "sentence": "Select 20 MHz channel width in crowded areas to prevent interference.",
+      "tokens": [
+        {
+          "token": "Select",
+          "tag": "VERB"
+        },
+        {
+          "token": "20",
+          "tag": "NUM"
+        },
+        {
+          "token": "MHz",
+          "tag": "PROPN"
+        },
+        {
+          "token": "channel",
+          "tag": "NOUN"
+        },
+        {
+          "token": "width",
+          "tag": "NOUN"
+        },
+        {
+          "token": "in",
+          "tag": "ADP"
+        },
+        {
+          "token": "crowded",
+          "tag": "ADJ"
+        },
+        {
+          "token": "areas",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "prevent",
+          "tag": "VERB"
+        },
+        {
+          "token": "interference",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_026",
+      "sentence": "The 5 GHz wireless band supports channel width up to 160 MHz.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "5",
+          "tag": "NUM"
+        },
+        {
+          "token": "GHz",
+          "tag": "NOUN"
+        },
+        {
+          "token": "wireless",
+          "tag": "ADJ"
+        },
+        {
+          "token": "band",
+          "tag": "NOUN"
+        },
+        {
+          "token": "supports",
+          "tag": "VERB"
+        },
+        {
+          "token": "channel",
+          "tag": "NOUN"
+        },
+        {
+          "token": "width",
+          "tag": "VERB"
+        },
+        {
+          "token": "up",
+          "tag": "ADP"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "160",
+          "tag": "NUM"
+        },
+        {
+          "token": "MHz",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_027",
+      "sentence": "A Guest Network provides visitors with isolated internet access.",
+      "tokens": [
+        {
+          "token": "A",
+          "tag": "DET"
+        },
+        {
+          "token": "Guest",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Network",
+          "tag": "PROPN"
+        },
+        {
+          "token": "provides",
+          "tag": "VERB"
+        },
+        {
+          "token": "visitors",
+          "tag": "NOUN"
+        },
+        {
+          "token": "with",
+          "tag": "ADP"
+        },
+        {
+          "token": "isolated",
+          "tag": "ADJ"
+        },
+        {
+          "token": "internet",
+          "tag": "NOUN"
+        },
+        {
+          "token": "access",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_028",
+      "sentence": "Toggle Enable Guest Network to ON under Settings > Wireless > Guest Network.",
+      "tokens": [
+        {
+          "token": "Toggle",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Enable",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Guest",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Network",
+          "tag": "PROPN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "ON",
+          "tag": "PROPN"
+        },
+        {
+          "token": "under",
+          "tag": "ADP"
+        },
+        {
+          "token": "Settings",
+          "tag": "PROPN"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "Wireless",
+          "tag": "PROPN"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "Guest",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Network",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_029",
+      "sentence": "Ensure Isolate from Local Network is checked to protect private LAN devices.",
+      "tokens": [
+        {
+          "token": "Ensure",
+          "tag": "VERB"
+        },
+        {
+          "token": "Isolate",
+          "tag": "PROPN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "Local",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Network",
+          "tag": "PROPN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "checked",
+          "tag": "VERB"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "protect",
+          "tag": "VERB"
+        },
+        {
+          "token": "private",
+          "tag": "ADJ"
+        },
+        {
+          "token": "LAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "devices",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_030",
+      "sentence": "You can configure bandwidth control to limit guest download speed.",
+      "tokens": [
+        {
+          "token": "You",
+          "tag": "PRON"
+        },
+        {
+          "token": "can",
+          "tag": "AUX"
+        },
+        {
+          "token": "configure",
+          "tag": "VERB"
+        },
+        {
+          "token": "bandwidth",
+          "tag": "ADJ"
+        },
+        {
+          "token": "control",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "limit",
+          "tag": "VERB"
+        },
+        {
+          "token": "guest",
+          "tag": "NOUN"
+        },
+        {
+          "token": "download",
+          "tag": "NOUN"
+        },
+        {
+          "token": "speed",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_031",
+      "sentence": "WPA3-Personal uses Simultaneous Authentication of Equals to resist dictionary attacks.",
+      "tokens": [
+        {
+          "token": "WPA3",
+          "tag": "PROPN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "Personal",
+          "tag": "PROPN"
+        },
+        {
+          "token": "uses",
+          "tag": "VERB"
+        },
+        {
+          "token": "Simultaneous",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Authentication",
+          "tag": "PROPN"
+        },
+        {
+          "token": "of",
+          "tag": "ADP"
+        },
+        {
+          "token": "Equals",
+          "tag": "PROPN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "resist",
+          "tag": "VERB"
+        },
+        {
+          "token": "dictionary",
+          "tag": "ADJ"
+        },
+        {
+          "token": "attacks",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_032",
+      "sentence": "WPA2 and WPA3 Mixed Mode maintains backwards compatibility for older devices.",
+      "tokens": [
+        {
+          "token": "WPA2",
+          "tag": "PROPN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "WPA3",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Mixed",
+          "tag": "ADJ"
+        },
+        {
+          "token": "Mode",
+          "tag": "PROPN"
+        },
+        {
+          "token": "maintains",
+          "tag": "VERB"
+        },
+        {
+          "token": "backwards",
+          "tag": "ADV"
+        },
+        {
+          "token": "compatibility",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "older",
+          "tag": "ADJ"
+        },
+        {
+          "token": "devices",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_033",
+      "sentence": "Quality of Service QoS guarantees critical network traffic receives top priority.",
+      "tokens": [
+        {
+          "token": "Quality",
+          "tag": "NOUN"
+        },
+        {
+          "token": "of",
+          "tag": "ADP"
+        },
+        {
+          "token": "Service",
+          "tag": "PROPN"
+        },
+        {
+          "token": "QoS",
+          "tag": "NOUN"
+        },
+        {
+          "token": "guarantees",
+          "tag": "VERB"
+        },
+        {
+          "token": "critical",
+          "tag": "ADJ"
+        },
+        {
+          "token": "network",
+          "tag": "NOUN"
+        },
+        {
+          "token": "traffic",
+          "tag": "NOUN"
+        },
+        {
+          "token": "receives",
+          "tag": "VERB"
+        },
+        {
+          "token": "top",
+          "tag": "ADJ"
+        },
+        {
+          "token": "priority",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_034",
+      "sentence": "Select Gaming Priority to minimize packet latency and bufferbloat.",
+      "tokens": [
+        {
+          "token": "Select",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Gaming",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Priority",
+          "tag": "PROPN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "minimize",
+          "tag": "VERB"
+        },
+        {
+          "token": "packet",
+          "tag": "ADJ"
+        },
+        {
+          "token": "latency",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "bufferbloat",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_035",
+      "sentence": "Parental Controls allow you to manage screen time by client MAC address.",
+      "tokens": [
+        {
+          "token": "Parental",
+          "tag": "ADJ"
+        },
+        {
+          "token": "Controls",
+          "tag": "PROPN"
+        },
+        {
+          "token": "allow",
+          "tag": "VERB"
+        },
+        {
+          "token": "you",
+          "tag": "PRON"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "manage",
+          "tag": "VERB"
+        },
+        {
+          "token": "screen",
+          "tag": "NOUN"
+        },
+        {
+          "token": "time",
+          "tag": "NOUN"
+        },
+        {
+          "token": "by",
+          "tag": "ADP"
+        },
+        {
+          "token": "client",
+          "tag": "NOUN"
+        },
+        {
+          "token": "MAC",
+          "tag": "PROPN"
+        },
+        {
+          "token": "address",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_036",
+      "sentence": "Configure Allowed Internet Hours from Monday to Friday under Parental Controls.",
+      "tokens": [
+        {
+          "token": "Configure",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Allowed",
+          "tag": "VERB"
+        },
+        {
+          "token": "Internet",
+          "tag": "NOUN"
+        },
+        {
+          "token": "Hours",
+          "tag": "PROPN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "Monday",
+          "tag": "PROPN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "Friday",
+          "tag": "PROPN"
+        },
+        {
+          "token": "under",
+          "tag": "ADP"
+        },
+        {
+          "token": "Parental",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Controls",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_037",
+      "sentence": "Add specific website URLs to the domain blacklist to block access.",
+      "tokens": [
+        {
+          "token": "Add",
+          "tag": "VERB"
+        },
+        {
+          "token": "specific",
+          "tag": "ADJ"
+        },
+        {
+          "token": "website",
+          "tag": "NOUN"
+        },
+        {
+          "token": "URLs",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "domain",
+          "tag": "NOUN"
+        },
+        {
+          "token": "blacklist",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "block",
+          "tag": "VERB"
+        },
+        {
+          "token": "access",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_038",
+      "sentence": "Port forwarding allows external internet traffic to reach local servers.",
+      "tokens": [
+        {
+          "token": "Port",
+          "tag": "NOUN"
+        },
+        {
+          "token": "forwarding",
+          "tag": "NOUN"
+        },
+        {
+          "token": "allows",
+          "tag": "VERB"
+        },
+        {
+          "token": "external",
+          "tag": "ADJ"
+        },
+        {
+          "token": "internet",
+          "tag": "NOUN"
+        },
+        {
+          "token": "traffic",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "reach",
+          "tag": "VERB"
+        },
+        {
+          "token": "local",
+          "tag": "ADJ"
+        },
+        {
+          "token": "servers",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_039",
+      "sentence": "Navigate to Settings > Advanced > NAT Forwarding to create virtual server rules.",
+      "tokens": [
+        {
+          "token": "Navigate",
+          "tag": "VERB"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "Settings",
+          "tag": "PROPN"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "Advanced",
+          "tag": "ADJ"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "NAT",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Forwarding",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "create",
+          "tag": "VERB"
+        },
+        {
+          "token": "virtual",
+          "tag": "ADJ"
+        },
+        {
+          "token": "server",
+          "tag": "NOUN"
+        },
+        {
+          "token": "rules",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_040",
+      "sentence": "The router includes integrated OpenVPN and WireGuard VPN server capabilities.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "includes",
+          "tag": "VERB"
+        },
+        {
+          "token": "integrated",
+          "tag": "VERB"
+        },
+        {
+          "token": "OpenVPN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "WireGuard",
+          "tag": "PROPN"
+        },
+        {
+          "token": "VPN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "server",
+          "tag": "NOUN"
+        },
+        {
+          "token": "capabilities",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_041",
+      "sentence": "Download the client configuration profile and import it into your device.",
+      "tokens": [
+        {
+          "token": "Download",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "client",
+          "tag": "NOUN"
+        },
+        {
+          "token": "configuration",
+          "tag": "NOUN"
+        },
+        {
+          "token": "profile",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "import",
+          "tag": "VERB"
+        },
+        {
+          "token": "it",
+          "tag": "PRON"
+        },
+        {
+          "token": "into",
+          "tag": "ADP"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "device",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_042",
+      "sentence": "Access USB storage files from Windows Explorer at \\\\192.168.1.1\\share.",
+      "tokens": [
+        {
+          "token": "Access",
+          "tag": "ADJ"
+        },
+        {
+          "token": "USB",
+          "tag": "NOUN"
+        },
+        {
+          "token": "storage",
+          "tag": "NOUN"
+        },
+        {
+          "token": "files",
+          "tag": "NOUN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "Windows",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Explorer",
+          "tag": "PROPN"
+        },
+        {
+          "token": "at",
+          "tag": "ADP"
+        },
+        {
+          "token": "\\\\192.168.1.1\\share",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_043",
+      "sentence": "Firmware upgrades provide feature enhancements, bug fixes, and security patches.",
+      "tokens": [
+        {
+          "token": "Firmware",
+          "tag": "ADJ"
+        },
+        {
+          "token": "upgrades",
+          "tag": "NOUN"
+        },
+        {
+          "token": "provide",
+          "tag": "VERB"
+        },
+        {
+          "token": "feature",
+          "tag": "NOUN"
+        },
+        {
+          "token": "enhancements",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "bug",
+          "tag": "NOUN"
+        },
+        {
+          "token": "fixes",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "security",
+          "tag": "NOUN"
+        },
+        {
+          "token": "patches",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_044",
+      "sentence": "Do not power off the router during a firmware upgrade.",
+      "tokens": [
+        {
+          "token": "Do",
+          "tag": "AUX"
+        },
+        {
+          "token": "not",
+          "tag": "PART"
+        },
+        {
+          "token": "power",
+          "tag": "VERB"
+        },
+        {
+          "token": "off",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "during",
+          "tag": "ADP"
+        },
+        {
+          "token": "a",
+          "tag": "DET"
+        },
+        {
+          "token": "firmware",
+          "tag": "ADJ"
+        },
+        {
+          "token": "upgrade",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_045",
+      "sentence": "The router will automatically check the cloud server for new firmware versions.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "will",
+          "tag": "AUX"
+        },
+        {
+          "token": "automatically",
+          "tag": "ADV"
+        },
+        {
+          "token": "check",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "cloud",
+          "tag": "NOUN"
+        },
+        {
+          "token": "server",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "new",
+          "tag": "ADJ"
+        },
+        {
+          "token": "firmware",
+          "tag": "NOUN"
+        },
+        {
+          "token": "versions",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_046",
+      "sentence": "Download the official firmware .bin file from https://aurora-tech.com/support.",
+      "tokens": [
+        {
+          "token": "Download",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "official",
+          "tag": "ADJ"
+        },
+        {
+          "token": "firmware",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".bin",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "file",
+          "tag": "NOUN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "https://aurora-tech.com/support",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_047",
+      "sentence": "Save an encrypted backup configuration file before modifying settings.",
+      "tokens": [
+        {
+          "token": "Save",
+          "tag": "VERB"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "encrypted",
+          "tag": "VERB"
+        },
+        {
+          "token": "backup",
+          "tag": "ADJ"
+        },
+        {
+          "token": "configuration",
+          "tag": "NOUN"
+        },
+        {
+          "token": "file",
+          "tag": "NOUN"
+        },
+        {
+          "token": "before",
+          "tag": "ADP"
+        },
+        {
+          "token": "modifying",
+          "tag": "VERB"
+        },
+        {
+          "token": "settings",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_048",
+      "sentence": "A soft reset reboots the router via the Web GUI without erasing settings.",
+      "tokens": [
+        {
+          "token": "A",
+          "tag": "DET"
+        },
+        {
+          "token": "soft",
+          "tag": "ADJ"
+        },
+        {
+          "token": "reset",
+          "tag": "NOUN"
+        },
+        {
+          "token": "reboots",
+          "tag": "NOUN"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "via",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "Web",
+          "tag": "NOUN"
+        },
+        {
+          "token": "GUI",
+          "tag": "PROPN"
+        },
+        {
+          "token": "without",
+          "tag": "ADP"
+        },
+        {
+          "token": "erasing",
+          "tag": "VERB"
+        },
+        {
+          "token": "settings",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_049",
+      "sentence": "Pressing the Reset button for 10 seconds restores all factory settings.",
+      "tokens": [
+        {
+          "token": "Pressing",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "Reset",
+          "tag": "ADJ"
+        },
+        {
+          "token": "button",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "10",
+          "tag": "NUM"
+        },
+        {
+          "token": "seconds",
+          "tag": "NOUN"
+        },
+        {
+          "token": "restores",
+          "tag": "VERB"
+        },
+        {
+          "token": "all",
+          "tag": "DET"
+        },
+        {
+          "token": "factory",
+          "tag": "NOUN"
+        },
+        {
+          "token": "settings",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_050",
+      "sentence": "Diagnostic error codes are displayed in the Web GUI System Log.",
+      "tokens": [
+        {
+          "token": "Diagnostic",
+          "tag": "ADJ"
+        },
+        {
+          "token": "error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "codes",
+          "tag": "NOUN"
+        },
+        {
+          "token": "are",
+          "tag": "AUX"
+        },
+        {
+          "token": "displayed",
+          "tag": "VERB"
+        },
+        {
+          "token": "in",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "Web",
+          "tag": "NOUN"
+        },
+        {
+          "token": "GUI",
+          "tag": "PROPN"
+        },
+        {
+          "token": "System",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Log",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_051",
+      "sentence": "Error code E-102 indicates PPPoE authentication failure with your ISP.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-102",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "PPPoE",
+          "tag": "ADJ"
+        },
+        {
+          "token": "authentication",
+          "tag": "NOUN"
+        },
+        {
+          "token": "failure",
+          "tag": "NOUN"
+        },
+        {
+          "token": "with",
+          "tag": "ADP"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "ISP",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_052",
+      "sentence": "Error code E-103 indicates DHCP lease renewal timeout from ISP gateway.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-103",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "DHCP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "lease",
+          "tag": "NOUN"
+        },
+        {
+          "token": "renewal",
+          "tag": "NOUN"
+        },
+        {
+          "token": "timeout",
+          "tag": "NOUN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "ISP",
+          "tag": "NOUN"
+        },
+        {
+          "token": "gateway",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_053",
+      "sentence": "Error code E-201 indicates an IP address conflict with an upstream modem.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-201",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "IP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "address",
+          "tag": "NOUN"
+        },
+        {
+          "token": "conflict",
+          "tag": "NOUN"
+        },
+        {
+          "token": "with",
+          "tag": "ADP"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "upstream",
+          "tag": "ADJ"
+        },
+        {
+          "token": "modem",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_054",
+      "sentence": "Change the router LAN IP to 192.168.2.1 to resolve error E-201.",
+      "tokens": [
+        {
+          "token": "Change",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "LAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "IP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "192.168.2.1",
+          "tag": "VERB"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "resolve",
+          "tag": "VERB"
+        },
+        {
+          "token": "error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-201",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_055",
+      "sentence": "Error code E-204 indicates DNS resolution failure on the WAN link.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-204",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "DNS",
+          "tag": "PROPN"
+        },
+        {
+          "token": "resolution",
+          "tag": "NOUN"
+        },
+        {
+          "token": "failure",
+          "tag": "NOUN"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "WAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "link",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_056",
+      "sentence": "Set Primary DNS to 8.8.8.8 and Secondary DNS to 1.1.1.1 to fix E-204.",
+      "tokens": [
+        {
+          "token": "Set",
+          "tag": "ADJ"
+        },
+        {
+          "token": "Primary",
+          "tag": "PROPN"
+        },
+        {
+          "token": "DNS",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "8.8.8.8",
+          "tag": "NUM"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "Secondary",
+          "tag": "ADJ"
+        },
+        {
+          "token": "DNS",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "1.1.1.1",
+          "tag": "NUM"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "fix",
+          "tag": "VERB"
+        },
+        {
+          "token": "E-204",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_057",
+      "sentence": "Error code E-301 indicates wireless radio thermal fault over 85\u00b0C.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-301",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "wireless",
+          "tag": "ADJ"
+        },
+        {
+          "token": "radio",
+          "tag": "NOUN"
+        },
+        {
+          "token": "thermal",
+          "tag": "ADJ"
+        },
+        {
+          "token": "fault",
+          "tag": "NOUN"
+        },
+        {
+          "token": "over",
+          "tag": "ADP"
+        },
+        {
+          "token": "85",
+          "tag": "NUM"
+        },
+        {
+          "token": "\u00b0",
+          "tag": "NUM"
+        },
+        {
+          "token": "C",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_058",
+      "sentence": "Relocate the router to an open, well-ventilated location away from heat sources.",
+      "tokens": [
+        {
+          "token": "Relocate",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "open",
+          "tag": "ADJ"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "well",
+          "tag": "ADV"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "ventilated",
+          "tag": "VERB"
+        },
+        {
+          "token": "location",
+          "tag": "NOUN"
+        },
+        {
+          "token": "away",
+          "tag": "ADV"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "heat",
+          "tag": "NOUN"
+        },
+        {
+          "token": "sources",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_059",
+      "sentence": "Error code E-305 indicates guest network isolation firewall failure.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-305",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "guest",
+          "tag": "NOUN"
+        },
+        {
+          "token": "network",
+          "tag": "NOUN"
+        },
+        {
+          "token": "isolation",
+          "tag": "NOUN"
+        },
+        {
+          "token": "firewall",
+          "tag": "NOUN"
+        },
+        {
+          "token": "failure",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_060",
+      "sentence": "Error code E-401 indicates firmware verification checksum mismatch.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-401",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "firmware",
+          "tag": "ADJ"
+        },
+        {
+          "token": "verification",
+          "tag": "NOUN"
+        },
+        {
+          "token": "checksum",
+          "tag": "NOUN"
+        },
+        {
+          "token": "mismatch",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_061",
+      "sentence": "Re-download the official firmware package over a wired LAN connection.",
+      "tokens": [
+        {
+          "token": "Re",
+          "tag": "NOUN"
+        },
+        {
+          "token": "-",
+          "tag": "VERB"
+        },
+        {
+          "token": "download",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "official",
+          "tag": "ADJ"
+        },
+        {
+          "token": "firmware",
+          "tag": "NOUN"
+        },
+        {
+          "token": "package",
+          "tag": "NOUN"
+        },
+        {
+          "token": "over",
+          "tag": "ADP"
+        },
+        {
+          "token": "a",
+          "tag": "DET"
+        },
+        {
+          "token": "wired",
+          "tag": "VERB"
+        },
+        {
+          "token": "LAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "connection",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_062",
+      "sentence": "Error code E-402 indicates internal flash memory write failure.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-402",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "internal",
+          "tag": "ADJ"
+        },
+        {
+          "token": "flash",
+          "tag": "NOUN"
+        },
+        {
+          "token": "memory",
+          "tag": "NOUN"
+        },
+        {
+          "token": "write",
+          "tag": "VERB"
+        },
+        {
+          "token": "failure",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_063",
+      "sentence": "Error code E-501 indicates connected USB storage exceeded 1.5 A current limit.",
+      "tokens": [
+        {
+          "token": "Error",
+          "tag": "NOUN"
+        },
+        {
+          "token": "code",
+          "tag": "NOUN"
+        },
+        {
+          "token": "E-501",
+          "tag": "PROPN"
+        },
+        {
+          "token": "indicates",
+          "tag": "VERB"
+        },
+        {
+          "token": "connected",
+          "tag": "ADJ"
+        },
+        {
+          "token": "USB",
+          "tag": "NOUN"
+        },
+        {
+          "token": "storage",
+          "tag": "NOUN"
+        },
+        {
+          "token": "exceeded",
+          "tag": "VERB"
+        },
+        {
+          "token": "1.5",
+          "tag": "NUM"
+        },
+        {
+          "token": "A",
+          "tag": "DET"
+        },
+        {
+          "token": "current",
+          "tag": "ADJ"
+        },
+        {
+          "token": "limit",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_064",
+      "sentence": "Unplug the USB storage device immediately and connect external power.",
+      "tokens": [
+        {
+          "token": "Unplug",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "USB",
+          "tag": "NOUN"
+        },
+        {
+          "token": "storage",
+          "tag": "NOUN"
+        },
+        {
+          "token": "device",
+          "tag": "NOUN"
+        },
+        {
+          "token": "immediately",
+          "tag": "ADV"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "connect",
+          "tag": "VERB"
+        },
+        {
+          "token": "external",
+          "tag": "ADJ"
+        },
+        {
+          "token": "power",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_065",
+      "sentence": "Power cycle the network by restarting the modem and then the router.",
+      "tokens": [
+        {
+          "token": "Power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "cycle",
+          "tag": "NOUN"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "network",
+          "tag": "NOUN"
+        },
+        {
+          "token": "by",
+          "tag": "ADP"
+        },
+        {
+          "token": "restarting",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "modem",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "then",
+          "tag": "ADV"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_066",
+      "sentence": "Verify your laptop is connected to the 5 GHz band for highest speed.",
+      "tokens": [
+        {
+          "token": "Verify",
+          "tag": "VERB"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "laptop",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "connected",
+          "tag": "VERB"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "5",
+          "tag": "NUM"
+        },
+        {
+          "token": "GHz",
+          "tag": "NOUN"
+        },
+        {
+          "token": "band",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "highest",
+          "tag": "ADJ"
+        },
+        {
+          "token": "speed",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_067",
+      "sentence": "Orient two external antennas vertically at 90 degrees and two at 45 degrees.",
+      "tokens": [
+        {
+          "token": "Orient",
+          "tag": "NOUN"
+        },
+        {
+          "token": "two",
+          "tag": "NUM"
+        },
+        {
+          "token": "external",
+          "tag": "ADJ"
+        },
+        {
+          "token": "antennas",
+          "tag": "NOUN"
+        },
+        {
+          "token": "vertically",
+          "tag": "ADV"
+        },
+        {
+          "token": "at",
+          "tag": "ADP"
+        },
+        {
+          "token": "90",
+          "tag": "NUM"
+        },
+        {
+          "token": "degrees",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "two",
+          "tag": "NUM"
+        },
+        {
+          "token": "at",
+          "tag": "ADP"
+        },
+        {
+          "token": "45",
+          "tag": "NUM"
+        },
+        {
+          "token": "degrees",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_068",
+      "sentence": "The main processor is a Dual-Core 1.5 GHz ARM 64-bit network CPU.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "main",
+          "tag": "ADJ"
+        },
+        {
+          "token": "processor",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "a",
+          "tag": "DET"
+        },
+        {
+          "token": "Dual",
+          "tag": "PROPN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "Core",
+          "tag": "PROPN"
+        },
+        {
+          "token": "1.5",
+          "tag": "NUM"
+        },
+        {
+          "token": "GHz",
+          "tag": "NOUN"
+        },
+        {
+          "token": "ARM",
+          "tag": "PROPN"
+        },
+        {
+          "token": "64",
+          "tag": "NUM"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "bit",
+          "tag": "NOUN"
+        },
+        {
+          "token": "network",
+          "tag": "NOUN"
+        },
+        {
+          "token": "CPU",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_069",
+      "sentence": "The system has 512 MB DDR3 high-speed RAM and 256 MB NAND flash.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "system",
+          "tag": "NOUN"
+        },
+        {
+          "token": "has",
+          "tag": "VERB"
+        },
+        {
+          "token": "512",
+          "tag": "NUM"
+        },
+        {
+          "token": "MB",
+          "tag": "PROPN"
+        },
+        {
+          "token": "DDR3",
+          "tag": "PROPN"
+        },
+        {
+          "token": "high",
+          "tag": "ADJ"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "speed",
+          "tag": "NOUN"
+        },
+        {
+          "token": "RAM",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "256",
+          "tag": "NUM"
+        },
+        {
+          "token": "MB",
+          "tag": "NOUN"
+        },
+        {
+          "token": "NAND",
+          "tag": "NOUN"
+        },
+        {
+          "token": "flash",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_070",
+      "sentence": "Four external high-gain omnidirectional antennas provide 5 dBi gain.",
+      "tokens": [
+        {
+          "token": "Four",
+          "tag": "NUM"
+        },
+        {
+          "token": "external",
+          "tag": "ADJ"
+        },
+        {
+          "token": "high",
+          "tag": "ADJ"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "gain",
+          "tag": "NOUN"
+        },
+        {
+          "token": "omnidirectional",
+          "tag": "ADJ"
+        },
+        {
+          "token": "antennas",
+          "tag": "NOUN"
+        },
+        {
+          "token": "provide",
+          "tag": "VERB"
+        },
+        {
+          "token": "5",
+          "tag": "NUM"
+        },
+        {
+          "token": "dBi",
+          "tag": "ADJ"
+        },
+        {
+          "token": "gain",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_071",
+      "sentence": "The router includes one Gigabit WAN port and four Gigabit LAN ports.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "includes",
+          "tag": "VERB"
+        },
+        {
+          "token": "one",
+          "tag": "NUM"
+        },
+        {
+          "token": "Gigabit",
+          "tag": "PROPN"
+        },
+        {
+          "token": "WAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "port",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "four",
+          "tag": "NUM"
+        },
+        {
+          "token": "Gigabit",
+          "tag": "NOUN"
+        },
+        {
+          "token": "LAN",
+          "tag": "PROPN"
+        },
+        {
+          "token": "ports",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_072",
+      "sentence": "Maximum power consumption is 18.5 W with active USB 3.0 storage load.",
+      "tokens": [
+        {
+          "token": "Maximum",
+          "tag": "ADJ"
+        },
+        {
+          "token": "power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "consumption",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "18.5",
+          "tag": "NUM"
+        },
+        {
+          "token": "W",
+          "tag": "PROPN"
+        },
+        {
+          "token": "with",
+          "tag": "ADP"
+        },
+        {
+          "token": "active",
+          "tag": "ADJ"
+        },
+        {
+          "token": "USB",
+          "tag": "NOUN"
+        },
+        {
+          "token": "3.0",
+          "tag": "NUM"
+        },
+        {
+          "token": "storage",
+          "tag": "NOUN"
+        },
+        {
+          "token": "load",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_073",
+      "sentence": "Operating temperature range is 0\u00b0C to 40\u00b0C in non-condensing humidity.",
+      "tokens": [
+        {
+          "token": "Operating",
+          "tag": "VERB"
+        },
+        {
+          "token": "temperature",
+          "tag": "NOUN"
+        },
+        {
+          "token": "range",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "0",
+          "tag": "NUM"
+        },
+        {
+          "token": "\u00b0",
+          "tag": "ADJ"
+        },
+        {
+          "token": "C",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "40",
+          "tag": "NUM"
+        },
+        {
+          "token": "\u00b0",
+          "tag": "NOUN"
+        },
+        {
+          "token": "C",
+          "tag": "PROPN"
+        },
+        {
+          "token": "in",
+          "tag": "ADP"
+        },
+        {
+          "token": "non",
+          "tag": "ADJ"
+        },
+        {
+          "token": "-",
+          "tag": "ADJ"
+        },
+        {
+          "token": "condensing",
+          "tag": "ADJ"
+        },
+        {
+          "token": "humidity",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_074",
+      "sentence": "Do not expose the device to water, liquids, or high humidity environments.",
+      "tokens": [
+        {
+          "token": "Do",
+          "tag": "AUX"
+        },
+        {
+          "token": "not",
+          "tag": "PART"
+        },
+        {
+          "token": "expose",
+          "tag": "VERB"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "device",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "water",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "liquids",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "or",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "high",
+          "tag": "ADJ"
+        },
+        {
+          "token": "humidity",
+          "tag": "NOUN"
+        },
+        {
+          "token": "environments",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_075",
+      "sentence": "Maintain at least 10 cm of clear space around ventilation openings.",
+      "tokens": [
+        {
+          "token": "Maintain",
+          "tag": "VERB"
+        },
+        {
+          "token": "at",
+          "tag": "ADV"
+        },
+        {
+          "token": "least",
+          "tag": "ADJ"
+        },
+        {
+          "token": "10",
+          "tag": "NUM"
+        },
+        {
+          "token": "cm",
+          "tag": "NOUN"
+        },
+        {
+          "token": "of",
+          "tag": "ADP"
+        },
+        {
+          "token": "clear",
+          "tag": "ADJ"
+        },
+        {
+          "token": "space",
+          "tag": "NOUN"
+        },
+        {
+          "token": "around",
+          "tag": "ADP"
+        },
+        {
+          "token": "ventilation",
+          "tag": "NOUN"
+        },
+        {
+          "token": "openings",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_076",
+      "sentence": "Using an uncertified third-party power adapter voids your warranty.",
+      "tokens": [
+        {
+          "token": "Using",
+          "tag": "VERB"
+        },
+        {
+          "token": "an",
+          "tag": "DET"
+        },
+        {
+          "token": "uncertified",
+          "tag": "ADJ"
+        },
+        {
+          "token": "third",
+          "tag": "ADJ"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "party",
+          "tag": "NOUN"
+        },
+        {
+          "token": "power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "adapter",
+          "tag": "NOUN"
+        },
+        {
+          "token": "voids",
+          "tag": "NOUN"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "warranty",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_077",
+      "sentence": "Aurora Networks warrants this hardware against defects for two years.",
+      "tokens": [
+        {
+          "token": "Aurora",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Networks",
+          "tag": "PROPN"
+        },
+        {
+          "token": "warrants",
+          "tag": "NOUN"
+        },
+        {
+          "token": "this",
+          "tag": "DET"
+        },
+        {
+          "token": "hardware",
+          "tag": "NOUN"
+        },
+        {
+          "token": "against",
+          "tag": "ADP"
+        },
+        {
+          "token": "defects",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "two",
+          "tag": "NUM"
+        },
+        {
+          "token": "years",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_078",
+      "sentence": "Warranty exclusions include liquid contact, lightning strikes, and custom firmware.",
+      "tokens": [
+        {
+          "token": "Warranty",
+          "tag": "NOUN"
+        },
+        {
+          "token": "exclusions",
+          "tag": "NOUN"
+        },
+        {
+          "token": "include",
+          "tag": "VERB"
+        },
+        {
+          "token": "liquid",
+          "tag": "ADJ"
+        },
+        {
+          "token": "contact",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "lightning",
+          "tag": "NOUN"
+        },
+        {
+          "token": "strikes",
+          "tag": "NOUN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "custom",
+          "tag": "NOUN"
+        },
+        {
+          "token": "firmware",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_079",
+      "sentence": "Contact customer support toll-free at +1-800-555-0199.",
+      "tokens": [
+        {
+          "token": "Contact",
+          "tag": "NOUN"
+        },
+        {
+          "token": "customer",
+          "tag": "NOUN"
+        },
+        {
+          "token": "support",
+          "tag": "NOUN"
+        },
+        {
+          "token": "toll",
+          "tag": "NOUN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "free",
+          "tag": "ADJ"
+        },
+        {
+          "token": "at",
+          "tag": "ADP"
+        },
+        {
+          "token": "+1",
+          "tag": "PROPN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "800",
+          "tag": "NUM"
+        },
+        {
+          "token": "-",
+          "tag": "NUM"
+        },
+        {
+          "token": "555",
+          "tag": "NUM"
+        },
+        {
+          "token": "-",
+          "tag": "SYM"
+        },
+        {
+          "token": "0199",
+          "tag": "NUM"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_080",
+      "sentence": "International customer support is available at +1-415-555-0142.",
+      "tokens": [
+        {
+          "token": "International",
+          "tag": "ADJ"
+        },
+        {
+          "token": "customer",
+          "tag": "NOUN"
+        },
+        {
+          "token": "support",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "available",
+          "tag": "ADJ"
+        },
+        {
+          "token": "at",
+          "tag": "ADP"
+        },
+        {
+          "token": "+1",
+          "tag": "PROPN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "415",
+          "tag": "NUM"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "555",
+          "tag": "NUM"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "0142",
+          "tag": "NUM"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_081",
+      "sentence": "Send support inquiries by email to support@aurora-tech.com.",
+      "tokens": [
+        {
+          "token": "Send",
+          "tag": "VERB"
+        },
+        {
+          "token": "support",
+          "tag": "NOUN"
+        },
+        {
+          "token": "inquiries",
+          "tag": "NOUN"
+        },
+        {
+          "token": "by",
+          "tag": "ADP"
+        },
+        {
+          "token": "email",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "support@aurora-tech.com",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_082",
+      "sentence": "Submit warranty claims online at https://aurora-tech.com/warranty.",
+      "tokens": [
+        {
+          "token": "Submit",
+          "tag": "NOUN"
+        },
+        {
+          "token": "warranty",
+          "tag": "NOUN"
+        },
+        {
+          "token": "claims",
+          "tag": "VERB"
+        },
+        {
+          "token": "online",
+          "tag": "ADV"
+        },
+        {
+          "token": "at",
+          "tag": "ADP"
+        },
+        {
+          "token": "https://aurora-tech.com/warranty",
+          "tag": "NUM"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_083",
+      "sentence": "Technical support hours are Monday through Friday 8am to 8pm EST.",
+      "tokens": [
+        {
+          "token": "Technical",
+          "tag": "ADJ"
+        },
+        {
+          "token": "support",
+          "tag": "NOUN"
+        },
+        {
+          "token": "hours",
+          "tag": "NOUN"
+        },
+        {
+          "token": "are",
+          "tag": "AUX"
+        },
+        {
+          "token": "Monday",
+          "tag": "PROPN"
+        },
+        {
+          "token": "through",
+          "tag": "ADP"
+        },
+        {
+          "token": "Friday",
+          "tag": "PROPN"
+        },
+        {
+          "token": "8",
+          "tag": "NUM"
+        },
+        {
+          "token": "am",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "8",
+          "tag": "NUM"
+        },
+        {
+          "token": "pm",
+          "tag": "NOUN"
+        },
+        {
+          "token": "EST",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_084",
+      "sentence": "Corporate headquarters are located in San Jose, California.",
+      "tokens": [
+        {
+          "token": "Corporate",
+          "tag": "ADJ"
+        },
+        {
+          "token": "headquarters",
+          "tag": "NOUN"
+        },
+        {
+          "token": "are",
+          "tag": "AUX"
+        },
+        {
+          "token": "located",
+          "tag": "VERB"
+        },
+        {
+          "token": "in",
+          "tag": "ADP"
+        },
+        {
+          "token": "San",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Jose",
+          "tag": "PROPN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "California",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_085",
+      "sentence": "The router complies with FCC Part 15 Class B digital device standards.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "complies",
+          "tag": "VERB"
+        },
+        {
+          "token": "with",
+          "tag": "ADP"
+        },
+        {
+          "token": "FCC",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Part",
+          "tag": "PROPN"
+        },
+        {
+          "token": "15",
+          "tag": "NUM"
+        },
+        {
+          "token": "Class",
+          "tag": "PROPN"
+        },
+        {
+          "token": "B",
+          "tag": "PROPN"
+        },
+        {
+          "token": "digital",
+          "tag": "ADJ"
+        },
+        {
+          "token": "device",
+          "tag": "NOUN"
+        },
+        {
+          "token": "standards",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_086",
+      "sentence": "The 5 GHz wireless band operations are restricted to indoor usage in EU states.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "5",
+          "tag": "NUM"
+        },
+        {
+          "token": "GHz",
+          "tag": "NOUN"
+        },
+        {
+          "token": "wireless",
+          "tag": "ADJ"
+        },
+        {
+          "token": "band",
+          "tag": "NOUN"
+        },
+        {
+          "token": "operations",
+          "tag": "NOUN"
+        },
+        {
+          "token": "are",
+          "tag": "AUX"
+        },
+        {
+          "token": "restricted",
+          "tag": "VERB"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "indoor",
+          "tag": "ADJ"
+        },
+        {
+          "token": "usage",
+          "tag": "NOUN"
+        },
+        {
+          "token": "in",
+          "tag": "ADP"
+        },
+        {
+          "token": "EU",
+          "tag": "PROPN"
+        },
+        {
+          "token": "states",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_087",
+      "sentence": "Clone your computer MAC address under Settings > Network > MAC Clone.",
+      "tokens": [
+        {
+          "token": "Clone",
+          "tag": "NOUN"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "computer",
+          "tag": "NOUN"
+        },
+        {
+          "token": "MAC",
+          "tag": "PROPN"
+        },
+        {
+          "token": "address",
+          "tag": "NOUN"
+        },
+        {
+          "token": "under",
+          "tag": "ADP"
+        },
+        {
+          "token": "Settings",
+          "tag": "PROPN"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "Network",
+          "tag": "PROPN"
+        },
+        {
+          "token": ">",
+          "tag": "X"
+        },
+        {
+          "token": "MAC",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Clone",
+          "tag": "PROPN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_088",
+      "sentence": "Configure Dynamic DNS DDNS to assign a domain name to your router.",
+      "tokens": [
+        {
+          "token": "Configure",
+          "tag": "ADJ"
+        },
+        {
+          "token": "Dynamic",
+          "tag": "ADJ"
+        },
+        {
+          "token": "DNS",
+          "tag": "NOUN"
+        },
+        {
+          "token": "DDNS",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "assign",
+          "tag": "VERB"
+        },
+        {
+          "token": "a",
+          "tag": "DET"
+        },
+        {
+          "token": "domain",
+          "tag": "NOUN"
+        },
+        {
+          "token": "name",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "your",
+          "tag": "PRON"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_089",
+      "sentence": "The DLNA media server streams video and music directly to smart TVs.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "DLNA",
+          "tag": "PROPN"
+        },
+        {
+          "token": "media",
+          "tag": "NOUN"
+        },
+        {
+          "token": "server",
+          "tag": "NOUN"
+        },
+        {
+          "token": "streams",
+          "tag": "NOUN"
+        },
+        {
+          "token": "video",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "music",
+          "tag": "NOUN"
+        },
+        {
+          "token": "directly",
+          "tag": "ADV"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "smart",
+          "tag": "ADJ"
+        },
+        {
+          "token": "TVs",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_090",
+      "sentence": "Restore saved configuration settings from a local .cfg file.",
+      "tokens": [
+        {
+          "token": "Restore",
+          "tag": "NOUN"
+        },
+        {
+          "token": "saved",
+          "tag": "VERB"
+        },
+        {
+          "token": "configuration",
+          "tag": "NOUN"
+        },
+        {
+          "token": "settings",
+          "tag": "NOUN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "a",
+          "tag": "DET"
+        },
+        {
+          "token": "local",
+          "tag": "ADJ"
+        },
+        {
+          "token": ".cfg",
+          "tag": "NOUN"
+        },
+        {
+          "token": "file",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_091",
+      "sentence": "Ensure both ends of the Ethernet cable click securely into the ports.",
+      "tokens": [
+        {
+          "token": "Ensure",
+          "tag": "VERB"
+        },
+        {
+          "token": "both",
+          "tag": "DET"
+        },
+        {
+          "token": "ends",
+          "tag": "NOUN"
+        },
+        {
+          "token": "of",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "Ethernet",
+          "tag": "PROPN"
+        },
+        {
+          "token": "cable",
+          "tag": "NOUN"
+        },
+        {
+          "token": "click",
+          "tag": "VERB"
+        },
+        {
+          "token": "securely",
+          "tag": "ADV"
+        },
+        {
+          "token": "into",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "ports",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_092",
+      "sentence": "Select WPA3-Personal encryption for superior data security protection.",
+      "tokens": [
+        {
+          "token": "Select",
+          "tag": "PROPN"
+        },
+        {
+          "token": "WPA3",
+          "tag": "PROPN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "Personal",
+          "tag": "ADJ"
+        },
+        {
+          "token": "encryption",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "superior",
+          "tag": "ADJ"
+        },
+        {
+          "token": "data",
+          "tag": "NOUN"
+        },
+        {
+          "token": "security",
+          "tag": "NOUN"
+        },
+        {
+          "token": "protection",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_093",
+      "sentence": "Speed test tool automatically detects download and upload broadband speeds.",
+      "tokens": [
+        {
+          "token": "Speed",
+          "tag": "NOUN"
+        },
+        {
+          "token": "test",
+          "tag": "NOUN"
+        },
+        {
+          "token": "tool",
+          "tag": "NOUN"
+        },
+        {
+          "token": "automatically",
+          "tag": "ADV"
+        },
+        {
+          "token": "detects",
+          "tag": "VERB"
+        },
+        {
+          "token": "download",
+          "tag": "NOUN"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "upload",
+          "tag": "VERB"
+        },
+        {
+          "token": "broadband",
+          "tag": "NOUN"
+        },
+        {
+          "token": "speeds",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_094",
+      "sentence": "The WPS LED blinks white for 120 seconds while pairing new client devices.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "WPS",
+          "tag": "PROPN"
+        },
+        {
+          "token": "LED",
+          "tag": "VERB"
+        },
+        {
+          "token": "blinks",
+          "tag": "VERB"
+        },
+        {
+          "token": "white",
+          "tag": "ADJ"
+        },
+        {
+          "token": "for",
+          "tag": "ADP"
+        },
+        {
+          "token": "120",
+          "tag": "NUM"
+        },
+        {
+          "token": "seconds",
+          "tag": "NOUN"
+        },
+        {
+          "token": "while",
+          "tag": "SCONJ"
+        },
+        {
+          "token": "pairing",
+          "tag": "VERB"
+        },
+        {
+          "token": "new",
+          "tag": "ADJ"
+        },
+        {
+          "token": "client",
+          "tag": "NOUN"
+        },
+        {
+          "token": "devices",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_095",
+      "sentence": "Check modem online indicators before powering on the Aurora router.",
+      "tokens": [
+        {
+          "token": "Check",
+          "tag": "VERB"
+        },
+        {
+          "token": "modem",
+          "tag": "NOUN"
+        },
+        {
+          "token": "online",
+          "tag": "ADJ"
+        },
+        {
+          "token": "indicators",
+          "tag": "NOUN"
+        },
+        {
+          "token": "before",
+          "tag": "ADP"
+        },
+        {
+          "token": "powering",
+          "tag": "VERB"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "Aurora",
+          "tag": "PROPN"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_096",
+      "sentence": "Assign static DHCP reservations to local servers under DHCP settings.",
+      "tokens": [
+        {
+          "token": "Assign",
+          "tag": "VERB"
+        },
+        {
+          "token": "static",
+          "tag": "ADJ"
+        },
+        {
+          "token": "DHCP",
+          "tag": "ADJ"
+        },
+        {
+          "token": "reservations",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "ADP"
+        },
+        {
+          "token": "local",
+          "tag": "ADJ"
+        },
+        {
+          "token": "servers",
+          "tag": "NOUN"
+        },
+        {
+          "token": "under",
+          "tag": "ADP"
+        },
+        {
+          "token": "DHCP",
+          "tag": "ADJ"
+        },
+        {
+          "token": "settings",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_097",
+      "sentence": "The router supports FAT32, NTFS, and exFAT USB storage filesystems.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "supports",
+          "tag": "VERB"
+        },
+        {
+          "token": "FAT32",
+          "tag": "PROPN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "NTFS",
+          "tag": "PROPN"
+        },
+        {
+          "token": ",",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "and",
+          "tag": "CCONJ"
+        },
+        {
+          "token": "exFAT",
+          "tag": "ADJ"
+        },
+        {
+          "token": "USB",
+          "tag": "NOUN"
+        },
+        {
+          "token": "storage",
+          "tag": "NOUN"
+        },
+        {
+          "token": "filesystems",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_098",
+      "sentence": "Allow 2 minutes for the router to complete booting after power on.",
+      "tokens": [
+        {
+          "token": "Allow",
+          "tag": "VERB"
+        },
+        {
+          "token": "2",
+          "tag": "NUM"
+        },
+        {
+          "token": "minutes",
+          "tag": "NOUN"
+        },
+        {
+          "token": "for",
+          "tag": "SCONJ"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "router",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "complete",
+          "tag": "VERB"
+        },
+        {
+          "token": "booting",
+          "tag": "NOUN"
+        },
+        {
+          "token": "after",
+          "tag": "ADP"
+        },
+        {
+          "token": "power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_099",
+      "sentence": "Enable AP Isolation to prevent guest devices from communicating with each other.",
+      "tokens": [
+        {
+          "token": "Enable",
+          "tag": "VERB"
+        },
+        {
+          "token": "AP",
+          "tag": "PROPN"
+        },
+        {
+          "token": "Isolation",
+          "tag": "NOUN"
+        },
+        {
+          "token": "to",
+          "tag": "PART"
+        },
+        {
+          "token": "prevent",
+          "tag": "VERB"
+        },
+        {
+          "token": "guest",
+          "tag": "NOUN"
+        },
+        {
+          "token": "devices",
+          "tag": "NOUN"
+        },
+        {
+          "token": "from",
+          "tag": "ADP"
+        },
+        {
+          "token": "communicating",
+          "tag": "VERB"
+        },
+        {
+          "token": "with",
+          "tag": "ADP"
+        },
+        {
+          "token": "each",
+          "tag": "DET"
+        },
+        {
+          "token": "other",
+          "tag": "ADJ"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    },
+    {
+      "id": "pos_gold_100",
+      "sentence": "The power switch is a latching push-button located on the rear panel.",
+      "tokens": [
+        {
+          "token": "The",
+          "tag": "DET"
+        },
+        {
+          "token": "power",
+          "tag": "NOUN"
+        },
+        {
+          "token": "switch",
+          "tag": "NOUN"
+        },
+        {
+          "token": "is",
+          "tag": "AUX"
+        },
+        {
+          "token": "a",
+          "tag": "DET"
+        },
+        {
+          "token": "latching",
+          "tag": "VERB"
+        },
+        {
+          "token": "push",
+          "tag": "NOUN"
+        },
+        {
+          "token": "-",
+          "tag": "PUNCT"
+        },
+        {
+          "token": "button",
+          "tag": "NOUN"
+        },
+        {
+          "token": "located",
+          "tag": "VERB"
+        },
+        {
+          "token": "on",
+          "tag": "ADP"
+        },
+        {
+          "token": "the",
+          "tag": "DET"
+        },
+        {
+          "token": "rear",
+          "tag": "ADJ"
+        },
+        {
+          "token": "panel",
+          "tag": "NOUN"
+        },
+        {
+          "token": ".",
+          "tag": "PUNCT"
+        }
+      ],
+      "verified_by_team": true
+    }
+  ]
+}
