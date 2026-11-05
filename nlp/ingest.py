@@ -39,28 +39,67 @@ class ScannedPDFError(ValueError):
     pass
 
 
+IMPERATIVE_VERBS = {
+    "connect", "plug", "press", "select", "click", "slide", "fold", "turn", "insert",
+    "push", "open", "close", "switch", "download", "remove", "place", "align", "attach",
+    "hold", "release", "repeat", "ensure", "verify", "check", "rotate", "wait", "power",
+    "charge", "tap", "swipe", "enter", "type", "navigate", "go", "choose", "install",
+    "adjust", "disconnect", "unplug", "locate", "set", "use", "follow", "keep", "make",
+    "put", "take", "pull", "read", "refer", "see", "allow", "do", "restart", "reboot"
+}
+
+
 def is_heading_candidate(line: str, font_size: float = 0.0, avg_font_size: float = 10.0) -> Optional[int]:
     """
     Determines if a text line is a heading based on numbering patterns and font size.
     Returns the heading level (1, 2, or 3) if candidate, else None.
+    Distinguishes section headings from numbered procedural steps.
     """
     clean = line.strip()
     if not clean:
         return None
 
-    # Numbered heading patterns: e.g. "1. Product Overview" or "1.1 Package Contents" or "Chapter 1"
-    m_num = re.match(r"^(\d+(?:\.\d+)*\.?)\s+[A-Z]", clean)
-    if m_num:
-        dots = m_num.group(1).rstrip('.').count('.')
-        return min(3, dots + 1)
+    # Filter running headers/footers
+    if re.match(r"^\s*\d+\s*(?:\||\u2502|\/)\s*[A-Z\s]{2,}\s*$", clean):
+        return None
+    if re.match(r"^\s*[A-Z\s]{2,}\s*(?:\||\u2502|\/)\s*\d+\s*$", clean):
+        return None
+    if re.match(r"^\s*\d+\s*$", clean):
+        return None
 
+    # Explicit chapter/appendix keywords
     m_chap = re.match(r"^(Chapter|Section|Appendix)\s+\d+", clean, re.IGNORECASE)
     if m_chap:
         return 1
 
-    # Font size based heuristic (if font size is at least 20% larger than average)
-    if font_size >= avg_font_size * 1.25 and len(clean) < 80:
-        if font_size >= avg_font_size * 1.5:
+    # Numbered heading patterns: e.g. "1. Product Overview" or "1.1 Package Contents"
+    m_num = re.match(r"^(\d+(?:\.\d+)*\.?)\s+([A-Za-z].*)$", clean)
+    if m_num:
+        num_part = m_num.group(1).rstrip(".")
+        rest = m_num.group(2).strip()
+        words = rest.split()
+        first_word = words[0].lower().rstrip(".,:;") if words else ""
+
+        # Single number (e.g. "1." or "2."): Disambiguate procedural step vs section heading
+        if "." not in num_part:
+            # Procedural action verb -> step, not heading
+            if first_word in IMPERATIVE_VERBS:
+                return None
+            # Ends in sentence-ending punctuation with more than 4 words -> step/sentence
+            if clean.endswith((".", ";")) and len(words) > 4:
+                return None
+            # Normal body font size -> not a heading
+            if font_size > 0 and avg_font_size > 0 and font_size < avg_font_size * 1.15:
+                return None
+            return 1
+        else:
+            # Hierarchical numbering like "1.1", "1.2.3"
+            dots = num_part.count(".")
+            return min(3, dots + 1)
+
+    # Font size based heuristic (at least 20% larger than average font size)
+    if font_size >= avg_font_size * 1.20 and len(clean) < 80:
+        if font_size >= avg_font_size * 1.45:
             return 1
         return 2
 
@@ -95,13 +134,19 @@ def extract_from_pdf(pdf_path: Path) -> List[Dict[str, Any]]:
                 for line in b.get("lines", []):
                     line_text = ""
                     for span in line.get("spans", []):
-                        text = span.get("text", "")
+                        text = span.get("text", "").replace("\xad", "")
                         line_text += text
                         size = span.get("size", 10.0)
                         if size > max_font_size:
                             max_font_size = size
-                    if line_text.strip():
-                        block_lines.append(line_text.strip())
+                    clean_l = line_text.strip()
+                    if clean_l:
+                        # Filter running headers/footers (e.g. '2 8 | E N G' with wide tracking, or standalone page numbers)
+                        if re.match(r"^\s*[\d\s]+\s*(?:\||\u2502|\/|\-)\s*[A-Za-z\s]+\s*$", clean_l) or \
+                           re.match(r"^\s*[A-Za-z\s]+\s*(?:\||\u2502|\/|\-)\s*[\d\s]+\s*$", clean_l) or \
+                           re.match(r"^\s*\d+\s*$", clean_l):
+                            continue
+                        block_lines.append(clean_l)
                 
                 block_full_text = "\n".join(block_lines)
                 total_chars += len(block_full_text)
@@ -201,23 +246,23 @@ def chunk_text_content(
         return []
 
     chunks: List[ManualChunk] = []
-    current_words: List[str] = []
+    current_paras: List[str] = []
+    current_word_count = 0
     chunk_idx = chunk_index_start
 
-    step_regex = re.compile(r"(?:Step\s+\d+:|\b\d+\.|\b\d+\))\s+[A-Za-z]", re.IGNORECASE)
-    bullet_regex = re.compile(r"(?:^|[\r\n]+|\s+)[•\*\-\+]\s+[A-Za-z]")
+    step_regex = re.compile(r"(?:^|[\r\n]+)\s*(?:Step\s+\d+:|\d+[\.\)])\s+[A-Za-z]", re.IGNORECASE)
+    bullet_regex = re.compile(r"(?:^|[\r\n]+)\s*[•\*\-\+]\s+[A-Za-z]")
 
     for para in paragraphs:
-        para_words = para.split()
-        if not para_words:
+        p_words = len(para.split())
+        if p_words == 0:
             continue
 
-        # If adding this paragraph exceeds target words + overlap and we already have enough words
-        if len(current_words) + len(para_words) > (target_words + overlap_words) and len(current_words) >= 100:
-            content_str = " ".join(current_words)
+        if current_word_count + p_words > (target_words + overlap_words) and current_word_count >= 80:
+            content_str = "\n\n".join(current_paras)
             has_steps = bool(step_regex.search(content_str))
             has_bullets = bool(bullet_regex.search(content_str))
-            
+
             chunk_id = f"{Path(manual_name).stem}_chunk_{chunk_idx:04d}"
             chunks.append(ManualChunk(
                 chunk_id=chunk_id,
@@ -225,18 +270,20 @@ def chunk_text_content(
                 page=page,
                 section_path=section_path,
                 content=content_str,
-                word_count=len(current_words),
+                word_count=current_word_count,
                 has_numbered_steps=has_steps,
                 has_bullets=has_bullets
             ))
             chunk_idx += 1
-            # Retain overlap from end of current chunk
-            current_words = current_words[-overlap_words:] + para_words
+            # Retain overlap paragraph if available
+            current_paras = [current_paras[-1], para] if len(current_paras) > 1 else [para]
+            current_word_count = sum(len(p.split()) for p in current_paras)
         else:
-            current_words.extend(para_words)
+            current_paras.append(para)
+            current_word_count += p_words
 
-    if current_words:
-        content_str = " ".join(current_words)
+    if current_paras:
+        content_str = "\n\n".join(current_paras)
         has_steps = bool(step_regex.search(content_str))
         has_bullets = bool(bullet_regex.search(content_str))
         chunk_id = f"{Path(manual_name).stem}_chunk_{chunk_idx:04d}"
@@ -246,7 +293,7 @@ def chunk_text_content(
             page=page,
             section_path=section_path,
             content=content_str,
-            word_count=len(current_words),
+            word_count=current_word_count,
             has_numbered_steps=has_steps,
             has_bullets=has_bullets
         ))
@@ -274,6 +321,15 @@ def ingest_manual(file_path: Path) -> IngestedDocument:
     full_text_collector: List[str] = []
     chunk_counter = 1
 
+    # Compute document-wide average font size for reliable heading detection
+    all_font_sizes = [
+        b["font_size"]
+        for page_item in pages_data
+        for b in page_item.get("blocks", [])
+        if b.get("font_size", 0.0) > 0.0
+    ]
+    avg_font_size = (sum(all_font_sizes) / len(all_font_sizes)) if all_font_sizes else 10.0
+
     for page_item in pages_data:
         page_num = page_item["page"]
         blocks = page_item["blocks"]
@@ -285,7 +341,7 @@ def ingest_manual(file_path: Path) -> IngestedDocument:
             lines = block.get("lines", [text])
             first_line = lines[0] if lines else text
 
-            heading_lvl = is_heading_candidate(first_line, font_size=font_size)
+            heading_lvl = is_heading_candidate(first_line, font_size=font_size, avg_font_size=avg_font_size)
             if heading_lvl:
                 clean_heading = re.sub(r"^[#\s]+", "", first_line).strip()
                 # Adjust hierarchy stack
@@ -303,10 +359,8 @@ def ingest_manual(file_path: Path) -> IngestedDocument:
                 if sec_path not in all_sections:
                     all_sections.append(sec_path)
                 
-                # If block had body text after the heading line, retain it
-                remaining_lines = lines[1:]
-                if remaining_lines:
-                    page_text_segments.append("\n".join(remaining_lines))
+                # Retain the heading text along with any subsequent lines in the segment
+                page_text_segments.append(text)
             else:
                 page_text_segments.append(text)
 

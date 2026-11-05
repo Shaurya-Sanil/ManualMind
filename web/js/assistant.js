@@ -216,6 +216,10 @@ function renderAssistantResponse(data) {
   const p = document.createElement("p");
   if (data.answer.generative_text) {
     p.innerHTML = `<span style="font-size:0.78rem; font-weight:700; color:var(--accent);">[FLAN-T5 Synthesis]</span> ${data.answer.generative_text}`;
+  } else if (data.answer.steps && data.answer.steps.length > 0) {
+    // When ordered steps are extracted, display the lead sentence cleanly without repeating raw numbered text
+    const leadLine = data.answer.answer_text.split("\n")[0];
+    p.textContent = leadLine;
   } else {
     p.textContent = data.answer.answer_text;
   }
@@ -255,18 +259,77 @@ function renderAssistantResponse(data) {
     content.appendChild(clarBox);
   }
 
-  // 5. Evidence Citations
+  // 5. Evidence Citations (Expandable on Click)
   if (data.answer.citations && data.answer.citations.length > 0) {
+    const citWrapper = document.createElement("div");
+    citWrapper.className = "citation-wrapper";
+    citWrapper.style.marginTop = "0.75rem";
+
+    const citTitle = document.createElement("div");
+    citTitle.style.fontSize = "0.74rem";
+    citTitle.style.fontWeight = "600";
+    citTitle.style.color = "var(--text-muted)";
+    citTitle.style.marginBottom = "0.35rem";
+    citTitle.textContent = "Ground-Truth Citations (click any page to expand text evidence):";
+    citWrapper.appendChild(citTitle);
+
     const citContainer = document.createElement("div");
     citContainer.className = "citation-container";
-    data.answer.citations.forEach(c => {
-      const chip = document.createElement("div");
+
+    const evidenceDrawer = document.createElement("div");
+    evidenceDrawer.className = "citation-evidence-card";
+    evidenceDrawer.style.display = "none";
+
+    let activeChip = null;
+
+    data.answer.citations.forEach((c, idx) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
       chip.className = "citation-chip";
-      chip.title = `Evidence snippet: ${c.evidence_snippet}`;
-      chip.innerHTML = `📄 Page ${c.page} • ${c.section_path.split(">").pop().trim()}`;
+      const cleanSection = c.section_path.split(">").pop().trim();
+      chip.innerHTML = `📄 Page ${c.page} • ${cleanSection} <span class="cit-arrow">▾</span>`;
+      
+      chip.addEventListener("click", () => {
+        if (activeChip === chip) {
+          // Collapse currently open drawer
+          evidenceDrawer.style.display = "none";
+          chip.classList.remove("active");
+          const arrow = chip.querySelector(".cit-arrow");
+          if (arrow) arrow.textContent = "▾";
+          activeChip = null;
+        } else {
+          // Expand evidence for clicked citation
+          if (activeChip) {
+            activeChip.classList.remove("active");
+            const prevArrow = activeChip.querySelector(".cit-arrow");
+            if (prevArrow) prevArrow.textContent = "▾";
+          }
+          chip.classList.add("active");
+          const arrow = chip.querySelector(".cit-arrow");
+          if (arrow) arrow.textContent = "▴";
+          activeChip = chip;
+
+          evidenceDrawer.innerHTML = `
+            <div class="citation-evidence-header">
+              <span>📖 PDF Evidence Passage • Page ${c.page}</span>
+              <span class="citation-score-badge">Relevance: ${(c.score * 100).toFixed(1)}%</span>
+            </div>
+            <div class="citation-evidence-meta">
+              <span>📁 <strong>Hierarchy:</strong> ${c.section_path}</span>
+              <span>🏷️ <strong>Chunk:</strong> ${c.chunk_id || `chunk_${idx+1}`}</span>
+            </div>
+            <div class="citation-evidence-body">${c.evidence_snippet}</div>
+          `;
+          evidenceDrawer.style.display = "block";
+        }
+      });
+
       citContainer.appendChild(chip);
     });
-    content.appendChild(citContainer);
+
+    citWrapper.appendChild(citContainer);
+    citWrapper.appendChild(evidenceDrawer);
+    content.appendChild(citWrapper);
   }
 
   // 6. Low Confidence Alert & Suggested Questions
@@ -550,10 +613,102 @@ function initInspectorTabs() {
 // 6. Voice Integration (STT & TTS)
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// 6. Voice Integration (STT & TTS)
+// ---------------------------------------------------------------------------
+
+let browserRecognition = null;
+
 function initVoiceSTT() {
   const micBtn = document.getElementById("mic-btn");
   const voiceStatus = document.getElementById("voice-status-text");
 
+  // Check for native Web Speech Recognition API (Chrome, Edge, Safari)
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  if (SpeechRecognition) {
+    browserRecognition = new SpeechRecognition();
+    browserRecognition.continuous = false;
+    browserRecognition.interimResults = true;
+    browserRecognition.lang = "en-US";
+
+    let finalTranscript = "";
+
+    browserRecognition.onstart = () => {
+      isRecording = true;
+      finalTranscript = "";
+      micBtn.classList.add("recording");
+      micBtn.title = "Listening... Click to stop";
+      if (voiceStatus) voiceStatus.textContent = "🎙️ Listening... (Speak your question clearly)";
+    };
+
+    browserRecognition.onresult = (event) => {
+      let interim = "";
+      for (let i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          finalTranscript += event.results[i][0].transcript;
+        } else {
+          interim += event.results[i][0].transcript;
+        }
+      }
+      const queryInput = document.getElementById("query-input");
+      if (queryInput) {
+        queryInput.value = finalTranscript || interim;
+      }
+      if (voiceStatus) {
+        voiceStatus.textContent = `🎙️ Hearing: "${(finalTranscript || interim).substring(0, 35)}..."`;
+      }
+    };
+
+    browserRecognition.onerror = (event) => {
+      console.warn("Native SpeechRecognition error:", event.error);
+      isRecording = false;
+      micBtn.classList.remove("recording");
+      micBtn.title = "Click to speak";
+      if (voiceStatus) {
+        voiceStatus.textContent = event.error === "no-speech" 
+          ? "Voice: No speech detected. Please try again."
+          : `Voice notice: ${event.error}`;
+      }
+    };
+
+    browserRecognition.onend = () => {
+      isRecording = false;
+      micBtn.classList.remove("recording");
+      micBtn.title = "Click to speak";
+
+      const queryInput = document.getElementById("query-input");
+      const textToSubmit = (finalTranscript || queryInput?.value || "").trim();
+
+      if (textToSubmit && textToSubmit.length >= 3) {
+        if (voiceStatus) voiceStatus.textContent = `✅ Transcribed: "${textToSubmit}"`;
+        // Ensure auto-speak is enabled for voice turns so assistant talks back
+        const autoSpeak = document.getElementById("auto-speak-toggle");
+        if (autoSpeak) autoSpeak.checked = true;
+        // Automatically submit the voice query
+        submitUserQuery(textToSubmit);
+      } else {
+        if (voiceStatus) voiceStatus.textContent = "Voice: Ready (Click mic to speak)";
+      }
+    };
+
+    micBtn.addEventListener("click", () => {
+      if (isRecording) {
+        browserRecognition.stop();
+      } else {
+        try {
+          browserRecognition.start();
+        } catch (e) {
+          console.error("Failed to start browser recognition:", e);
+        }
+      }
+    });
+
+    if (voiceStatus) voiceStatus.textContent = "Voice: Ready (Microphone enabled)";
+    return;
+  }
+
+  // Fallback: MediaRecorder + Server-side Whisper /api/stt
   if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
     if (voiceStatus) voiceStatus.textContent = "Voice: Microphone not supported in this browser";
     if (micBtn) micBtn.disabled = true;
@@ -590,7 +745,7 @@ async function startRecording() {
     const micBtn = document.getElementById("mic-btn");
     micBtn.classList.add("recording");
     micBtn.title = "Click to stop recording";
-    document.getElementById("voice-status-text").textContent = "Voice: Listening...";
+    document.getElementById("voice-status-text").textContent = "Voice: Recording audio... Click mic to stop";
   } catch (err) {
     console.error("Microphone access denied:", err);
     alert("Microphone access was denied or is unavailable. Please check your browser audio permissions.");
@@ -604,11 +759,12 @@ function stopRecording() {
     const micBtn = document.getElementById("mic-btn");
     micBtn.classList.remove("recording");
     micBtn.title = "Click to speak";
-    document.getElementById("voice-status-text").textContent = "Voice: Transcribing with Whisper...";
+    document.getElementById("voice-status-text").textContent = "Voice: Processing with Whisper...";
   }
 }
 
 async function sendAudioToSTT(audioBlob) {
+  const voiceStatus = document.getElementById("voice-status-text");
   try {
     const formData = new FormData();
     formData.append("file", audioBlob, "recording.webm");
@@ -620,16 +776,29 @@ async function sendAudioToSTT(audioBlob) {
 
     if (res.ok) {
       const data = await res.json();
-      const input = document.getElementById("query-input");
-      input.value = data.transcript;
-      document.getElementById("voice-status-text").textContent = `Voice: Transcribed (${data.duration_seconds}s)`;
-      input.focus();
+      const rawText = (data.transcript || "").trim();
+      
+      // If server returned fallback or valid text
+      if (rawText && !rawText.startsWith("[")) {
+        const input = document.getElementById("query-input");
+        if (input) input.value = rawText;
+        if (voiceStatus) voiceStatus.textContent = `Voice: Transcribed (${data.duration_seconds}s)`;
+        
+        // Auto-enable speech output for voice requests
+        const autoSpeak = document.getElementById("auto-speak-toggle");
+        if (autoSpeak) autoSpeak.checked = true;
+
+        // Auto-submit the voice query
+        submitUserQuery(rawText);
+      } else {
+        if (voiceStatus) voiceStatus.textContent = "Voice: Could not recognize speech. Please speak clearly.";
+      }
     } else {
       throw new Error(`STT HTTP error ${res.status}`);
     }
   } catch (err) {
     console.error("STT request failed:", err);
-    document.getElementById("voice-status-text").textContent = "Voice: Transcription failed";
+    if (voiceStatus) voiceStatus.textContent = "Voice: Transcription failed. Please type query.";
   }
 }
 

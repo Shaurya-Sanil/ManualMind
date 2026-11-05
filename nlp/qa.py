@@ -105,36 +105,43 @@ def extract_numbered_steps(text: str) -> List[str]:
     """
     steps: List[str] = []
 
-    # 1. Look for explicit 'Step X: ...' or 'X. ...' anchored to line starts
+    # 1. Look for explicit 'Step X: ...' or 'X. ...' anchored to line starts or punctuation
     step_pattern = re.compile(
-        r"(?:^|[\r\n]+)\s*(?:Step\s+\d+:|\d+\.|\d+\))\s*(.*?)(?=(?:[\r\n]+\s*(?:Step\s+\d+:|\d+\.|\d+\))|$))",
+        r"(?:^|[\r\n]+)\s*(?:Step\s+\d+:|\d+\.[\t\s]+|\d+\))\s*(.*?)(?=(?:[\r\n]+\s*(?:Step\s+\d+:|\d+\.[\t\s]+|\d+\)|NOTE[S]?:|TIP:|WARNING:|CAUTION:|\n\n)|$))",
         re.DOTALL | re.IGNORECASE
     )
     matches = step_pattern.findall(text)
     if matches:
         for m in matches:
             clean = " ".join(m.split()).strip()
-            # Remove any trailing section artifacts
+            # Trim trailing note references or page pointers
+            clean = re.sub(r"(?:NOTES?|TIP|WARNING|CAUTION):.*$", "", clean, flags=re.IGNORECASE).strip()
             if len(clean) > 8:
                 steps.append(clean)
         if len(steps) >= 2:
             return steps
 
     # 2. Look for bullet points
-    bullet_pattern = re.compile(r"(?:^|[\r\n]+)\s*[•\*\-]\s*(.*?)(?=(?:[\r\n]+\s*[•\*\-]|$))", re.DOTALL)
+    bullet_pattern = re.compile(
+        r"(?:^|[\r\n]+)\s*[•\*\-]\s*(.*?)(?=(?:[\r\n]+\s*(?:[•\*\-]|NOTE[S]?:|TIP:|WARNING:|CAUTION:|\n\n)|$))",
+        re.DOTALL
+    )
     b_matches = bullet_pattern.findall(text)
     if b_matches:
         for b in b_matches:
             clean = " ".join(b.split()).strip()
+            clean = re.sub(r"(?:NOTES?|TIP|WARNING|CAUTION):.*$", "", clean, flags=re.IGNORECASE).strip()
             if len(clean) > 8:
                 steps.append(clean)
         if len(steps) >= 2:
             return steps
 
-    # 3. Fallback: split on sentences
+    # 3. Fallback: split on sentences if step patterns present
     sentences = [s.strip() for s in text.splitlines() if len(s.strip()) > 15]
-    if len(sentences) >= 2:
-        return sentences[:5]
+    if len(sentences) >= 2 and any(re.match(r"^\d+\.", s) for s in sentences):
+        cleaned = [re.sub(r"^\d+\.\s*", "", s).strip() for s in sentences if len(s.strip()) > 10]
+        if len(cleaned) >= 2:
+            return cleaned[:6]
 
     return []
 
@@ -287,6 +294,63 @@ def run_prompting_experiment() -> Dict[str, Any]:
 # End-to-End Answer Composition Engine
 # ---------------------------------------------------------------------------
 
+def generate_suggested_questions(
+    query: str,
+    retrieved_chunks: List[Any],
+    manual_name: str = ""
+) -> List[str]:
+    """Generates relevant follow-up question suggestions based on retrieved manual sections."""
+    suggestions: List[str] = []
+    seen = set()
+
+    for item in retrieved_chunks:
+        chunk = item[0] if isinstance(item, (tuple, list)) else item
+        sec_name = chunk.section_path.split(">")[-1].strip()
+        clean_sec = re.sub(r"^\d+(?:\.\d+)*\.?\s*", "", sec_name).strip()
+        if clean_sec and clean_sec.lower() not in seen and len(clean_sec) > 3 and not clean_sec.isdigit():
+            seen.add(clean_sec.lower())
+            lower_s = clean_sec.lower()
+            if any(w in lower_s for w in ["led", "status", "light", "indicator"]):
+                suggestions.append(f"What do the {clean_sec} indicators mean?")
+            elif any(w in lower_s for w in ["connect", "pair", "setup", "install", "charge", "reset"]):
+                suggestions.append(f"How do I handle {clean_sec.lower()}?")
+            elif any(w in lower_s for w in ["troubleshoot", "problem", "error", "fix"]):
+                suggestions.append(f"How to troubleshoot {clean_sec.lower()}?")
+            else:
+                suggestions.append(f"What are the details for {clean_sec}?")
+            if len(suggestions) >= 3:
+                break
+
+    if len(suggestions) < 3:
+        m_lower = manual_name.lower()
+        q_lower = query.lower()
+        if "bose" in m_lower or "headphone" in m_lower or "headphone" in q_lower:
+            fallbacks = [
+                "What does the headphone status light indicate?",
+                "How do I pair a new Bluetooth device?",
+                "How long does the battery take to charge?"
+            ]
+        elif "router" in m_lower or "aurora" in m_lower:
+            fallbacks = [
+                "What do the front panel LED lights mean?",
+                "How do I reset the router to factory defaults?",
+                "How do I enable WPA3 security?"
+            ]
+        else:
+            fallbacks = [
+                "What are the key technical specifications?",
+                "How do I reset the device to factory defaults?",
+                "Where can I find safety and compliance precautions?"
+            ]
+        for f in fallbacks:
+            if f not in suggestions:
+                suggestions.append(f)
+            if len(suggestions) >= 3:
+                break
+
+    return suggestions[:3]
+
+
 def compose_answer(
     query: str,
     rewritten_query: str,
@@ -298,12 +362,14 @@ def compose_answer(
     Composes complete, faithful customer-support response with citations,
     extracted steps, confidence score, and optional generative rewrite.
     """
+    active_manual_name = retrieved_chunks[0][0].manual if retrieved_chunks else ""
+
     # 1. Handle Out-Of-Scope intent
     if intent == "out_of_scope":
         return {
             "answer_text": (
-                "I am ManualMind, your dedicated customer support assistant for the Aurora AX3000 Wi-Fi Router. "
-                "I can only answer questions related to router setup, Wi-Fi configuration, troubleshooting, "
+                "I am ManualMind, your dedicated customer support assistant. "
+                "I can only answer questions related to product configuration, setup, troubleshooting, "
                 "hardware specifications, safety precautions, and warranty information. "
                 "Your inquiry appears to be outside the scope of this product manual."
             ),
@@ -313,12 +379,7 @@ def compose_answer(
             "is_extractive": True,
             "generative_text": None,
             "low_confidence": False,
-            "suggested_questions": [
-                "How do I set up my Aurora AX3000 router for the first time?",
-                "How do I fix error code E-101 (WAN disconnected)?",
-                "What is the default IP address and administrator password?",
-                "How to configure a guest network with isolation?"
-            ],
+            "suggested_questions": generate_suggested_questions(query, retrieved_chunks, active_manual_name),
             "refusal_reason": "Out of domain scope"
         }
 
@@ -331,11 +392,20 @@ def compose_answer(
             "is_extractive": True,
             "generative_text": None,
             "low_confidence": True,
-            "suggested_questions": ["How do I reset my router to factory defaults?"],
+            "suggested_questions": generate_suggested_questions(query, [], active_manual_name),
             "refusal_reason": "No matching sections found"
         }
 
     winning_chunk, top_score, top_rank = retrieved_chunks[0]
+
+    # For procedural or how-to queries, prioritize top-ranked chunks that contain ordered steps
+    if (intent in ["how_to_usage", "setup_install"] or query.lower().startswith("how")) and not winning_chunk.has_numbered_steps:
+        for chunk, score, rank in retrieved_chunks[:3]:
+            if chunk.has_numbered_steps and score >= top_score * 0.75:
+                winning_chunk = chunk
+                top_score = score
+                top_rank = rank
+                break
 
     # 2. Extract answer span
     qa_span = extract_answer_span(rewritten_query, winning_chunk.content)
@@ -349,19 +419,21 @@ def compose_answer(
 
     # 4. Compose base answer text
     if steps:
-        answer_text = f"According to Section '{winning_chunk.section_path}', follow these steps:\n" + "\n".join([f"{i+1}. {s}" for i, s in enumerate(steps)])
+        clean_sec = winning_chunk.section_path.split(">")[-1].strip()
+        answer_text = f"According to Section '{clean_sec}', follow these steps:\n" + "\n".join([f"{i+1}. {s}" for i, s in enumerate(steps)])
     else:
         answer_text = span_text if span_text else winning_chunk.content[:240]
 
     # 5. Build citations
     citations = []
     for chunk, score, rank in retrieved_chunks[:3]:
+        clean_snippet = " ".join(chunk.content.split())
         citations.append({
             "manual": chunk.manual,
             "page": chunk.page,
             "section_path": chunk.section_path,
             "chunk_id": chunk.chunk_id,
-            "evidence_snippet": chunk.content[:200] + "...",
+            "evidence_snippet": clean_snippet[:500] + ("..." if len(clean_snippet) > 500 else ""),
             "score": round(float(score), 4)
         })
 
@@ -377,12 +449,8 @@ def compose_answer(
             gen_text = None  # Reject unfaithful rewrite
 
     # 7. Suggested follow-up questions
-    suggested_questions = [
-        "What do the front panel LED lights mean?",
-        "How do I reset the router to factory defaults?",
-        "How do I enable WPA3 security?"
-    ]
-    if "error" in query.lower() or "e-" in query.lower():
+    suggested_questions = generate_suggested_questions(query, retrieved_chunks, active_manual_name)
+    if ("error" in query.lower() or "e-" in query.lower()) and ("router" in active_manual_name.lower() or "aurora" in active_manual_name.lower()):
         suggested_questions = [
             "What does error code E-204 DNS failure mean?",
             "How do I fix error code E-101 WAN disconnected?",

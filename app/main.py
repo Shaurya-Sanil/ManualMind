@@ -13,18 +13,25 @@ Provides REST API endpoints for:
 
 import sys
 import os
-import time
-import json
-import io
-
-os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 from pathlib import Path
-from typing import List, Dict, Any, Optional
 
 # Ensure project root is in sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
+
+# Redirect all caches away from full C: drive to project directory on E: drive (91 GB free)
+CACHE_DIR = PROJECT_ROOT / ".cache"
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+os.environ["HF_HOME"] = str(CACHE_DIR / "huggingface")
+os.environ["TRANSFORMERS_CACHE"] = str(CACHE_DIR / "huggingface")
+os.environ["TORCH_HOME"] = str(CACHE_DIR / "torch")
+os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+
+import time
+import json
+import io
+from typing import List, Dict, Any, Optional
 
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Query, Request

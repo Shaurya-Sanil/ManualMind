@@ -86,3 +86,21 @@ To satisfy university NLP laboratory rigor and professor examination criteria, e
 - **Memory Footprint:** Resident memory is ~1.85 GB, scaling to ~2.4 GB under load, comfortably fitting inside free 2 vCPU / 16 GB RAM containers on Hugging Face Spaces and Render.
 - **Latency Verification:** End-to-end pipeline median latency is 527.56 ms, well beneath the 4000 ms target threshold.
 
+---
+
+## 8. Real-World PDF Ingestion, Disambiguation & Verifiable Citations
+- **Heading vs. Procedural Step Disambiguation:**
+  - *Root Cause of Ingestion Anomaly:* Earlier regex `^(\d+(?:\.\d+)*\.?)\s+[A-Z]` matched single-number action lines like `1. Connect the small end of the USB cable...` and `2. Connect the other end into a USB wall charger.` as Level 1 Section Headings! This caused the ingestion pipeline to strip the steps from the chunk body, leaving only fragmented crumbs in the text and generating 0 structured steps.
+  - *Heuristic Solution:* Enforced strict disambiguation: single-number lines (`1.`, `2.`) are treated as procedural steps (NOT headings) if their first token is an imperative action verb (`connect`, `plug`, `press`, `slide`, `fold`, `turn`, `insert`, etc.), if they end in a period with > 4 words, or if their font size matches standard body font size (`font_size < avg_font_size * 1.15`).
+- **PDF Hygiene & Wide-Tracking Header Removal:**
+  - Filtered running headers/footers with spaced letter tracking (e.g., `2 8 \t | \t E N G`) using `re.compile(r"^\s*[\d\s]+\s*(?:\||\u2502|\/|\-)\s*[A-Za-z\s]+\s*$")`.
+  - Replaced soft-hyphens `\xad` to prevent broken tokenization (e.g., `\xadl\xadocated` $\to$ `located`).
+- **Chunk Boundary & Step Ordering Invariant:**
+  - Preserved newline boundaries in `chunk_text_content` rather than collapsing all whitespace into single spaces.
+  - In `compose_answer`, when the user asks a procedural `how_to_usage` or `setup_install` query, prioritized top-3 retrieved chunks that contain structured ordered steps over unstructured overview tables.
+- **Interactive Ground-Truth Citation Accordion:**
+  - Upgraded frontend citation chips into clickable toggle accordions. Clicking any citation expands an evidence card displaying the exact page number, section hierarchy, chunk ID, relevance match percentage, and the verbatim excerpt from that manual page.
+- **Dynamic Follow-Up Questions:**
+  - Replaced hardcoded router fallback questions with dynamic question generators derived from the active manual's section headers and topical keywords.
+
+

@@ -23,8 +23,11 @@ def get_whisper_model():
     if _WHISPER_MODEL is None:
         try:
             from faster_whisper import WhisperModel
-            _WHISPER_MODEL = WhisperModel("base.en", device="cpu", compute_type="int8")
-        except Exception:
+            cache_dir = Path(__file__).resolve().parent.parent / ".cache" / "huggingface"
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            _WHISPER_MODEL = WhisperModel("base.en", device="cpu", compute_type="int8", download_root=str(cache_dir))
+        except Exception as e:
+            print(f"Warning: WhisperModel load notice: {e}")
             _WHISPER_MODEL = None
     return _WHISPER_MODEL
 
