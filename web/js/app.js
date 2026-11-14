@@ -75,17 +75,41 @@ window.fetch = function(input, init) {
 
 // Fetch Active Manual from Backend Health Probe
 async function fetchHealthAndActiveManual() {
+  const pill = document.getElementById("active-manual-name");
+  const dot = document.querySelector(".indicator-dot");
+  
+  if (pill) {
+    pill.addEventListener("click", () => {
+      const current = window.API_BASE || "";
+      const input = prompt("Enter Backend API URL (e.g. from Render or Hugging Face Space):", current);
+      if (input !== null) {
+        const clean = input.trim().replace(/\/+$/, "");
+        localStorage.setItem("manualmind-backend-url", clean);
+        window.location.reload();
+      }
+    });
+  }
+
   try {
     const res = await fetch(window.apiUrl("/api/health"));
     if (res.ok) {
       const data = await res.json();
-      const pill = document.getElementById("active-manual-name");
       if (pill && data.active_manual) {
         pill.textContent = data.active_manual;
+        pill.title = "Connected to backend. Click to change backend URL.";
+        if (dot) dot.style.background = "var(--success)";
       }
+    } else {
+      throw new Error(`HTTP ${res.status}`);
     }
   } catch (err) {
     console.warn("ManualMind backend health check waiting: ", err);
+    if (pill) {
+      pill.textContent = "Connect Backend ⚙️";
+      pill.style.cursor = "pointer";
+      pill.title = "Click to configure backend API URL";
+      if (dot) dot.style.background = "var(--warning)";
+    }
   }
 }
 

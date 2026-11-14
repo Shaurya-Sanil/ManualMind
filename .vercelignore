@@ -1,0 +1,14 @@
+# Ignore heavy Python backend & dependencies so Vercel does not build a Lambda function
+requirements.txt
+pyproject.toml
+Dockerfile
+Makefile
+app/
+nlp/
+data/
+eval/
+tests/
+scripts/
+reports/
+*.pdf
+*.docx
