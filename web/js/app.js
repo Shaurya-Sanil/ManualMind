@@ -53,10 +53,30 @@ function initNavigation() {
   });
 }
 
+// Global API Endpoint Resolver (supports local, Vercel proxy rewrite, or custom ?backend=URL)
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get("backend")) {
+  localStorage.setItem("manualmind-backend-url", urlParams.get("backend").replace(/\/+$/, ""));
+}
+window.API_BASE = localStorage.getItem("manualmind-backend-url") || "";
+window.apiUrl = function(path) {
+  if (!path.startsWith("/")) path = "/" + path;
+  return `${window.API_BASE}${path}`;
+};
+
+// Universal fetch interceptor for remote backend deployments (e.g. Vercel)
+const _nativeFetch = window.fetch;
+window.fetch = function(input, init) {
+  if (typeof input === "string" && input.startsWith("/api") && window.API_BASE) {
+    input = `${window.API_BASE}${input}`;
+  }
+  return _nativeFetch(input, init);
+};
+
 // Fetch Active Manual from Backend Health Probe
 async function fetchHealthAndActiveManual() {
   try {
-    const res = await fetch("/api/health");
+    const res = await fetch(window.apiUrl("/api/health"));
     if (res.ok) {
       const data = await res.json();
       const pill = document.getElementById("active-manual-name");

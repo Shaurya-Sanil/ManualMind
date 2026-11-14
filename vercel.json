@@ -1,0 +1,10 @@
+{
+  "outputDirectory": "web",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://manualmind-backend.onrender.com/api/:path*"
+    }
+  ]
+}

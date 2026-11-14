@@ -50,7 +50,30 @@ Hugging Face Spaces provides a free 2 vCPU / 16 GB RAM container environment wit
 
 ---
 
-## 3. Local Docker Deployment
+## 3. Deploying the Frontend on Vercel
+
+The ManualMind frontend is 100% static (pure HTML, modern CSS, vanilla JavaScript with locally vendored libraries) and can be deployed to Vercel in seconds.
+
+Because genuine local NLP transformer models and PyTorch require ~2.5 GB (exceeding Vercel serverless function limits of 250 MB), the backend runs in a free container on **Render** or **Hugging Face Spaces**, while Vercel serves the public UI.
+
+### Step-by-Step Vercel Setup:
+1. **Import Project to Vercel:**
+   - Log into [vercel.com](https://vercel.com) and click **Add New...** > **Project**.
+   - Select your GitHub repository: `Shaurya-Sanil/ManualMind`.
+   - In **Root Directory**, leave as `./` (or select `web`).
+   - Framework Preset: **Other**. Build Command: **None**. Output Directory: `web`.
+2. **Connect to Backend:**
+   - The repository includes a pre-configured `vercel.json` with an edge rewrite proxy.
+   - Simply update the destination in `vercel.json` to point to your live backend (e.g., `https://your-backend.onrender.com/api/:path*`).
+   - **Alternative (No config needed):** Open your live Vercel URL with the backend parameter once:
+     ```
+     https://your-manualmind.vercel.app?backend=https://your-backend.onrender.com
+     ```
+     The client stores the backend address in `localStorage` and routes all API requests automatically.
+
+---
+
+## 4. Local Docker Deployment
 
 Run the complete, self-contained container locally using Docker:
 

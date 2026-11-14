@@ -58,7 +58,8 @@ function initChatInput() {
 
 async function fetchAutocomplete(prefix) {
   try {
-    const res = await fetch(`/api/autocomplete?prefix=${encodeURIComponent(prefix)}&max_suggestions=4`);
+    const url = (window.apiUrl || (p => p))(`/api/autocomplete?prefix=${encodeURIComponent(prefix)}&max_suggestions=4`);
+    const res = await fetch(url);
     if (res.ok) {
       const data = await res.json();
       renderAutocompleteDropdown(data.suggestions);
@@ -131,7 +132,8 @@ async function submitUserQuery(overrideText = null, clarificationSelection = nul
 
     setStageActive("stage-understand");
     const t0 = performance.now();
-    const res = await fetch("/api/ask", {
+    const askUrl = (window.apiUrl || (p => p))("/api/ask");
+    const res = await fetch(askUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
@@ -769,7 +771,8 @@ async function sendAudioToSTT(audioBlob) {
     const formData = new FormData();
     formData.append("file", audioBlob, "recording.webm");
 
-    const res = await fetch("/api/stt", {
+    const sttUrl = (window.apiUrl || (p => p))("/api/stt");
+    const res = await fetch(sttUrl, {
       method: "POST",
       body: formData
     });

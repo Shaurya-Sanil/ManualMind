@@ -19,7 +19,8 @@ async function runMethodEvolution() {
     const formData = new FormData();
     formData.append("query", query);
 
-    const res = await fetch("/api/evolution", {
+    const evoUrl = (window.apiUrl || (p => p))("/api/evolution");
+    const res = await fetch(evoUrl, {
       method: "POST",
       body: formData
     });

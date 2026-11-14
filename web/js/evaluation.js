@@ -9,7 +9,8 @@ async function loadEvaluationResults() {
   if (!container) return;
 
   try {
-    const res = await fetch("/api/eval/results");
+    const url = (window.apiUrl || (p => p))("/api/eval/results");
+    const res = await fetch(url);
     if (!res.ok) {
       container.innerHTML = `
         <div class="lab-tool-card" style="text-align: center; color: var(--danger);">

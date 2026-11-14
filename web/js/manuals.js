@@ -9,7 +9,8 @@ async function loadManualsList() {
   if (!container) return;
 
   try {
-    const res = await fetch("/api/manuals");
+    const listUrl = (window.apiUrl || (p => p))("/api/manuals");
+    const res = await fetch(listUrl);
     if (!res.ok) throw new Error(`HTTP error ${res.status}`);
     const data = await res.json();
 
@@ -64,7 +65,8 @@ async function uploadManualFile() {
   formData.append("file", file);
 
   try {
-    const res = await fetch("/api/manuals", {
+    const uploadUrl = (window.apiUrl || (p => p))("/api/manuals");
+    const res = await fetch(uploadUrl, {
       method: "POST",
       body: formData
     });
@@ -87,7 +89,8 @@ async function uploadManualFile() {
 
 async function activateManual(filename) {
   try {
-    const res = await fetch(`/api/manuals/${encodeURIComponent(filename)}/activate`, {
+    const actUrl = (window.apiUrl || (p => p))(`/api/manuals/${encodeURIComponent(filename)}/activate`);
+    const res = await fetch(actUrl, {
       method: "POST"
     });
     if (res.ok) {
