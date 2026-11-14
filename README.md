@@ -2,13 +2,13 @@
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests: 102 passed](https://img.shields.io/badge/tests-102%20passed-brightgreen.svg)](https://github.com/your-username/NLP_mini_project)
-[![Inference: CPU Only](https://img.shields.io/badge/inference-100%25%20CPU%20local-orange.svg)](https://github.com/your-username/NLP_mini_project)
-[![Docker: Ready](https://img.shields.io/badge/docker-ready-blue.svg)](https://github.com/your-username/NLP_mini_project)
+[![Tests: 102 passed](https://img.shields.io/badge/tests-102%20passed-brightgreen.svg)](https://github.com/Shaurya-Sanil/ManualMind)
+[![Inference: CPU Only](https://img.shields.io/badge/inference-100%25%20CPU%20local-orange.svg)](https://github.com/Shaurya-Sanil/ManualMind)
+[![Docker: Ready](https://img.shields.io/badge/docker-ready-blue.svg)](https://github.com/Shaurya-Sanil/ManualMind)
 
 > **University Natural Language Processing Laboratory — Final Mini-Project**  
 > **Course Examiner:** Theory-Oriented NLP Professor  
-> **Author & Engineering Team:** ManualMind Project Team  
+> **Author:** Shaurya Sanil  
 > **Evaluation Mode:** Rigorous syllabus implementation, from-scratch algorithmic foundations, verifiable benchmarks, and zero API wrappers.
 
 ---
@@ -143,6 +143,10 @@ All numbers below were computed by `eval/run_all_evals.py` on the test datasets 
 | Era 4: Dense Transformer (`all-MiniLM-L6-v2`) | 80.77 | 94.23 | 98.08 | 0.8750 |
 | **Era 5: Hybrid RRF + Error Code Boost (Production)** | **88.46** | **96.15** | **100.00** | **0.9295** |
 
+<p align="center">
+  <img src="reports/figures/retrieval_comparison.png" alt="Retrieval Recall and MRR Comparison across Eras" width="85%" />
+</p>
+
 ### 5.2 Preprocessing Ablation on Retrieval
 | Preprocessing Pipeline | Recall@1 (%) | Recall@5 (%) | MRR |
 | :--- | :---: | :---: | :---: |
@@ -156,18 +160,35 @@ All numbers below were computed by `eval/run_all_evals.py` on the test datasets 
 - **Scikit-learn Logistic Regression Baseline:** **73.78%** (Macro F1: 71.71%)
 - **Out-of-Scope Adversarial Rejection Accuracy:** **100.00%** (8 of 8 non-manual queries gracefully rejected).
 
+<p align="center">
+  <img src="reports/figures/intent_confusion_matrices.png" alt="Intent Classification Confusion Matrices" width="85%" />
+</p>
+
 ### 5.4 Sequence Labeling (POS & NER)
 - **POS Tagging:** spaCy achieves **98.50%** accuracy; CRF achieves **55.37%**; Rule-based achieves **52.21%**; HMM achieves **50.32%**.
 - **Named Entity Recognition:** Rule-based EntityRuler + Regex achieves **100.00%** domain F1; Statistical CRF achieves **67.72%**; Generic `bert-base-NER` achieves **0.00%** (misses all domain-specific router entities).
+
+<p align="center">
+  <img src="reports/figures/pos_tagger_accuracy.png" alt="POS Tagger Accuracy Comparison" width="48%" />
+  <img src="reports/figures/ner_metrics.png" alt="NER Evaluation Metrics" width="48%" />
+</p>
 
 ### 5.5 Ambiguity Guard & Understanding Layer Ablation
 - **Ambiguity Guard Benchmark (20 Queries):** **100.00% Precision**, **86.67% Recall**, **92.86% F1**, **90.00% Accuracy**.
 - **Ablation Study:** Multi-turn pronoun resolution increases answering Token F1 from **21.54%** to **26.39%** (**+22.52% relative gain**).
 
+<p align="center">
+  <img src="reports/figures/understanding_ablation.png" alt="Understanding Layer & Pronoun Resolution Ablation" width="80%" />
+</p>
+
 ### 5.6 Execution Latency (2 vCPU CPU Environment)
 - **Median Pipeline Turnaround:** **527.56 ms**
 - **P95 Latency:** **569.50 ms**
 - **Target Threshold:** < 4,000 ms (**7.6x faster than budget**).
+
+<p align="center">
+  <img src="reports/figures/pipeline_latency.png" alt="Pipeline Latency Breakdown on CPU" width="85%" />
+</p>
 
 ---
 
@@ -177,8 +198,8 @@ All numbers below were computed by `eval/run_all_evals.py` on the test datasets 
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-username/NLP_mini_project.git
-cd NLP_mini_project
+git clone https://github.com/Shaurya-Sanil/ManualMind.git
+cd ManualMind
 
 # 2. Create virtual environment
 python -m venv .venv
