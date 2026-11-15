@@ -544,10 +544,18 @@ async def health_check():
 # Static Web Frontend Hosting
 # ---------------------------------------------------------------------------
 
-app.mount("/css", StaticFiles(directory=settings.WEB_DIR / "css"), name="css")
-app.mount("/js", StaticFiles(directory=settings.WEB_DIR / "js"), name="js")
-app.mount("/vendor", StaticFiles(directory=settings.WEB_DIR / "vendor"), name="vendor")
-app.mount("/reports/figures", StaticFiles(directory=settings.FIGURES_DIR), name="figures")
+# Ensure static directories exist before mounting to prevent Starlette RuntimeError
+for static_path in [settings.WEB_DIR / "css", settings.WEB_DIR / "js", settings.WEB_DIR / "vendor", settings.FIGURES_DIR]:
+    static_path.mkdir(parents=True, exist_ok=True)
+
+if (settings.WEB_DIR / "css").is_dir():
+    app.mount("/css", StaticFiles(directory=settings.WEB_DIR / "css"), name="css")
+if (settings.WEB_DIR / "js").is_dir():
+    app.mount("/js", StaticFiles(directory=settings.WEB_DIR / "js"), name="js")
+if (settings.WEB_DIR / "vendor").is_dir():
+    app.mount("/vendor", StaticFiles(directory=settings.WEB_DIR / "vendor"), name="vendor")
+if settings.FIGURES_DIR.is_dir():
+    app.mount("/reports/figures", StaticFiles(directory=settings.FIGURES_DIR), name="figures")
 
 
 @app.get("/favicon.ico", include_in_schema=False)
