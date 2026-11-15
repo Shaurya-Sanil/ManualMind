@@ -10,7 +10,14 @@ ENV PYTHONUNBUFFERED=1 \
     PORT=7860 \
     HF_HOME=/app/.cache/huggingface \
     TRANSFORMERS_CACHE=/app/.cache/huggingface \
-    TORCH_HOME=/app/.cache/torch
+    TORCH_HOME=/app/.cache/torch \
+    LOW_MEMORY_MODE=true \
+    MALLOC_ARENA_MAX=2 \
+    OMP_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
+    OPENBLAS_NUM_THREADS=1 \
+    NUMEXPR_NUM_THREADS=1 \
+    TORCH_NUM_THREADS=1
 
 # Install system dependencies (ffmpeg for whisper audio decoding, build-essential for C extensions)
 RUN apt-get update && apt-get install -y --no-install-recommends \

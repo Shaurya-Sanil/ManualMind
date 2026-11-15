@@ -26,19 +26,25 @@ from nlp.patterns import find_error_codes
 _QA_READER_PIPELINE = None
 
 
-def get_qa_reader(model_name: str = "deepset/roberta-base-squad2"):
+def get_qa_reader(model_name: Optional[str] = None):
     global _QA_READER_PIPELINE
     if _QA_READER_PIPELINE is None:
+        from app.config import settings
+        if getattr(settings, "LOW_MEMORY_MODE", False):
+            target_model = settings.QA_READER_FALLBACK
+        else:
+            target_model = model_name or settings.QA_READER_MODEL
+
         try:
             from transformers import pipeline
             _QA_READER_PIPELINE = pipeline(
                 "question-answering",
-                model=model_name,
-                tokenizer=model_name,
+                model=target_model,
+                tokenizer=target_model,
                 device=-1  # Force CPU execution
             )
         except Exception:
-            # Fallback to MiniLM reader if roberta-base is unavailable
+            # Fallback to MiniLM reader if primary model is unavailable
             try:
                 from transformers import pipeline
                 _QA_READER_PIPELINE = pipeline(

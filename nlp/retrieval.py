@@ -339,8 +339,17 @@ _SENTENCE_TRANSFORMER_MODEL = None
 def get_sentence_transformer():
     global _SENTENCE_TRANSFORMER_MODEL
     if _SENTENCE_TRANSFORMER_MODEL is None:
-        from sentence_transformers import SentenceTransformer
-        _SENTENCE_TRANSFORMER_MODEL = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+        try:
+            import torch
+            torch.set_num_threads(1)
+            from sentence_transformers import SentenceTransformer
+            _SENTENCE_TRANSFORMER_MODEL = SentenceTransformer(
+                "sentence-transformers/all-MiniLM-L6-v2",
+                device="cpu"
+            )
+        except Exception as e:
+            logger.warning(f"Failed to load SentenceTransformer: {e}")
+            _SENTENCE_TRANSFORMER_MODEL = None
     return _SENTENCE_TRANSFORMER_MODEL
 
 
@@ -381,11 +390,25 @@ class HybridRetriever:
         self.w2v_cbow_embeddings = np.array([self.w2v.encode_sentence(t, "cbow") for t in self.doc_texts])
         self.w2v_sg_embeddings = np.array([self.w2v.encode_sentence(t, "skipgram") for t in self.doc_texts])
 
-        # 3. Dense sentence embeddings
-        st_model = get_sentence_transformer()
-        self.dense_embeddings = st_model.encode(
-            self.doc_texts, show_progress_bar=False, normalize_embeddings=True
-        )
+        # 3. Dense sentence embeddings (guarded for low-memory container stability)
+        try:
+            st_model = get_sentence_transformer()
+            if st_model is not None:
+                import torch
+                import gc
+                with torch.no_grad():
+                    self.dense_embeddings = st_model.encode(
+                        self.doc_texts,
+                        batch_size=8,
+                        show_progress_bar=False,
+                        normalize_embeddings=True
+                    )
+                gc.collect()
+            else:
+                self.dense_embeddings = None
+        except Exception as e:
+            logger.warning(f"Dense sentence encoding skipped: {e}")
+            self.dense_embeddings = None
 
         self.is_indexed = True
 
@@ -442,12 +465,22 @@ class HybridRetriever:
         bm25_ranked = np.argsort(bm25_scores)[::-1]
         bm25_rank_dict = {doc_idx: rank for rank, doc_idx in enumerate(bm25_ranked)}
 
-        # 2. Dense ranks
+        # 2. Dense ranks (fallback to TF-IDF ranks if dense embeddings unavailable)
         st_model = get_sentence_transformer()
-        q_emb = st_model.encode([query], normalize_embeddings=True)[0]
-        dense_scores = np.dot(self.dense_embeddings, q_emb)
-        dense_ranked = np.argsort(dense_scores)[::-1]
-        dense_rank_dict = {doc_idx: rank for rank, doc_idx in enumerate(dense_ranked)}
+        if st_model is not None and self.dense_embeddings is not None:
+            try:
+                import torch
+                with torch.no_grad():
+                    q_emb = st_model.encode([query], normalize_embeddings=True)[0]
+                dense_scores = np.dot(self.dense_embeddings, q_emb)
+                dense_ranked = np.argsort(dense_scores)[::-1]
+                dense_rank_dict = {doc_idx: rank for rank, doc_idx in enumerate(dense_ranked)}
+            except Exception:
+                tfidf_pairs = self.tfidf.rank(query, top_k=N)
+                dense_rank_dict = {doc_idx: rank for rank, (doc_idx, _) in enumerate(tfidf_pairs)}
+        else:
+            tfidf_pairs = self.tfidf.rank(query, top_k=N)
+            dense_rank_dict = {doc_idx: rank for rank, (doc_idx, _) in enumerate(tfidf_pairs)}
 
         # 3. Reciprocal Rank Fusion
         rrf_scores = np.zeros(N, dtype=np.float32)

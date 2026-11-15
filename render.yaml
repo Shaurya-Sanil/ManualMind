@@ -6,4 +6,12 @@ services:
     envVars:
       - key: PORT
         value: 7860
+      - key: LOW_MEMORY_MODE
+        value: "true"
+      - key: MALLOC_ARENA_MAX
+        value: "2"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
 

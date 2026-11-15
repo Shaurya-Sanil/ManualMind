@@ -20,13 +20,26 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-# Redirect all caches away from full C: drive to project directory on E: drive (91 GB free)
+# Optimize glibc memory arenas and thread pools for low-memory container environments (Render 512MB)
+os.environ.setdefault("MALLOC_ARENA_MAX", "2")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
+os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS_WARNING", "1")
+
+try:
+    import torch
+    torch.set_num_threads(1)
+except Exception:
+    pass
+
+# Unified model cache directory
 CACHE_DIR = PROJECT_ROOT / ".cache"
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
-os.environ["HF_HOME"] = str(CACHE_DIR / "huggingface")
-os.environ["TRANSFORMERS_CACHE"] = str(CACHE_DIR / "huggingface")
-os.environ["TORCH_HOME"] = str(CACHE_DIR / "torch")
-os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+os.environ.setdefault("HF_HOME", str(CACHE_DIR / "huggingface"))
+os.environ.setdefault("TRANSFORMERS_CACHE", str(CACHE_DIR / "huggingface"))
+os.environ.setdefault("TORCH_HOME", str(CACHE_DIR / "torch"))
 
 import time
 import json

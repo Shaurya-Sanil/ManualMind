@@ -12,6 +12,14 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+import os
+CACHE_DIR = PROJECT_ROOT / ".cache"
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+os.environ.setdefault("HF_HOME", str(CACHE_DIR / "huggingface"))
+os.environ.setdefault("TRANSFORMERS_CACHE", str(CACHE_DIR / "huggingface"))
+os.environ.setdefault("TORCH_HOME", str(CACHE_DIR / "torch"))
+os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS_WARNING", "1")
+
 
 def download_all_assets():
     print("=" * 60)
@@ -46,6 +54,7 @@ def download_all_assets():
 
     models_to_cache = [
         ("sentence-transformers/all-MiniLM-L6-v2", SentenceTransformer),
+        ("deepset/minilm-uncased-squad2", lambda m: AutoModelForQuestionAnswering.from_pretrained(m)),
         ("deepset/roberta-base-squad2", lambda m: AutoModelForQuestionAnswering.from_pretrained(m)),
         ("dslim/bert-base-NER", lambda m: AutoModelForTokenClassification.from_pretrained(m)),
     ]

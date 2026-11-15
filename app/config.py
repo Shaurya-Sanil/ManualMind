@@ -32,6 +32,10 @@ class Settings(BaseSettings):
     # Default Active Manual
     DEFAULT_MANUAL_NAME: str = "aurora_ax3000_manual.pdf"
 
+    # Memory & Performance Tuning
+    # Set LOW_MEMORY_MODE=True for 512MB RAM hosts (Render free tier), False for 2GB+ hosts
+    LOW_MEMORY_MODE: bool = True
+
     # NLP Models Configuration
     SPACY_MODEL: str = "en_core_web_sm"
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
