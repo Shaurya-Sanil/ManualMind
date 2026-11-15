@@ -6,3 +6,4 @@ services:
     envVars:
       - key: PORT
         value: 7860
+
