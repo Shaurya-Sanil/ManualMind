@@ -53,11 +53,24 @@ function initNavigation() {
   });
 }
 
-// Global API Endpoint Resolver (supports local, Vercel proxy rewrite, or custom ?backend=URL)
+// Global API Endpoint Resolver (supports local, Vercel proxy rewrite, Render hosted, or custom ?backend=URL)
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get("backend")) {
   localStorage.setItem("manualmind-backend-url", urlParams.get("backend").replace(/\/+$/, ""));
 }
+
+// Default production Render backend fallback
+const DEFAULT_REMOTE_BACKEND = "https://manualmind-backend.onrender.com";
+
+// Auto-configure for production hosting (e.g. Vercel) without prompting the user
+const isLocalEnv = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "";
+const isRenderHosted = window.location.hostname.includes("onrender.com");
+
+if (!localStorage.getItem("manualmind-backend-url") && !isLocalEnv && !isRenderHosted) {
+  // Running on Vercel or external domain: route directly to Render backend
+  localStorage.setItem("manualmind-backend-url", DEFAULT_REMOTE_BACKEND);
+}
+
 window.API_BASE = localStorage.getItem("manualmind-backend-url") || "";
 window.apiUrl = function(path) {
   if (!path.startsWith("/")) path = "/" + path;
@@ -77,18 +90,6 @@ window.fetch = function(input, init) {
 async function fetchHealthAndActiveManual() {
   const pill = document.getElementById("active-manual-name");
   const dot = document.querySelector(".indicator-dot");
-  
-  if (pill) {
-    pill.addEventListener("click", () => {
-      const current = window.API_BASE || "";
-      const input = prompt("Enter Backend API URL (e.g. from Render or Hugging Face Space):", current);
-      if (input !== null) {
-        const clean = input.trim().replace(/\/+$/, "");
-        localStorage.setItem("manualmind-backend-url", clean);
-        window.location.reload();
-      }
-    });
-  }
 
   try {
     const res = await fetch(window.apiUrl("/api/health"));
@@ -96,7 +97,7 @@ async function fetchHealthAndActiveManual() {
       const data = await res.json();
       if (pill && data.active_manual) {
         pill.textContent = data.active_manual;
-        pill.title = "Connected to backend. Click to change backend URL.";
+        pill.title = "Connected to live NLP backend";
         if (dot) dot.style.background = "var(--success)";
       }
     } else {
@@ -105,9 +106,8 @@ async function fetchHealthAndActiveManual() {
   } catch (err) {
     console.warn("ManualMind backend health check waiting: ", err);
     if (pill) {
-      pill.textContent = "Connect Backend ⚙️";
-      pill.style.cursor = "pointer";
-      pill.title = "Click to configure backend API URL";
+      pill.textContent = "aurora_ax3000_manual.pdf";
+      pill.title = "Connecting to backend service (Render takes ~30s if waking up)...";
       if (dot) dot.style.background = "var(--warning)";
     }
   }

@@ -3,5 +3,15 @@
   "framework": null,
   "buildCommand": null,
   "outputDirectory": "web",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://manualmind-backend.onrender.com/api/:path*"
+    },
+    {
+      "source": "/reports/figures/:path*",
+      "destination": "https://manualmind-backend.onrender.com/reports/figures/:path*"
+    }
+  ]
 }
