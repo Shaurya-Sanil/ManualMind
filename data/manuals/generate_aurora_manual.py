@@ -746,6 +746,10 @@ def build_manual_pdf(output_path: str):
     print(f"Manual PDF successfully generated at: {output_path}")
 
 
+# Alias for backward compatibility
+generate_manual = build_manual_pdf
+
+
 if __name__ == "__main__":
     out_dir = Path(__file__).resolve().parent
     out_file = out_dir / "aurora_ax3000_manual.pdf"

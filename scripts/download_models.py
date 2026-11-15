@@ -69,12 +69,18 @@ def download_all_assets():
         print(f"    Notice on faster-whisper caching: {e}")
 
     # 5. Aurora Manual Generation
-    print("\n[5/5] Generating Aurora AX3000 Wi-Fi 6 Router User Manual PDF...")
-    from data.manuals.generate_aurora_manual import generate_manual
+    print("\n[5/5] Checking Aurora AX3000 Wi-Fi 6 Router User Manual PDF...")
     manual_path = PROJECT_ROOT / "data" / "manuals" / "aurora_ax3000_manual.pdf"
     if not manual_path.exists():
-        generate_manual(manual_path)
-        print(f"    Generated: {manual_path}")
+        try:
+            try:
+                from data.manuals.generate_aurora_manual import build_manual_pdf as generate_manual
+            except ImportError:
+                from data.manuals.generate_aurora_manual import generate_manual
+            generate_manual(str(manual_path))
+            print(f"    Generated: {manual_path}")
+        except Exception as e:
+            print(f"    Notice on manual generation: {e}")
     else:
         print(f"    Manual already exists: {manual_path}")
 
